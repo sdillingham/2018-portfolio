@@ -26,13 +26,29 @@ html lang="en"
 
         link href="http://media.scpr.org/favicon.ico" rel="shortcut icon" type="image/x-icon"
         = stylesheet_link_tag "all"
+
         = javascript_include_tag  "all"
+        script src="//use.typekit.net/rnz6xzs.js" type="text/javascript"
+        javascript:
+          try{Typekit.load();}catch(e){}
 
   body class=(page_classes)
     header
-      h1 Sean Dillingham
-      h2 I’m a digital product designer and technologist living in Los Angeles.
+      .bound
+        h1.marquee-heading Sean Dillingham
+        h2 I’m a digital product designer and technologist living in Los Angeles.
     main
-      = yield
+      .bound
+        = yield
     footer
+      .bound
+        hr
+        nav.nav-footer
+          ul
+            li: a href="/" Home
+            li: a href="/work" Work
+            li: a href="/blog" Blog
+        p.fineprint 
+          | &copy; 2013 Sean Dillingham. Photo credit: 
+          a href="http://www.flickr.com/photos/neilarmstrong2/5608567621/" Neil Kremer
 

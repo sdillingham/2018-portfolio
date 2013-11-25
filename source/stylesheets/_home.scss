@@ -1,0 +1,33 @@
+.index {
+  header {
+    background:url(../images/intro-el-lay.jpg) no-repeat 50% 20%;
+    background-size:cover;
+    height:440px;
+    padding-top:7em;
+    text-align:center;
+    h1 {
+      color:$white;
+      font-size:2.875em;
+    }
+    h2 {
+      color:$brightAccent;
+      font-size:2em;
+      font-weight:400;
+      line-height:1.4375em;
+    }
+  }
+  main {
+    padding:2em 0;
+    p {
+      color:$medGray;
+      font-size:1.25em;
+      line-height:1.5em;
+      a {
+        color:$linkAccent;
+        &:hover {
+          color:lighten($linkAccent, 20%);
+        }
+      }
+    }
+  }
+}

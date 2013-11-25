@@ -1,3 +1,8 @@
+require "slim"
+activate :bourbon
+activate :neat
+activate :livereload
+
 ###
 # Compass
 ###
@@ -44,6 +49,9 @@
 #     "Helping"
 #   end
 # end
+
+# Set slim-lang output style
+Slim::Engine.set_default_options :pretty => true
 
 set :css_dir, 'stylesheets'
 

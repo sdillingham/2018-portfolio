@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Sean Dillingham - <%= current_page.data.title || "Product Designer" %></title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="description" content="<%= current_page.data.description || "" %>" />
+    <meta name="keywords" content="Sean Dillingham, product design, product strategy, UX, user experience, interaction design,UI design, mobile design, front-end development, KPCC, public radio, NPR, news design" />
+    <meta name="author" content="Sean Dillingham" />
+    
+    
+    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= javascript_include_tag  "all" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <%= yield %>
+  </body>
+</html>

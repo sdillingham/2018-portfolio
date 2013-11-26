@@ -1,11 +1,14 @@
 @charset "utf-8";
 
-// Import libs
+// Import vendor dependencies
 @import "bourbon";
 @import "neat";
 
-// Import styles
+// Import author dependencies
 @import "variables";
+@import "mixins";
 @import "normalize";
+
+// Import site styles
 @import "base";
 @import "home";

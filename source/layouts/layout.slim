@@ -13,7 +13,7 @@ html lang="en"
     meta content=(current_page.data.title || "Home") property="og:title"
     meta content="Sean Dillingham" property="og:site_name"
     meta content="website" property="og:type"
-    meta content="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" property="og:image"
+    meta content="images/intro-el-ley.jpg" property="og:image"
     meta content="http://sean.dillingh.am#{current_page.url}" property="og:url"
     meta content=(current_page.data.description) property="og:description"
     meta content="summary" name="twitter:card"
@@ -22,7 +22,7 @@ html lang="en"
     meta content="Sean Dillingham" name="twitter:site"
     meta content=(current_page.data.title || "Home") name="twitter:title"
     meta content=(current_page.data.description) name="twitter:description"
-    meta content="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" name="twitter:image:src"
+    meta content="images/intro-el-ley.jpg" name="twitter:image:src"
 
         link href="http://media.scpr.org/favicon.ico" rel="shortcut icon" type="image/x-icon"
         = stylesheet_link_tag "all"
@@ -35,7 +35,7 @@ html lang="en"
   body class=(page_classes)
     header
       .bound
-        h1.marquee-heading Sean Dillingham
+        h1 Sean Dillingham
         h2 I’m a digital product designer and technologist living in Los Angeles.
     main
       .bound
@@ -43,11 +43,6 @@ html lang="en"
     footer
       .bound
         hr
-        nav.nav-footer
-          ul
-            li: a href="/" Home
-            li: a href="/work" Work
-            li: a href="/blog" Blog
         p.fineprint 
           | &copy; 2013 Sean Dillingham. Photo credit: 
           a href="http://www.flickr.com/photos/neilarmstrong2/5608567621/" Neil Kremer

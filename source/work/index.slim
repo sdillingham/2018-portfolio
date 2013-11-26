@@ -1,0 +1,15 @@
+.marquee
+  .bound
+    h3 I work on websites and mobile apps doing product design, UX strategy, and front-end development.
+section.work-list
+  .bound
+    h4 Selected Work
+    hr
+    - data.work.items.each do |f|
+      article.work-item
+        h2: a href="#" = f
+        p Product design for KPCC's flagship native tablet app.
+        figure
+          img src="http://placehold.it/540x540" alt="KPCC for iPad - All Programs view"
+          figcaption
+            a href="#" View this project

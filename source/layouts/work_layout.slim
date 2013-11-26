@@ -1,0 +1,11 @@
+- wrap_layout :layout do
+  header
+    .bound
+      h1: a href="/" Sean Dillingham
+      nav.site-nav
+        ul
+          li: a href="/" Home
+          li: a href="/work" Work
+          li: a href="/blog" Blog
+  main
+    = yield

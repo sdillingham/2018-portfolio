@@ -33,13 +33,7 @@ html lang="en"
           try{Typekit.load();}catch(e){}
 
   body class=(page_classes)
-    header
-      .bound
-        h1 Sean Dillingham
-        h2 I’m a digital product designer and technologist living in Los Angeles.
-    main
-      .bound
-        = yield
+    = yield
     footer
       .bound
         hr

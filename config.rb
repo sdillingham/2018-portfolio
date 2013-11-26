@@ -16,6 +16,9 @@ activate :livereload
 # Page options, layouts, aliases and proxies
 ###
 
+page "/",       :layout => :index_layout
+page "work/*",  :layout => :work_layout
+
 # Per-page layout changes:
 #
 # With no layout

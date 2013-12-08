@@ -13,12 +13,15 @@
       background:lighten($medDivider, 10%);
       border:0;
       height:1px;
-      margin:0 -10px;
+      &.ledge {
+        margin:0 -10px;
+      }
     }
   }
     // Site title
     h1 {
       @extend .marquee-heading;
+      color:$deepGray;
       font-size:1.640625em;
       line-height:1em;
       margin:0;
@@ -31,9 +34,73 @@
       }
     }
 
-    // Hide nav for small screens
+    // Style nav for small screens
     .site-nav {
-      display:none;
+      @extend .marquee-heading;
+      background:rgba($black, 0.95);
+      // display:none; // Hide for small screens by default
+      padding:0 10px;
+      position:fixed;
+      left:0;
+      right:0;
+      top:0;
+      bottom:-100px;
+      z-index:300;
+      hr {
+        background:rgba($white, 0.1);
+      }
+      h4 {
+        color:$lightAccent;
+        font-size:1em;
+        font-weight:400;
+        margin-bottom:.5em;
+        padding:0 10px;
+        text-transform:uppercase; 
+      }
+      ul {
+        margin:0;
+        padding:0;
+        li {
+          a {
+            color:$white;
+            display:block;
+            font-size:1.640625em;
+            margin:8px 0;
+            padding:10px;
+            position:relative;
+            text-decoration:none;
+            &:active {
+              background:$black;
+              color:$brightAccent;
+            }
+            &.active {
+              &:before {
+                content:"";
+                background:#14B9D5;
+                border-radius:12px;
+                display:block;
+                position:absolute;
+                width:12px;
+                height:12px;
+                left:-20px;
+                top:50%;
+                margin-top:-6px;
+                -webkit-filter: blur(5px);
+              }
+            }
+          }
+        }
+      }
+      // Dismiss menu for small screens
+      .nav-close {
+        position:absolute;
+        left:20px;
+        top:20px;
+        &:before {
+          color:$medDivider;
+          font-size:1em;
+        }
+      }
     }
 
     // Menu toggle for small screens
@@ -41,6 +108,7 @@
       position:absolute;
       left:0;
       top:20px;
+      z-index:10;
       &:before {
         color:$medDivider;
         font-size:1em;

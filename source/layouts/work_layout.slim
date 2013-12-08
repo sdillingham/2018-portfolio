@@ -3,10 +3,13 @@
     .bound
       h1: a href="/" Sean Dillingham
       nav.site-nav
+        span.nav-close.icon-close aria-hidden="true"
+        h1 aria-hidden="true" Sean Dillingham
+        hr
         h4 Menu
         ul.menu-main
           li: a href="/" Home
-          li: a href="/work" Work
+          li: a.active href="/work" Work
           li: a href="/blog" Blog
         hr
         h4 Elsewhere
@@ -14,6 +17,6 @@
           li: a href="http://twitter.com/seandillingham" Twitter
           li: a href="http://github.com/sdillingham" Github
       span.nav-toggle.icon-menu aria-hidden="true"
-      hr
+      hr.ledge
   main
     = yield

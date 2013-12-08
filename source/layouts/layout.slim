@@ -27,12 +27,12 @@ html lang="en"
         link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"
         = stylesheet_link_tag "all"
 
-        = javascript_include_tag  "all"
+        = javascript_include_tag  "head"
         script src="//use.typekit.net/rnz6xzs.js" type="text/javascript"
         javascript:
           try{Typekit.load();}catch(e){}
 
-  body class=(page_classes)
+  body class=(page_classes) ontouchstart=""
     = yield
     footer
       .bound
@@ -43,4 +43,5 @@ html lang="en"
                 a href="http://www.flickr.com/photos/neilarmstrong2/5608567621/" Neil Kremer
         - else
             p.fineprint &copy; 2013 Sean Dillingham.
+    = javascript_include_tag  "body"
 

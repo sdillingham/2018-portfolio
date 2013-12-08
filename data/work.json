@@ -6,7 +6,7 @@
       "teaser"   : "Product design for KPCC's flagship native tablet app.",
       "thumbnail": 
         {
-          "url"    : "/images/thumb-kpcc-ipad.jpg",
+          "url"    : "images/thumb-kpcc-ipad.jpg",
           "caption": "KPCC for iPad"
         }
     },
@@ -16,7 +16,7 @@
       "teaser"   : "A redesign of poverty data visualizations for Center for American Progress.",
       "thumbnail":
         {
-          "url"    : "/images/thumb-half-in-ten.jpg",
+          "url"    : "images/thumb-half-in-ten.jpg",
           "caption": "Poverty data vizualization for halfinten.org"
         }
     },
@@ -26,7 +26,7 @@
       "teaser"   : "A fast, mobile-first, infinite-scroll news experience for KPCC.",
       "thumbnail":
         {
-          "url"    : "/images/thumb-kpcc-reader.jpg",
+          "url"    : "images/thumb-kpcc-reader.jpg",
           "caption": "KPCC Reader - a mobile-first reading experience"
         }
     },
@@ -36,7 +36,7 @@
       "teaser"   : "A visual system and front-end solution for mobile-friendly email newsletters.",
       "thumbnail":
         {
-          "url"    : "/images/thumb-kpcc-email.jpg",
+          "url"    : "images/thumb-kpcc-email.jpg",
           "caption": "Emal newsletters for KPCC"
         }
     },
@@ -46,7 +46,7 @@
       "teaser"   : "A responsive redesign for Southern California Public Radio.",
       "thumbnail":
         {
-          "url"    : "/images/thumb-kpcc-responsive.jpg",
+          "url"    : "images/thumb-kpcc-responsive.jpg",
           "caption": "KPCC.org homepage"
         }
     },
@@ -56,7 +56,7 @@
       "teaser"   : "A premium advertising experience for one of KPCC's corporate underwriters.",
       "thumbnail":
         {
-          "url"    : "/images/thumb-laup.jpg",
+          "url"    : "images/thumb-laup.jpg",
           "caption": "LAUP corporate underwriter landing page"
         }
     },
@@ -66,7 +66,7 @@
       "teaser"   : "A UCR web app that guides incoming students through orientation registration.",
       "thumbnail":
         {
-          "url"    : "/images/thumb-highlander-orientation.jpg",
+          "url"    : "images/thumb-highlander-orientation.jpg",
           "caption": "UCR's Highlander New Student Orientation"
         }
     }

@@ -10,6 +10,6 @@ section.work-list
         h2: a href=(i.slug) = i.title
         p = i.teaser
         figure
-          img src=(i.thumbnail.url) alt=(i.thumbnail.caption)
+          img src="../#{i.thumbnail.url}" alt=(i.thumbnail.caption)
           figcaption
             a href=(i.slug) View this project

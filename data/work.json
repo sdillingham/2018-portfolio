@@ -1,7 +1,74 @@
 {
   "items": [
-    "KPCC for iPad",
-    "Half In Ten",
-    "KPCC Responsive Emails"
+    {
+      "slug"     : "kpcc-ipad",
+      "title"    : "KPCC for iPad",
+      "teaser"   : "Product design for KPCC's flagship native tablet app.",
+      "thumbnail": 
+        {
+          "url"    : "http://placehold.it/540x540",
+          "caption": "KPCC for iPad"
+        }
+    },
+    {
+      "slug"     : "half-in-ten",
+      "title"    : "Half In Ten",
+      "teaser"   : "A redesign of poverty data visualizations for Center for American Progress.",
+      "thumbnail":
+        {
+          "url"    : "http://placehold.it/540x540",
+          "caption": "Poverty data vizualization for halfinten.org"
+        }
+    },
+    {
+      "slug"     : "kpcc-reader",
+      "title"    : "KPCC Reader",
+      "teaser"   : "A fast, mobile-first, infinite-scroll news experience for KPCC.",
+      "thumbnail":
+        {
+          "url"    : "http://placehold.it/540x540",
+          "caption": "KPCC Reader - a mobile-first reading experience"
+        }
+    },
+    {
+      "slug"     : "kpcc-newsletters",
+      "title"    : "KPCC Responsive Emails",
+      "teaser"   : "A visual system and front-end solution for mobile-friendly email newsletters.",
+      "thumbnail":
+        {
+          "url"    : "http://placehold.it/540x540",
+          "caption": "Emal newsletters for KPCC"
+        }
+    },
+    {
+      "slug"     : "kpcc-redesign",
+      "title"    : "KPCC.org Redesign",
+      "teaser"   : "A responsive redesign for Southern California Public Radio.",
+      "thumbnail":
+        {
+          "url"    : "http://placehold.it/540x540",
+          "caption": "KPCC.org homepage"
+        }
+    },
+    {
+      "slug"     : "laup-landing-page",
+      "title"    : "LAUP marketing landing page",
+      "teaser"   : "A premium advertising experience for one of KPCC's corporate underwriters.",
+      "thumbnail":
+        {
+          "url"    : "http://placehold.it/540x540",
+          "caption": "A close-up of the 'All Programs' view on KPCC for iPad"
+        }
+    },
+    {
+      "slug"     : "highlander-orientation",
+      "title"    : "Highlander Orientation Redesign",
+      "teaser"   : "A UCR web app that guides incoming students through orientation registration.",
+      "thumbnail":
+        {
+          "url"    : "http://placehold.it/540x540",
+          "caption": "UCR's Highlander New Student Orientation"
+        }
+    }
   ]
 }

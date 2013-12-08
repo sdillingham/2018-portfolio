@@ -1,15 +1,15 @@
 .marquee
   .bound
-    h3 I work on websites and mobile apps doing product design, UX strategy, and front-end development.
+    h3 I work on websites and mobile apps, specializing in product design, experience strategy, and front-end development.
 section.work-list
   .bound
     h4 Selected Work
     hr
-    - data.work.items.each do |f|
+    - data.work.items.each do |i|
       article.work-item
-        h2: a href="#" = f
-        p Product design for KPCC's flagship native tablet app.
+        h2: a href=(i.slug) = i.title
+        p = i.teaser
         figure
-          img src="http://placehold.it/540x540" alt="KPCC for iPad - All Programs view"
+          img src=(i.thumbnail.url) alt=(i.thumbnail.caption)
           figcaption
-            a href="#" View this project
+            a href=(i.slug) View this project

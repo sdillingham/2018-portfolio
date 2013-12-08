@@ -1,6 +1,10 @@
 // Typography
 body {
   font-family:"ff-tisa-web-pro", "Lucida Bright", "Droid Serif", Georgia, serif;
+  font-size:0.8em;
+  @include respond-to(medium-screens) {
+    font-size:1em;
+  }
 }
 .marquee-heading {
   font-family:"freight-sans-pro", "Avenir Next," Helvatica, "Droid Sans", sans-serif; 
@@ -16,4 +20,17 @@ img {
   margin:0 auto;
   max-width:33.75em;
   width:87.5%;
+}
+
+// Global Footer
+footer {
+  hr {
+    background:$lightGray;
+    border:0;
+    height:1px;
+  }
+  p.fineprint {
+    color:$medGray;
+    font-size:0.75em;
+  }
 }

@@ -1,8 +1,4 @@
 .index {
-  font-size:0.8em;
-  @include respond-to(medium-screens) {
-    font-size:1em;
-  }
   header {
     background:url(../images/intro-el-lay.jpg) no-repeat 50% 20%;
     background-size:cover;
@@ -38,15 +34,4 @@
           color:lighten($linkAccent, 20%);
         }
       }
-  footer {
-    hr {
-      background:$lightGray;
-      border:0;
-      height:1px;
-    }
-    .fineprint {
-      color:$medGray;
-      font-size:0.75em;
-    }
-  }
 }

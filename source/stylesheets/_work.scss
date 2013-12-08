@@ -1,0 +1,49 @@
+.work {
+  // Header bits
+  header {
+    background:$white;
+    background:rgba(255,255,255,0.98);
+    position:fixed;
+    top:0;
+    width:100%;
+    .bound {
+      position:relative;
+    }
+    hr {
+      background:lighten($medDivider, 10%);
+      border:0;
+      height:1px;
+      margin:0 -10px;
+    }
+  }
+    // Site title
+    h1 {
+      @extend .marquee-heading;
+      font-size:1.640625em;
+      line-height:1em;
+      margin:0;
+      padding:14px 0;
+      text-align:center;
+      a {
+        color:$black;
+        display:inline-block;
+        text-decoration:none;
+      }
+    }
+
+    // Hide nav for small screens
+    .site-nav {
+      display:none;
+    }
+
+    // Menu toggle for small screens
+    .nav-toggle {
+      position:absolute;
+      left:0;
+      top:20px;
+      &:before {
+        color:$medDivider;
+        font-size:1em;
+      }
+    }
+}

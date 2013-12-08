@@ -37,7 +37,10 @@ html lang="en"
     footer
       .bound
         hr
-        p.fineprint 
-          | &copy; 2013 Sean Dillingham. Photo credit: 
-          a href="http://www.flickr.com/photos/neilarmstrong2/5608567621/" Neil Kremer
+        - if current_page.url == '/'
+            p.fineprint 
+                | &copy; 2013 Sean Dillingham. Photo credit: 
+                a href="http://www.flickr.com/photos/neilarmstrong2/5608567621/" Neil Kremer
+        - else
+            p.fineprint &copy; 2013 Sean Dillingham.
 

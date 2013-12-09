@@ -32,7 +32,7 @@
     },
     {
       "slug"     : "kpcc-newsletters",
-      "title"    : "KPCC Responsive Emails",
+      "title"    : "KPCC Email Newsletters",
       "teaser"   : "A visual system and front-end solution for mobile-friendly email newsletters.",
       "thumbnail":
         {

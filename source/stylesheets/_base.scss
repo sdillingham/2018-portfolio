@@ -6,6 +6,7 @@ body {
     font-size:1em;
   }
 }
+
 .marquee-heading {
   font-family:"freight-sans-pro", "Avenir Next," Helvatica, "Droid Sans", sans-serif; 
 }
@@ -16,6 +17,11 @@ img {
 }
 
 // Common Elements
+a {
+  color:$linkAccent;
+  text-decoration:none;
+}
+
 hr {
   border:0;
   height:1px;
@@ -28,10 +34,29 @@ hr {
   width:87.5%;
 }
 
+// Global Header
+  .global-header {
+    background:$white;
+    background:rgba(255,255,255,0.98);
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:300;
+    .bound {
+      position:relative;
+    }
+    hr {
+      background:lighten($medDivider, 10%);
+      &.ledge {
+        margin:0 -10px;
+      }
+    }
+  }
+
 // Global Footer
 footer {
   hr {
-    background:$lightGray;
+    background:$paleGray;
   }
   p.fineprint {
     color:$medGray;

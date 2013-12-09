@@ -3,13 +3,17 @@
     h3 I work on websites and mobile apps, specializing in product design, experience strategy, and front-end development.
 section.work-list
   .bound
-    h4 Selected Work
-    hr
+    header.section-header
+      h4: span Selected Work
+      hr
     - data.work.items.each do |i|
       article.work-item
+        hr
         h2: a href=(i.slug) = i.title
         p = i.teaser
         figure
           img src="../images/#{i.thumbnail.src}" alt=(i.thumbnail.caption)
           figcaption
-            a href=(i.slug) View this project
+            a href=(i.slug)
+              | View this project
+              span.icon-chevron

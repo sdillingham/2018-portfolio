@@ -2,23 +2,6 @@
 
 .work {
   padding-top:50px;
-  // Header bits
-  header {
-    background:$white;
-    background:rgba(255,255,255,0.98);
-    position:fixed;
-    top:0;
-    width:100%;
-    .bound {
-      position:relative;
-    }
-    hr {
-      background:lighten($medDivider, 10%);
-      &.ledge {
-        margin:0 -10px;
-      }
-    }
-  }
 
     // Site title
     h1 {
@@ -143,6 +126,35 @@
     }
 }
 
+// Section headings for main content area
+.section-header {
+  padding:3em 0;
+  position:relative;
+
+  h4 {
+    color:$brightAccentAlt;
+    font-size:1.6em;
+    font-weight:400;
+    margin:0;
+    position:relative;
+    text-align:center;
+    z-index:11;
+    span {
+      background:$white;
+      display:inline-block;
+      padding:0 10px;
+    }
+  }
+
+  hr {
+    background:$paleGray;
+    position:absolute;
+    top:45%;
+    width:100%;
+    z-index:10;
+  }
+}
+
 // Marquee - introductory section for pages that need one.
 .marquee {
   background:$darkAccent;
@@ -160,7 +172,57 @@
 
 // List of Selected Work
 .work-list {
-  hr {
-    background:$lightGray;
+
+  h2 {
+    @extend .marquee-heading;
+    font-size:3em;
+    line-height:1em;
+    margin:0;
+    a {
+      color:$darkGray;
+    }
+  }
+
+  p {
+    color:$lightGray;
+    font-size:1.3em;
+    line-height:1.4em;
+    margin:0 0 0.8em;
+  }
+
+  figure {
+    position:relative;
+
+    img {
+      border:1px solid $medDivider;
+      display:block
+    }
+
+    figcaption {
+      background:rgba($linkAccent, 0.9);
+      padding:10px 14px;
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+
+      a {
+        color:$white;
+        font-size:1.3em;
+        span {
+          display:inline-block;
+          font-size:0.85em;
+          margin-left:10px; 
+        }
+      }
+    }
+  }
+
+  .work-item {
+    margin-bottom:4em;
+    hr {
+      background:$paleGray;
+      margin-bottom:3em;
+    }
   }
 }

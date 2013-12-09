@@ -1,0 +1,37 @@
+- p = locals[:item]
+
+.marquee
+  .bound
+    h2= p[:title]
+    p= p[:description]
+    img src="../images/#{p[:hero_img]}" 
+article.project-details
+  .bound
+    a.button href=(p[:link].href) 
+      = p[:link].title
+      span.icon-chevron 
+    section.checklist
+      header.section-header
+        h4: span Challenges
+        hr
+      ul
+      - p[:challenges].each do |c|
+        li = c.item
+    section.checklist
+      header.section-header
+        h4: span Outcomes
+        hr
+      ul
+      - p[:outcomes].each do |o|
+        li = o.item
+  section.gallery
+    ul
+      - p[:gallery].each do |g|
+        li
+          img src="../images/#{g.image}""
+  .bound
+    dl
+      dt Company:
+      dd= p[:company]
+      dt Work:
+      dd= p[:services]

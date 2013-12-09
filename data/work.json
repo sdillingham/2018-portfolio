@@ -9,7 +9,34 @@
         {
           "src"    : "thumb-kpcc-ipad.jpg",
           "caption": "KPCC for iPad"
-        }
+        },
+      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "gallery"  :
+        [
+          {"image"  : "img-kpcc-ipad-1.jpg"},
+          {"image"  : "img-kpcc-ipad-2.jpg"},
+          {"image"  : "img-kpcc-ipad-3.jpg"},
+          {"image"  : "img-kpcc-ipad-4.jpg"}
+        ],
+      "link"       :
+        {
+          "title"  : "Visit the App Store",
+          "href"   : "https://itunes.apple.com/us/app/kpcc-for-ipad/id744160424?mt=8"
+        },
+      "company"    : "KPCC",
+      "services"   : "Product strategy, Product design",
+      "challenges"  :
+        [
+          {"item"  : "Build audience recognition that KPCC is more than just radio"},
+          {"item"  : "Design an experience that creates addictive reading habits"},
+          {"item"  : "Make a great listening experience for the public radio our audiences love"},
+          {"item"  : "Deepen the emotional connection with our brand to build increased loyalty/membership"}
+        ],
+      "outcomes"    :
+        [
+          {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon"},
+          {"item"  : "Leveraged iPad's canvas to feature edge-to-edge editorial photography"}
+        ]
     },
     {
       "slug"       : "half-in-ten",
@@ -20,7 +47,15 @@
         {
           "src"    : "thumb-half-in-ten.jpg",
           "caption": "Poverty data vizualization for halfinten.org"
-        }
+        },
+      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "link"       :
+        {
+          "title"  : "",
+          "href"   : ""
+        },
+      "company"    : "Center for American Progress",
+      "services"   : "User interface design" 
     },
     {
       "slug"       : "kpcc-reader",
@@ -31,7 +66,15 @@
         {
           "src"    : "thumb-kpcc-reader.jpg",
           "caption": "KPCC Reader - a mobile-first reading experience"
-        }
+        },
+      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "link"       :
+        {
+          "title"  : "View KPCC Reader",
+          "href"   : "http://reader.scprdev.org"
+        },
+      "company"    : "KPCC",
+      "services"   : "User interface design, front-end development" 
     },
     {
       "slug"       : "kpcc-newsletters",
@@ -42,7 +85,15 @@
         {
           "src"    : "thumb-kpcc-email.jpg",
           "caption": "Emal newsletters for KPCC"
-        }
+        },
+      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "link"       :
+        {
+          "title"  : "",
+          "href"   : ""
+        },
+      "company"    : "KPCC",
+      "services"   : "Design, front-end development" 
     },
     {
       "slug"       : "kpcc-redesign",
@@ -53,7 +104,15 @@
         {
           "src"    : "thumb-kpcc-responsive.jpg",
           "caption": "KPCC.org homepage"
-        }
+        },
+      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "link"       :
+        {
+          "title"  : "View KPCC.org",
+          "href"   : "http://www.scpr.org"
+        },
+      "company"    : "KPCC",
+      "services"   : "Product strategy, Product design, front-end development" 
     },
     {
       "slug"       : "laup-landing-page",
@@ -64,7 +123,15 @@
         {
           "src"    : "thumb-laup.jpg",
           "caption": "LAUP corporate underwriter landing page"
-        }
+        },
+      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "link"       :
+        {
+          "title"  : "View LAUP landing page",
+          "href"   : "http://underwriting.herokuapp.com"
+        },
+      "company"    : "KPCC",
+      "services"   : "User interface design, front-end development" 
     },
     {
       "slug"       : "highlander-orientation",
@@ -75,7 +142,15 @@
         {
           "src"    : "thumb-highlander-orientation.jpg",
           "caption": "UCR's Highlander New Student Orientation"
-        }
+        },
+      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "link"       :
+        {
+          "title"  : "",
+          "href"   : ""
+        },
+      "company"    : "KPCC",
+      "services"   : "Product strategy, User interface design" 
     }
   ]
 }

@@ -1,10 +1,30 @@
 .index {
   header {
-    background:url(../images/intro-el-lay.jpg) no-repeat 50% 20%;
-    background-size:cover;
     height:27em;
     padding-top:3em;
+    position:relative;
     text-align:center;
+
+    .img-src {
+        position:absolute;
+        background-image:url('../images/intro-el-lay.jpg');
+        background-position:50% 20%;
+        background-size:cover;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+    }
+    .img-src.color {
+      background-image:url('../images/intro-el-lay-color.jpg');
+      opacity:0;
+    }
+
+    .bound {
+      position:relative;
+      z-index:100;
+    }
+
   }
     h1 {
       @extend .marquee-heading;

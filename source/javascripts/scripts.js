@@ -10,5 +10,6 @@ $(document).ready(function() {
         opacityVal = (s / 150.0);
 
     $('.color').css('opacity', opacityVal); 
+    //$('.img-src').css('-webkit-transform', 'translateY(' + (s/2) + 'px)');
   });
 });

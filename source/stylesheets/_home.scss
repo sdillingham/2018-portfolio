@@ -40,7 +40,10 @@
       max-width:14em;
     }
   main {
+    background:$white;
     padding:2em 0;
+    position:relative;
+    z-index:200;
   }
     p {
       color:$medGray;

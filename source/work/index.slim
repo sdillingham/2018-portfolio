@@ -11,9 +11,10 @@ section.work-list
         hr
         h2: a href=(i.slug) = i.title
         p = i.teaser
-        figure
-          img src="../images/#{i.thumbnail.src}" alt=(i.thumbnail.caption)
-          figcaption
-            a href=(i.slug)
-              | View this project
-              span.icon-chevron
+        a href=(i.slug)
+          figure
+            img src="../images/#{i.thumbnail.src}" alt=(i.thumbnail.caption)
+            figcaption
+                p
+                  | View this project
+                  span.icon-chevron

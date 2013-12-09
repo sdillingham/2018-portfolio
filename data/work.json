@@ -1,70 +1,77 @@
 {
   "items": [
     {
-      "slug"     : "kpcc-ipad",
-      "title"    : "KPCC for iPad",
-      "teaser"   : "Product design for KPCC's flagship native tablet app.",
-      "thumbnail": 
+      "slug"       : "kpcc-ipad",
+      "title"      : "KPCC for iPad",
+      "teaser"     : "Product design for KPCC's flagship native tablet app.",
+      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "thumbnail"  : 
         {
           "src"    : "thumb-kpcc-ipad.jpg",
           "caption": "KPCC for iPad"
         }
     },
     {
-      "slug"     : "half-in-ten",
-      "title"    : "Half In Ten",
-      "teaser"   : "A redesign of poverty data visualizations for Center for American Progress.",
-      "thumbnail":
+      "slug"       : "half-in-ten",
+      "title"      : "Half In Ten",
+      "teaser"     : "A redesign of poverty data visualizations for Center for American Progress.",
+      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "thumbnail"  :
         {
           "src"    : "thumb-half-in-ten.jpg",
           "caption": "Poverty data vizualization for halfinten.org"
         }
     },
     {
-      "slug"     : "kpcc-reader",
-      "title"    : "KPCC Reader",
-      "teaser"   : "A fast, mobile-first, infinite-scroll news experience for KPCC.",
-      "thumbnail":
+      "slug"       : "kpcc-reader",
+      "title"      : "KPCC Reader",
+      "teaser"     : "A fast, mobile-first, infinite-scroll news experience for KPCC.",
+      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "thumbnail"  :
         {
           "src"    : "thumb-kpcc-reader.jpg",
           "caption": "KPCC Reader - a mobile-first reading experience"
         }
     },
     {
-      "slug"     : "kpcc-newsletters",
-      "title"    : "KPCC Email Newsletters",
-      "teaser"   : "A visual system and front-end solution for mobile-friendly email newsletters.",
-      "thumbnail":
+      "slug"       : "kpcc-newsletters",
+      "title"      : "KPCC Email Newsletters",
+      "teaser"     : "A visual system and front-end solution for mobile-friendly email newsletters.",
+      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "thumbnail"  :
         {
           "src"    : "thumb-kpcc-email.jpg",
           "caption": "Emal newsletters for KPCC"
         }
     },
     {
-      "slug"     : "kpcc-redesign",
-      "title"    : "KPCC.org Redesign",
-      "teaser"   : "A responsive redesign for Southern California Public Radio.",
-      "thumbnail":
+      "slug"       : "kpcc-redesign",
+      "title"      : "KPCC.org Redesign",
+      "teaser"     : "A responsive redesign for Southern California Public Radio.",
+      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "thumbnail"  :
         {
           "src"    : "thumb-kpcc-responsive.jpg",
           "caption": "KPCC.org homepage"
         }
     },
     {
-      "slug"     : "laup-landing-page",
-      "title"    : "LAUP marketing landing page",
-      "teaser"   : "A premium advertising experience for one of KPCC's corporate underwriters.",
-      "thumbnail":
+      "slug"       : "laup-landing-page",
+      "title"      : "LAUP marketing landing page",
+      "teaser"     : "A premium advertising experience for one of KPCC's corporate underwriters.",
+      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "thumbnail"  :
         {
           "src"    : "thumb-laup.jpg",
           "caption": "LAUP corporate underwriter landing page"
         }
     },
     {
-      "slug"     : "highlander-orientation",
-      "title"    : "Highlander Orientation Redesign",
-      "teaser"   : "A UCR web app that guides incoming students through orientation registration.",
-      "thumbnail":
+      "slug"       : "highlander-orientation",
+      "title"      : "Highlander Orientation Redesign",
+      "teaser"     : "A UCR web app that guides incoming students through orientation registration.",
+      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "thumbnail"  :
         {
           "src"    : "thumb-highlander-orientation.jpg",
           "caption": "UCR's Highlander New Student Orientation"

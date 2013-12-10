@@ -160,13 +160,106 @@
   background:$darkAccent;
   color:$white;
   padding:2em 0;
+  text-align:center;
+  &.single-project {
+    padding-bottom:8em;
+  }
+
+  h2 {
+    @extend .marquee-heading;
+    font-size:2.4em;
+  }
+
   h3 {
     font-size:1.9em;
     font-style:italic;
     font-weight:400;
     line-height:1.44em;
     margin:0.6em 0 1em;
-    text-align:center;
+  }
+
+  .description {
+    @extend .marquee-heading;
+    font-size:1.25em;
+    line-height:1.7em;
+  }
+}
+
+// Styles for single project view
+.product-shot {
+  text-align:center;
+
+  img {
+    margin:-6em 0 4em;
+  }
+
+  .button {
+    font-size:1.4em;
+    span {
+      font-size:0.8em;
+      margin-left:8px;
+    }
+  }
+}
+
+.checklist {
+  &.challenges {
+    h4 {
+      color:$darkGray;
+    }
+  }
+
+  .section-header {
+    padding-bottom:1em;
+    hr {
+      top:58%;
+    }
+  }
+
+  ul {
+    color:$deepGray;
+    font-size:1.25em;
+    padding-left:36px;
+    li {
+      margin-bottom:0.75em;
+    }
+  }
+}
+
+.gallery {
+  background:$black;
+  overflow:hidden;
+  margin:4em 0;
+  padding:1em;
+  ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    li {
+      float:left;
+      img {
+        display:block;
+      }
+    }
+  }
+}
+
+.meta {
+  margin-bottom:4em;
+  text-align:center;
+
+  dl {
+    margin-bottom:1em;
+    dd, dt {
+      @extend .marquee-heading;
+      color:$deepGray;
+      display:inline-block;
+      font-size:1.25em;
+    }
+    dd {
+      color:$black;
+      margin-left:2px;
+    }
   }
 }
 

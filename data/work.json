@@ -35,7 +35,8 @@
       "outcomes"    :
         [
           {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon"},
-          {"item"  : "Leveraged iPad's canvas to feature edge-to-edge editorial photography"}
+          {"item"  : "Leveraged iPad's canvas to feature edge-to-edge editorial photography"},
+          {"item"  : "Optimized listening experience for public radio fans: users can select their favorite programs, have new episodes automatically added to a queue, and the design across the app is optimized for audio discovery"}
         ]
     },
     {

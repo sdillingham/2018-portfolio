@@ -1,37 +1,40 @@
 - p = locals[:item]
 
-.marquee
+.marquee.single-project
   .bound
-    h2= p[:title]
-    p= p[:description]
-    img src="../images/#{p[:hero_img]}" 
+    h2.title= p[:title]
+    p.description= p[:description]
 article.project-details
   .bound
-    a.button href=(p[:link].href) 
-      = p[:link].title
-      span.icon-chevron 
-    section.checklist
+    section.product-shot
+      img src="../images/#{p[:hero_img]}" 
+      a.button href=(p[:link].href) 
+        = p[:link].title
+        span.icon-chevron 
+    section.checklist.challenges
       header.section-header
         h4: span Challenges
         hr
       ul
-      - p[:challenges].each do |c|
-        li = c.item
-    section.checklist
+        - p[:challenges].each do |c|
+          li = c.item
+    section.checklist.outcomes
       header.section-header
         h4: span Outcomes
         hr
       ul
-      - p[:outcomes].each do |o|
-        li = o.item
+        - p[:outcomes].each do |o|
+          li = o.item
   section.gallery
     ul
       - p[:gallery].each do |g|
         li
-          img src="../images/#{g.image}""
+          img src="../images/#{g.image}"
   .bound
-    dl
-      dt Company:
-      dd= p[:company]
-      dt Work:
-      dd= p[:services]
+    section.meta
+      dl
+        dt Company:
+        dd= p[:company]
+      dl
+        dt Work:
+        dd= p[:services]

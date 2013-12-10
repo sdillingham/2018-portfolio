@@ -1,4 +1,11 @@
 $(document).ready(function() {
+
+  // Let's see if we're working with a touchscreen device
+  function is_touch_device() {
+  return 'ontouchstart' in window
+    || 'onmsgesturechange' in window; // for ie10
+  };
+
   // Toggle menu visibility for smaller screens
   $('.nav-toggle, .nav-close').click(function() {
     $('.site-nav').toggleClass("active");
@@ -10,6 +17,10 @@ $(document).ready(function() {
         opacityVal = (s / 150.0);
 
     $('.color').css('opacity', opacityVal); 
-    //$('.img-src').css('-webkit-transform', 'translateY(' + (s/2) + 'px)');
+
+    // Add fixed position hero image if we're not on a touchscreen device
+    if (!is_touch_device()) {
+      $('.index .img-src').css('-webkit-transform', 'translateY(' + s + 'px)');
+    }
   });
 });

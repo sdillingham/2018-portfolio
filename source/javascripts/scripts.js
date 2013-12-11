@@ -1,11 +1,5 @@
 $(document).ready(function() {
 
-  // Let's see if we're working with a touchscreen device
-  function is_touch_device() {
-  return 'ontouchstart' in window
-    || 'onmsgesturechange' in window; // for ie10
-  };
-
   // Toggle menu visibility for smaller screens
   $('.nav-toggle, .nav-close').click(function() {
     $('.site-nav').toggleClass("active");

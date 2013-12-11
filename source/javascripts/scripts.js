@@ -19,9 +19,7 @@ $(document).ready(function() {
     $('.color').css('opacity', opacityVal); 
 
     // Add fixed position hero image if we're not on a touchscreen device
-    if (!is_touch_device()) {
-      $('.index .img-src').css('-webkit-transform', 'translateY(' + s + 'px)');
-    }
+    $('.no-touch .index .img-src').css('-webkit-transform', 'translateY(' + s + 'px)');
   });
 
   // Init Swipe for galleries

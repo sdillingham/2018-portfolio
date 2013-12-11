@@ -5,17 +5,32 @@ $(document).ready(function() {
     $('.site-nav').toggleClass("active");
   });
 
-  // Fade in color image as user scrolls
+  // Fade in color image and fix position of hero image as user scrolls
   $(window).scroll(function(e) {
     var s = $(window).scrollTop(),
         opacityVal = (s / 150.0);
 
+    // increase opacity for overlay image to create transition effect
     $('.color').css('opacity', opacityVal); 
 
     // Add fixed position hero image if we're not on a touchscreen device
     $('.no-touch .index .img-src').css('-webkit-transform', 'translateY(' + s + 'px)');
   });
 
-  // Init Swipe for galleries
-  window.mySwipe = Swipe(document.getElementById('slider'));
+  // Initialize Swipe.js for galleries
+  window.mySwipe = Swipe(document.getElementById('slider'), {
+    continuous: true,
+    callback: function(pos) {
+
+      var i = bullets.length;
+      while (i--) {
+        bullets[i].className = ' ';
+      }
+      bullets[pos].className = 'on';
+
+    }
+  });
+
+  var bullets = $('#position').children('li');
+
 });

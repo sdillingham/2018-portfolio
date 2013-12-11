@@ -23,4 +23,7 @@ $(document).ready(function() {
       $('.index .img-src').css('-webkit-transform', 'translateY(' + s + 'px)');
     }
   });
+
+  // Init Swipe for galleries
+  window.mySwipe = Swipe(document.getElementById('slider'));
 });

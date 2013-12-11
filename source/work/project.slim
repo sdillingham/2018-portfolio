@@ -26,10 +26,11 @@ article.project-details
         - p[:outcomes].each do |o|
           li = o.item
   section.gallery
-    ul
-      - p[:gallery].each do |g|
-        li
-          img src="../images/#{g.image}"
+    #slider.swipe
+      .swipe-wrap
+        - p[:gallery].each do |g|
+          div
+            img src="../images/#{g.image}"
   .bound
     section.meta
       dl

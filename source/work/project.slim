@@ -2,8 +2,12 @@
 
 .marquee.single-project
   .bound
-    h2.title= p[:title]
+    = page_heading p[:title]
     p.description= p[:description]
+    section.meta
+      dl
+        dt Work
+        dd= p[:services]
 article.project-details
   .bound
     section.product-shot
@@ -11,21 +15,16 @@ article.project-details
       a.button href=(p[:link].href) 
         = p[:link].title
         span.icon-chevron 
-    section.checklist.challenges
+    section.checklist.problem
       header.section-header
-        h4: span Challenges
+        h4: span The Problem
         hr
-      ul
-        - p[:challenges].each do |c|
-          li = c.item
-    section.checklist.outcomes
-      header.section-header
-        h4: span Outcomes
-        hr
-      ul
-        - p[:outcomes].each do |o|
-          li = o.item
+      = p[:problem]
   section.gallery
+    .bound
+      header.section-header
+        h4: span Screenshots
+        hr
     span.slider-nav.prev onclick="mySwipe.prev()"
     span.slider-nav.next onclick="mySwipe.next()"
     #slider.swipe
@@ -39,12 +38,11 @@ article.project-details
         li
         li
         li
-
   .bound
-    section.meta
-      dl
-        dt Company:
-        dd= p[:company]
-      dl
-        dt Work:
-        dd= p[:services]
+    section.checklist.outcomes
+      header.section-header
+        h4: span Outcomes
+        hr
+      ul
+        - p[:outcomes].each do |o|
+          li = o.item

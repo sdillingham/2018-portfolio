@@ -21,7 +21,10 @@ page "/",       :layout => :index_layout
 page "work/*",  :layout => :work_layout
 
 data.work.items.each do |project|
-  proxy "/work/#{project[:slug]}.html", "/work/project.html", :locals => { :item => project }, :ignore => true
+  proxy "/work/#{project[:slug]}.html", "/work/project.html", :locals => { 
+    :item => project 
+  }, 
+  :ignore => true
 end
 
 # Per-page layout changes:
@@ -52,11 +55,21 @@ end
 # activate :livereload
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+ helpers do
+  def page_title(site_name, separator = ' – ')
+    local_title = page_heading || current_page.data.title
+    [site_name, local_title].compact.join(separator)
+  end
+
+  def page_heading(title = nil, options = {})
+    if title
+      @page_heading = title
+      content_tag(:h2, title, options)
+    else
+      @page_heading
+    end
+  end
+ end
 
 # Set slim-lang output style
 Slim::Engine.set_default_options :pretty => true

@@ -1,3 +1,7 @@
+---
+title: "Work"
+---
+
 .marquee
   .bound
     h3 I work on websites and mobile apps, specializing in product design, experience strategy, and front-end development.
@@ -9,8 +13,9 @@ section.work-list
     - data.work.items.each do |i|
       article.work-item
         hr
-        h2: a href=(i.slug) = i.title
-        p = i.teaser
+        header
+          h2: a href=(i.slug) = i.title
+          p = i.teaser
         a href="#{i.slug}.html"
           figure
             img src="../images/#{i.thumbnail.src}" alt=(i.thumbnail.caption)

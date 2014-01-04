@@ -3,6 +3,10 @@
 .work {
   padding-top:50px;
 
+    .bound {
+      max-width:55em;
+    }
+
     // Site title
     h1 {
       @extend .marquee-heading;
@@ -168,6 +172,7 @@
   h2 {
     @extend .marquee-heading;
     font-size:2.4em;
+    margin-top:0.2em;
   }
 
   h3 {
@@ -203,7 +208,7 @@
 }
 
 .checklist {
-  &.challenges {
+  &.problem {
     h4 {
       color:$darkGray;
     }
@@ -216,10 +221,12 @@
     }
   }
 
-  ul {
+  ul, p {
     color:$deepGray;
     font-size:1.25em;
-    padding-left:36px;
+  }
+  ul {
+    padding-left:26px;
     li {
       margin-bottom:0.75em;
     }
@@ -229,9 +236,22 @@
 .gallery {
   background:$black;
   overflow:hidden;
-  margin:4em 0;
+  margin:4em 0 2em;
   padding:1em 0;
   position:relative;
+
+  .section-header {
+    padding-top:1em;
+    h4 {
+      span {
+        background:$black;
+      }
+    }
+    hr {
+      background:lighten($black, 15%);
+      top:32%;
+    }
+  }
 
   nav {
     text-align:center;
@@ -317,7 +337,7 @@
 
 
 .meta {
-  margin-bottom:4em;
+  margin-bottom:2em;
   text-align:center;
 
   dl {
@@ -325,11 +345,15 @@
     dd, dt {
       @extend .marquee-heading;
       color:$deepGray;
-      display:inline-block;
-      font-size:1.25em;
+      display:block;
+      font-size:1.1em;
+    }
+    dt {
+      font-size:0.8em;
+      text-transform:uppercase;
     }
     dd {
-      color:$black;
+      color:$lightGray;
       margin-left:2px;
     }
   }

@@ -1,0 +1,55 @@
+// Media Queries for larger screens
+
+@media (min-width:40em) {
+
+  // global header elements
+  h1 {
+    float:left;
+  }
+
+  .work .site-nav {
+    background:transparent;
+    float:right;
+    overflow:visible;
+    position:relative;
+    width:auto;
+    height:auto;
+    h1, .nav-close, hr, h4 {
+      display:none;
+    }
+    ul {
+      float:left;
+      list-style:none;
+      li {
+        float:left;
+        a {
+          color:$deepGray;
+          &.active {
+            &:before {
+              display:none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-toggle {
+    display:none;
+  }
+
+  .work-list {
+
+    .work-item {
+      @include clearfix();
+      header {
+        float:left;
+        width:60%;
+      }
+      > a {
+        float:right;
+        width:33%;
+      }
+    }
+  }
+}

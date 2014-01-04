@@ -4,7 +4,7 @@
       "slug"       : "kpcc-ipad",
       "title"      : "KPCC for iPad",
       "teaser"     : "Product design for KPCC's flagship native tablet app.",
-      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "description": "The flagship iPad app for KPCC, public radio for Southern California. The app positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
       "thumbnail"  : 
         {
           "src"    : "thumb-kpcc-ipad.jpg",
@@ -25,13 +25,7 @@
         },
       "company"    : "KPCC",
       "services"   : "Product strategy, Product design",
-      "challenges"  :
-        [
-          {"item"  : "Build audience recognition that KPCC is more than just radio"},
-          {"item"  : "Design an experience that creates addictive reading habits"},
-          {"item"  : "Make a great listening experience for the public radio our audiences love"},
-          {"item"  : "Deepen the emotional connection with our brand to build increased loyalty/membership"}
-        ],
+      "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned KPCC as a news brand that delivered more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build a product that would draw our audience in with a great listening experience, but also create addictive reading habits. And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
       "outcomes"    :
         [
           {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon"},
@@ -43,20 +37,34 @@
       "slug"       : "half-in-ten",
       "title"      : "Half In Ten",
       "teaser"     : "A redesign of poverty data visualizations for Center for American Progress.",
-      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "description": "The Center for American Progress has been workoing to reduce poverty by 50% in the U.S. by 2020 - a project they call Half in Ten. As part of that effort, CAP needed to rethink the way they visualized povery data to maximize its impact and catalyze action.",
       "thumbnail"  :
         {
           "src"    : "thumb-half-in-ten.jpg",
           "caption": "Poverty data vizualization for halfinten.org"
         },
       "hero_img"   : "img-hero-kpcc-ipad.png",
+      "gallery"  :
+        [
+          {"image"  : "img-kpcc-ipad-1.jpg"},
+          {"image"  : "img-kpcc-ipad-2.jpg"},
+          {"image"  : "img-kpcc-ipad-3.jpg"},
+          {"image"  : "img-kpcc-ipad-4.jpg"}
+        ],
       "link"       :
         {
-          "title"  : "",
-          "href"   : ""
+          "title"  : "test",
+          "href"   : "test"
         },
       "company"    : "Center for American Progress",
-      "services"   : "User interface design" 
+      "services"   : "User interface design",
+      "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned KPCC as a news brand that delivered more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build a product that would draw our audience in with a great listening experience, but also create addictive reading habits. And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
+      "outcomes"    :
+        [
+          {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon"},
+          {"item"  : "Leveraged iPad's canvas to feature edge-to-edge editorial photography"},
+          {"item"  : "Optimized listening experience for public radio fans: users can select their favorite programs, have new episodes automatically added to a queue, and the design across the app is optimized for audio discovery"}
+        ]
     },
     {
       "slug"       : "kpcc-reader",
@@ -78,25 +86,6 @@
       "services"   : "User interface design, front-end development" 
     },
     {
-      "slug"       : "kpcc-newsletters",
-      "title"      : "KPCC Email Newsletters",
-      "teaser"     : "A visual system and front-end solution for mobile-friendly email newsletters.",
-      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
-      "thumbnail"  :
-        {
-          "src"    : "thumb-kpcc-email.jpg",
-          "caption": "Emal newsletters for KPCC"
-        },
-      "hero_img"   : "img-hero-kpcc-ipad.png",
-      "link"       :
-        {
-          "title"  : "",
-          "href"   : ""
-        },
-      "company"    : "KPCC",
-      "services"   : "Design, front-end development" 
-    },
-    {
       "slug"       : "kpcc-redesign",
       "title"      : "KPCC.org Redesign",
       "teaser"     : "A responsive redesign for Southern California Public Radio.",
@@ -114,6 +103,25 @@
         },
       "company"    : "KPCC",
       "services"   : "Product strategy, Product design, front-end development" 
+    },
+    {
+      "slug"       : "kpcc-newsletters",
+      "title"      : "KPCC Email Newsletters",
+      "teaser"     : "A visual system and front-end solution for mobile-friendly email newsletters.",
+      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "thumbnail"  :
+        {
+          "src"    : "thumb-kpcc-email.jpg",
+          "caption": "Emal newsletters for KPCC"
+        },
+      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "link"       :
+        {
+          "title"  : "",
+          "href"   : ""
+        },
+      "company"    : "KPCC",
+      "services"   : "Design, front-end development" 
     },
     {
       "slug"       : "laup-landing-page",

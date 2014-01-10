@@ -23,12 +23,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu:before {
+  content: "\e600";
+}
 .icon-close:before {
   content: "\e601";
 }
 .icon-chevron:before {
   content: "\e602";
 }
-.icon-menu:before {
-  content: "\e600";
+.icon-github:before {
+  content: "\e603";
+}
+.icon-twitter:before {
+  content: "\e604";
 }

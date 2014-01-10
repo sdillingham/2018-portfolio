@@ -2,19 +2,21 @@
 
 .marquee.single-project
   .bound
-    = page_heading p[:title]
-    p.description= p[:description]
-    section.meta
-      dl
-        dt Work
-        dd= p[:services]
+    header
+      = page_heading p[:title]
+      p.description= p[:description]
+      .meta
+        dl
+          dt Responsibilities
+          dd= p[:services]
 article.project-details
   .bound
     section.product-shot
       img src="../images/#{p[:hero_img]}" 
-      a.button href=(p[:link].href) 
-        = p[:link].title
-        span.icon-chevron 
+      - if p[:link].href != ''
+        a.button href=(p[:link].href) 
+          = p[:link].title
+          span.icon-chevron 
     section.checklist.problem
       header.section-header
         h4: span The Problem
@@ -23,7 +25,7 @@ article.project-details
   section.gallery
     .bound
       header.section-header
-        h4: span Screenshots
+        h4: span The Results
         hr
     span.slider-nav.prev onclick="mySwipe.prev()"
     span.slider-nav.next onclick="mySwipe.next()"
@@ -31,7 +33,10 @@ article.project-details
       .swipe-wrap
         - p[:gallery].each do |g|
           div
-            img src="../images/#{g.image}"
+            figure
+              = partial(:img_helper, :locals => { :img => g.image, :alt => g.caption })
+            figcaption
+              p.caption= g.caption
     nav
       ul#position.bullets
         li.on

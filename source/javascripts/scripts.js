@@ -18,19 +18,22 @@ $(document).ready(function() {
   });
 
   // Initialize Swipe.js for galleries
-  window.mySwipe = Swipe(document.getElementById('slider'), {
-    continuous: true,
-    callback: function(pos) {
 
-      var i = bullets.length;
-      while (i--) {
-        bullets[i].className = ' ';
+    // Set vars
+    var bullets = $('#position').children('li');
+
+    window.mySwipe = Swipe(document.getElementById('slider'), {
+      continuous: true,
+      callback: function(pos) {
+
+        var i = bullets.length;
+
+        while (i--) {
+          bullets[i].className = ' ';
+        }
+        
+        bullets[pos].className = 'on';
       }
-      bullets[pos].className = 'on';
-
-    }
-  });
-
-  var bullets = $('#position').children('li');
+    });
 
 });

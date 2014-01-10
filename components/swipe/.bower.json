@@ -19,7 +19,6 @@
     "commit": "ec579c7846acaac2e74d67c00b073e48c19b010d"
   },
   "_source": "git://github.com/bradbirdsall/Swipe.git",
-  "_target": "~2.0.0",
-  "_originalSource": "swipe",
-  "_direct": true
+  "_target": "2.0.0",
+  "_originalSource": "swipe"
 }

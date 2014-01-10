@@ -13,10 +13,24 @@
       "hero_img"   : "img-hero-kpcc-ipad.png",
       "gallery"  :
         [
-          {"image"  : "img-kpcc-ipad-1.jpg"},
-          {"image"  : "img-kpcc-ipad-2.jpg"},
-          {"image"  : "img-kpcc-ipad-3.jpg"},
-          {"image"  : "img-kpcc-ipad-4.jpg"}
+          {
+            "image"      : "img-kpcc-ipad-1",
+            "caption"    : "Users can select their favorite programs and have new episodes automatically added to their queue."
+          },
+          {
+            "image"      : "img-kpcc-ipad-2",
+            "caption"    : "KPCC for iPad adapts to handle many different kinds of media assets that are associated with articles." 
+          },
+          {
+
+            "image"      : "img-kpcc-ipad-3",
+            "caption"    : "Audio is surfaced throughout the app, making it easy to discover, queue and play radio segments and episodes."
+          },
+          {
+
+            "image"      : "img-kpcc-ipad-4",
+            "caption"    : "The app takes full advantage of iPad's canvas to show off the Short List's tightly curated sets of stories and beautiful photography."
+          }
         ],
       "link"       :
         {
@@ -25,7 +39,7 @@
         },
       "company"    : "KPCC",
       "services"   : "Product strategy, Product design",
-      "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned KPCC as a news brand that delivered more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build a product that would draw our audience in with a great listening experience, but also create addictive reading habits. And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
+      "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned it as a news brand that delivered more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build a product that would draw our audience in with a great listening experience, but also create addictive reading habits. And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
       "outcomes"    :
         [
           {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon"},
@@ -46,15 +60,29 @@
       "hero_img"   : "img-hero-kpcc-ipad.png",
       "gallery"  :
         [
-          {"image"  : "img-kpcc-ipad-1.jpg"},
-          {"image"  : "img-kpcc-ipad-2.jpg"},
-          {"image"  : "img-kpcc-ipad-3.jpg"},
-          {"image"  : "img-kpcc-ipad-4.jpg"}
+          {
+            "image"      : "img-kpcc-ipad-1",
+            "caption"    : "Users can select their favorite programs and have new episodes automatically added to their queue."
+          },
+          {
+            "image"      : "img-kpcc-ipad-2",
+            "caption"    : "KPCC for iPad's design adapts to handle many different kinds of media assets that are associated with articles." 
+          },
+          {
+
+            "image"      : "img-kpcc-ipad-3",
+            "caption"    : "Audio is surfaced throughout the app, making it easy to discover, queue and play radio segments and episodes."
+          },
+          {
+
+            "image"      : "img-kpcc-ipad-4",
+            "caption"    : "The app takes full advantage of iPad's canvas to show off the Short List's tightly curated sets of stories and beautiful photography."
+          }
         ],
       "link"       :
         {
-          "title"  : "test",
-          "href"   : "test"
+          "title"  : "",
+          "href"   : ""
         },
       "company"    : "Center for American Progress",
       "services"   : "User interface design",

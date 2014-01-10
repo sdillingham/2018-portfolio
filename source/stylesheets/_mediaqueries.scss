@@ -1,38 +1,162 @@
 // Media Queries for larger screens
 
+// We're on a larger screen, let's use that extra real estate
 @media (min-width:40em) {
 
-  // global header elements
-  h1 {
-    float:left;
-  }
+  .work {
+    padding-top:0;
 
-  .work .site-nav {
-    background:transparent;
-    float:right;
-    overflow:visible;
-    position:relative;
-    width:auto;
-    height:auto;
-    h1, .nav-close, hr, h4 {
-      display:none;
+    // global header elements
+    .global-header {
+      position:relative;
     }
-    ul {
+
+    h1 {
       float:left;
-      list-style:none;
-      li {
+    }
+
+    // display full site nav in the masthead
+    .site-nav {
+      background:transparent;
+      float:right;
+      overflow:visible;
+      position:relative;
+      width:auto;
+      height:auto;
+
+      // hide some costmetic elements we don't need on larger screens  
+      h1, .nav-close, hr, h4 {
+        display:none;
+      }
+
+      ul {
         float:left;
-        a {
-          color:$deepGray;
-          &.active {
-            &:before {
-              display:none;
+        list-style:none;
+        li {
+          float:left;
+          &.home {
+            display:none;
+          }
+          a {
+            color:$deepGray;
+            font-size:1em;
+            margin:18px 0;
+            padding:0 10px;
+            text-transform:uppercase;
+            &:hover {
+              color:$brightAccent;
+            }
+            &.active {
+              &:before {
+                display:none;
+              }
+            }
+            i {
+              display:inline-block;
+              font-size:0.9em;
+              line-height:1em;
+              margin-top:5px;
+            }
+            span {
+              @include hide-text();
             }
           }
         }
       }
     }
+
+    .marquee {
+      @include clearfix();
+      text-align:left;
+
+      header {
+        float:left;
+        width:30em;
+
+        .meta {
+          text-align:left;
+        }
+      }
+    }
+
+    .project-details {
+
+      .product-shot {
+        float:right;
+        margin-top:-21em;
+        position:relative;
+        width:20em;
+
+        .button {
+          position:absolute;
+          bottom:11em;
+          left:-35em;
+          font-size:1em;
+        }
+      }
+
+      .problem {
+        padding:5em 0 1em;
+      }
+    }
+
   }
+
+  .gallery {
+    background:$white;
+
+    .section-header {
+      h4 {
+        color:$darkGray;
+        span {
+          background:$white;
+        }
+      }
+      hr {
+        background:$paleGray;
+      }
+    }
+
+    nav .bullets {
+      li {
+        border-color:$lightGray;
+        &.on {
+          background:$deepGray;
+        }
+      }
+    }
+  }
+
+  .swipe {
+    max-width:880px;
+  }
+
+    .swipe-wrap > div {
+      padding:0;
+
+      figcaption {
+        margin:0;
+      }
+    }
+
+  .no-touch {
+
+    .slider-nav {
+      &.next {
+        border-color:$deepGray;
+        &:after {
+          border-left-color:$deepGray;
+        }
+      }
+      &.prev {
+        border-color:$deepGray;
+        &:after {
+          border-right-color:$deepGray;
+        }
+      }
+    }
+  }
+
 
   .nav-toggle {
     display:none;
@@ -42,10 +166,12 @@
 
     .work-item {
       @include clearfix();
+
       header {
         float:left;
         width:60%;
       }
+
       > a {
         float:right;
         width:33%;

@@ -8,7 +8,7 @@ body {
 }
 
 .marquee-heading {
-  font-family:"freight-sans-pro", "Avenir Next," Helvatica, "Droid Sans", sans-serif; 
+  font-family:"freight-sans-pro", "Avenir Next", Helvatica, "Droid Sans", sans-serif; 
 }
 
 // Images
@@ -28,6 +28,9 @@ a {
   color:$white;
   display:inline-block;
   padding:10px;
+  &:hover {
+    background:saturate($brightAccentAlt, 30%);
+  }
 }
 
 hr {

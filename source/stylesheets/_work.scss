@@ -74,6 +74,7 @@
             padding:10px;
             position:relative;
             text-decoration:none;
+            i { display:none; }
             &:active {
               background:$black;
               color:$brightAccent;
@@ -294,6 +295,26 @@
     width:100%;
     padding:0 1em;
     position: relative;
+
+    figure  {
+      position:relative;
+    }
+
+    figcaption {
+      background:rgba($black, 0.85);
+      color:$paleGray;
+      font-size:0.9em;
+      margin:0 10px;
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+
+      p {
+        @extend .marquee-heading;
+        padding:0 10px;
+      }
+    }
   }
 
   .no-touch .slider-nav {

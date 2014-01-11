@@ -1,11 +1,16 @@
 $(document).ready(function() {
 
+  //
   // Toggle menu visibility for smaller screens
+  //
   $('.nav-toggle, .nav-close').click(function() {
     $('.site-nav').toggleClass("active");
   });
 
+
+  //
   // Initialize Swipe.js for galleries
+  //
 
     // Set vars
     var bullets = $('#position').children('li');
@@ -24,9 +29,12 @@ $(document).ready(function() {
       }
     });
   
-  /**
-   * Cache
-   */
+  
+  //
+  // Blurry Image Scrolling
+  //
+
+  // Cache
   var $content = $('.img-src')
     , $blur    = $('.img-src.color')
     , wHeight  = $(window).height();
@@ -35,9 +43,7 @@ $(document).ready(function() {
     wHeight = $(window).height();
   });
 
-  /**
-   * requestAnimationFrame Shim 
-   */
+  // requestAnimationFrame Shim 
   window.requestAnimFrame = (function()
   {
     return  window.requestAnimationFrame       ||
@@ -48,9 +54,7 @@ $(document).ready(function() {
             };
   })();
 
-  /**
-   * Scroller
-   */
+  // Scroller
   function Scroller()
   {
     this.latestKnownScrollY = 0;
@@ -58,24 +62,18 @@ $(document).ready(function() {
   }
 
   Scroller.prototype = {
-    /**
-     * Initialize
-     */
+    // Initialize
     init: function() {
       window.addEventListener('scroll', this.onScroll.bind(this), false);
     },
 
-    /**
-     * Capture Scroll
-     */
+    // Capture Scroll
     onScroll: function() {
       this.latestKnownScrollY = window.scrollY;
       this.requestTick();
     },
 
-    /**
-     * Request a Tick
-     */
+    // Request a Tick
     requestTick: function() {
       if( !this.ticking ) {
         window.requestAnimFrame(this.update.bind(this));
@@ -83,16 +81,12 @@ $(document).ready(function() {
       this.ticking = true;
     },
 
-    /**
-     * Update.
-     */
+    // Update
     update: function() {
       var currentScrollY = this.latestKnownScrollY;
       this.ticking       = false;
       
-      /**
-       * Do The Dirty Work Here
-       */
+      // Do The Dirty Work Here
       var blurScroll = currentScrollY * 4;
       
       $blur.css({
@@ -101,9 +95,7 @@ $(document).ready(function() {
     }
   };
 
-  /**
-   * Attach!
-   */
+  // Attach
   var scroller = new Scroller();  
   scroller.init();
 

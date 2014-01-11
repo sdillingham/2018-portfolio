@@ -5,18 +5,6 @@ $(document).ready(function() {
     $('.site-nav').toggleClass("active");
   });
 
-  // Fade in color image and fix position of hero image as user scrolls
-  $(window).scroll(function(e) {
-    var s = $(window).scrollTop(),
-        opacityVal = (s / 150.0);
-
-    // increase opacity for overlay image to create transition effect
-    $('.color').css('opacity', opacityVal); 
-
-    // Add fixed position hero image if we're not on a touchscreen device
-    $('.no-touch .index .img-src').css('-webkit-transform', 'translateY(' + s + 'px)');
-  });
-
   // Initialize Swipe.js for galleries
 
     // Set vars
@@ -35,5 +23,89 @@ $(document).ready(function() {
         bullets[pos].className = 'on';
       }
     });
+  
+  /**
+   * Cache
+   */
+  var $content = $('.img-src')
+    , $blur    = $('.img-src.color')
+    , wHeight  = $(window).height();
+
+  $(window).on('resize', function(){
+    wHeight = $(window).height();
+  });
+
+  /**
+   * requestAnimationFrame Shim 
+   */
+  window.requestAnimFrame = (function()
+  {
+    return  window.requestAnimationFrame       ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame    ||
+            function( callback ){
+              window.setTimeout(callback, 1000 / 60);
+            };
+  })();
+
+  /**
+   * Scroller
+   */
+  function Scroller()
+  {
+    this.latestKnownScrollY = 0;
+    this.ticking            = false;
+  }
+
+  Scroller.prototype = {
+    /**
+     * Initialize
+     */
+    init: function() {
+      window.addEventListener('scroll', this.onScroll.bind(this), false);
+    },
+
+    /**
+     * Capture Scroll
+     */
+    onScroll: function() {
+      this.latestKnownScrollY = window.scrollY;
+      this.requestTick();
+    },
+
+    /**
+     * Request a Tick
+     */
+    requestTick: function() {
+      if( !this.ticking ) {
+        window.requestAnimFrame(this.update.bind(this));
+      }
+      this.ticking = true;
+    },
+
+    /**
+     * Update.
+     */
+    update: function() {
+      var currentScrollY = this.latestKnownScrollY;
+      this.ticking       = false;
+      
+      /**
+       * Do The Dirty Work Here
+       */
+      var blurScroll = currentScrollY * 4;
+      
+      $blur.css({
+        'opacity' : blurScroll / wHeight
+      });
+    }
+  };
+
+  /**
+   * Attach!
+   */
+  var scroller = new Scroller();  
+  scroller.init();
 
 });
+

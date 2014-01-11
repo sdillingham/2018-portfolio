@@ -17,7 +17,6 @@
     "commit": "d920123cb974f7e193220fe59d3071aa2e84d118"
   },
   "_source": "git://github.com/scottjehl/picturefill.git",
-  "_target": "~1.2.1",
-  "_originalSource": "picturefill",
-  "_direct": true
+  "_target": "1.2.1",
+  "_originalSource": "picturefill"
 }

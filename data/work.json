@@ -10,7 +10,7 @@
           "src"    : "thumb-kpcc-ipad.jpg",
           "caption": "KPCC for iPad"
         },
-      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "hero_img"   : "img-hero-kpcc-ipad",
       "gallery"  :
         [
           {
@@ -39,7 +39,7 @@
         },
       "company"    : "KPCC",
       "services"   : "Product strategy, Product design",
-      "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned it as a news brand that delivered more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build a product that would draw our audience in with a great listening experience, but also create addictive reading habits. And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
+      "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned it as a news brand that delivered more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build a product that would draw our audience in with a great listening experience, but also create addictive reading habits.</p> <p>And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
       "outcomes"    :
         [
           {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon"},

@@ -1,5 +1,22 @@
 // Media Queries for larger screens
 
+// For those 'in-between' screens
+@media (min-width:40em) and (max-width:49.99999em) {
+  .swipe-wrap {
+    > div {
+      figure {
+        margin:0 auto;
+        max-width:540px;
+        text-align:center;
+        img {
+          display:block;
+          margin:0 auto;
+        }
+      }
+    }
+  }
+}
+
 // We're on a larger screen, let's use that extra real estate
 @media (min-width:40em) {
 
@@ -102,6 +119,13 @@
 
   }
 
+  .checklist {
+    p, ul {
+      margin-right:4em;
+      margin-left:4em;
+    }
+  }
+
   .gallery {
     background:$white;
 
@@ -142,6 +166,8 @@
   .no-touch {
 
     .slider-nav {
+      background:$white;
+      opacity:0.25;
       &.next {
         border-color:$deepGray;
         &:after {
@@ -175,6 +201,33 @@
       > a {
         float:right;
         width:33%;
+      }
+    }
+  }
+}
+
+// Tweakpoint between max-width and medium screens
+@media (min-width:40em) and (max-width:63.25em) {
+  .work {
+    .marquee {
+      header {
+        float:none;
+        width:auto;
+      }
+    }
+    .project-details {
+      .product-shot {
+        float:none;
+        margin-top:0;
+        width:auto;
+        .button {
+          display:block;
+          font-size:1.4em;
+          margin:0 auto;
+          position:relative;
+          bottom:auto;
+          width:14em;
+        }
       }
     }
   }

@@ -137,9 +137,10 @@
   position:relative;
 
   h4 {
+    @extend .marquee-heading;
     color:$brightAccentAlt;
     font-size:1.6em;
-    font-weight:400;
+    font-weight:700;
     margin:0;
     position:relative;
     text-align:center;
@@ -218,12 +219,12 @@
   .section-header {
     padding-bottom:1em;
     hr {
-      top:58%;
+      top:61%;
     }
   }
 
   ul, p {
-    color:$deepGray;
+    color:$darkGray;
     font-size:1.25em;
   }
   ul {
@@ -237,7 +238,7 @@
 .gallery {
   background:$black;
   overflow:hidden;
-  margin:4em 0 2em;
+  margin:3em 0 2em;
   padding:1em 0;
   position:relative;
 
@@ -250,7 +251,7 @@
     }
     hr {
       background:lighten($black, 15%);
-      top:32%;
+      top:30%;
     }
   }
 
@@ -304,7 +305,7 @@
       background:rgba($black, 0.85);
       color:$paleGray;
       font-size:0.9em;
-      margin:0 10px;
+      margin:0;
       position:absolute;
       left:0;
       right:0;
@@ -318,15 +319,17 @@
   }
 
   .no-touch .slider-nav {
+    background:rgba(0,0,0,0.4);
     border:2px solid $white;
     border-radius:22px;
     display:block;
     margin-top:-22px;
-    opacity:0.15;
+    opacity:0.65;
     position:absolute;
     width:44px;
     height:44px;
     top:50%;
+    z-index:400;
     &:hover {
       cursor:pointer;
       opacity:1;

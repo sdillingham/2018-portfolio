@@ -3,7 +3,7 @@
     {
       "slug"       : "kpcc-ipad",
       "title"      : "KPCC for iPad",
-      "teaser"     : "Product design for KPCC's flagship native tablet app.",
+      "teaser"     : "Product design for KPCC's native tablet app.",
       "description": "The flagship iPad app for KPCC, public radio for Southern California. The app positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
       "thumbnail"  : 
         {
@@ -19,15 +19,13 @@
           },
           {
             "image"      : "img-kpcc-ipad-2",
-            "caption"    : "KPCC for iPad adapts to handle many different kinds of media assets that are associated with articles." 
+            "caption"    : "Articles look their best on KPCC for iPad, with gorgeous images and elegant typography. Slideshows, video and audio are always just a tap away." 
           },
           {
-
             "image"      : "img-kpcc-ipad-3",
             "caption"    : "Audio is surfaced throughout the app, making it easy to discover, queue and play radio segments and episodes."
           },
           {
-
             "image"      : "img-kpcc-ipad-4",
             "caption"    : "The app takes full advantage of iPad's canvas to show off the Short List's tightly curated sets of stories and beautiful photography."
           }
@@ -42,9 +40,9 @@
       "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned it as a news brand that delivered more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build a product that would draw our audience in with a great listening experience, but also create addictive reading habits.</p> <p>And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
       "outcomes"    :
         [
-          {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon"},
-          {"item"  : "Leveraged iPad's canvas to feature edge-to-edge editorial photography"},
-          {"item"  : "Optimized listening experience for public radio fans: users can select their favorite programs, have new episodes automatically added to a queue, and the design across the app is optimized for audio discovery"}
+          {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon."},
+          {"item"  : "KPCC for iPad is the first product to succeessfully switch KPCC's loyal listeners to readers. Users read an average of more thant 2 stories per session, and engage in reading seven times more often than listening."},
+          {"item"  : "Built a product that users love: 94% 5-star ratings in the first 30 days, and more than 50% of active users use the app multiple times per day."}
         ]
     },
     {
@@ -57,26 +55,26 @@
           "src"    : "thumb-half-in-ten.jpg",
           "caption": "Poverty data vizualization for halfinten.org"
         },
-      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "hero_img"   : "img-hero-halfinten",
       "gallery"  :
         [
           {
-            "image"      : "img-kpcc-ipad-1",
-            "caption"    : "Users can select their favorite programs and have new episodes automatically added to their queue."
+            "image"      : "img-halfinten-1",
+            "caption"    : "Caption"
           },
           {
-            "image"      : "img-kpcc-ipad-2",
-            "caption"    : "KPCC for iPad's design adapts to handle many different kinds of media assets that are associated with articles." 
-          },
-          {
-
-            "image"      : "img-kpcc-ipad-3",
-            "caption"    : "Audio is surfaced throughout the app, making it easy to discover, queue and play radio segments and episodes."
+            "image"      : "img-halfinten-2",
+            "caption"    : "Caption" 
           },
           {
 
-            "image"      : "img-kpcc-ipad-4",
-            "caption"    : "The app takes full advantage of iPad's canvas to show off the Short List's tightly curated sets of stories and beautiful photography."
+            "image"      : "img-halfinten-3",
+            "caption"    : "Caption"
+          },
+          {
+
+            "image"      : "img-halfinten-4",
+            "caption"    : "Caption"
           }
         ],
       "link"       :
@@ -85,33 +83,61 @@
           "href"   : ""
         },
       "company"    : "Center for American Progress",
-      "services"   : "User interface design",
-      "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned KPCC as a news brand that delivered more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build a product that would draw our audience in with a great listening experience, but also create addictive reading habits. And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
+      "services"   : "UI Design, Copywriting",
+      "problem"    : "<p>Problem Description</p>",
       "outcomes"    :
         [
-          {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon"},
-          {"item"  : "Leveraged iPad's canvas to feature edge-to-edge editorial photography"},
-          {"item"  : "Optimized listening experience for public radio fans: users can select their favorite programs, have new episodes automatically added to a queue, and the design across the app is optimized for audio discovery"}
+          {"item"  : "Outcome 1"},
+          {"item"  : "Outcome 2"},
+          {"item"  : "Outcome 3"}
         ]
     },
     {
       "slug"       : "kpcc-reader",
       "title"      : "KPCC Reader",
       "teaser"     : "A fast, mobile-first, infinite-scroll news experience for KPCC.",
-      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "description": "Description",
       "thumbnail"  :
         {
           "src"    : "thumb-kpcc-reader.jpg",
           "caption": "KPCC Reader - a mobile-first reading experience"
         },
-      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "hero_img"   : "img-hero-kpcc-reader",
+      "gallery"  :
+        [
+          {
+            "image"      : "img-kpcc-reader-1",
+            "caption"    : "Caption"
+          },
+          {
+            "image"      : "img-kpcc-reader-2",
+            "caption"    : "Caption" 
+          },
+          {
+
+            "image"      : "img-kpcc-reader-3",
+            "caption"    : "Caption"
+          },
+          {
+
+            "image"      : "img-kpcc-reader-4",
+            "caption"    : "Caption"
+          }
+        ],
       "link"       :
         {
-          "title"  : "View KPCC Reader",
+          "title"  : "Visit KPCC Reader",
           "href"   : "http://reader.scprdev.org"
         },
       "company"    : "KPCC",
-      "services"   : "User interface design, front-end development" 
+      "services"   : "User interface design, front-end development",
+      "problem"    : "<p>Problem Description</p>",
+      "outcomes"    :
+        [
+          {"item"  : "Outcome 1"},
+          {"item"  : "Outcome 2"},
+          {"item"  : "Outcome 3"}
+        ]
     },
     {
       "slug"       : "kpcc-redesign",
@@ -153,41 +179,96 @@
     },
     {
       "slug"       : "laup-landing-page",
-      "title"      : "LAUP marketing landing page",
+      "title"      : "LAUP Marketing Landing Page",
       "teaser"     : "A premium advertising experience for one of KPCC's corporate underwriters.",
-      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
-      "thumbnail"  :
+      "description": "As part of an exclusive sponsorship of KPCC's education coverage, the responsive landing page for LA Universal Preschool goes beyond banner ads to deliver a premium experience for KPCC's audience and advertiser.",
+      "thumbnail"  : 
         {
           "src"    : "thumb-laup.jpg",
           "caption": "LAUP corporate underwriter landing page"
         },
-      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "hero_img"   : "img-hero-laup",
+      "gallery"  :
+        [
+          {
+            "image"      : "img-laup-1",
+            "caption"    : "After making an initial emotional impact, the landing page encourages users to launch a video that explains LAUP's values and mission."
+          },
+          {
+            "image"      : "img-laup-2",
+            "caption"    : "The landing page draws users through LAUP's story, touching down on an email signup form so LAUP can communicate directly with KPCC's audience." 
+          },
+          {
+
+            "image"      : "img-laup-3",
+            "caption"    : "Cinematic background images bolster the copywriting and reinforce LAUP's focus on improving the educational futures of young children in Los Angeles."
+          },
+          {
+
+            "image"      : "img-laup-4",
+            "caption"    : "The landing page is fully responsive, giving LAUP high-quality impressions across all devices."
+          }
+        ],
       "link"       :
         {
           "title"  : "View LAUP landing page",
           "href"   : "http://underwriting.herokuapp.com"
         },
-      "company"    : "KPCC",
-      "services"   : "User interface design, front-end development" 
+      "company"    : "KPCC, LAUP",
+      "services"   : "UI Design, Front-end Development",
+      "problem"    : "<p>Like most news organizations, KPCC is trying to go beyond banner ads to find new forms of digital ad revenue that are sustainable, lucrative, and provide a better user experience. So when LA Universal Preschool expressed interest in being the exclusive sponsor of KPCC's education coverage for an entire year, we knew we needed to design a solution that gave LAUP unique exposure, while remaining true to KPCC's member-supported, mission-driven values and ethics.</p><p>Finding the right solution required us to move into uncharted territory, both for KPCC and LAUP. Ensuring advertising impact while preserving the clear distinction between advertising and editorial required close collaboration with KPCC's editorial leadership and the corporate underwriter.</p>",
+      "outcomes"    :
+        [
+          {"item"  : "Designed a bespoke landing page as a destination for LAUP's campaign, creating unique ad inventory and enabling KPCC to secure premium sponsorship revenue."},
+          {"item"  : "Landing page includes an email signup conversation point, giving LAUP a direct way to engage with users that goes beyond impressions and clickthrough."}
+        ]
     },
     {
       "slug"       : "highlander-orientation",
-      "title"      : "Highlander Orientation Redesign",
-      "teaser"     : "A UCR web app that guides incoming students through orientation registration.",
-      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "title"      : "Highlander New Student Orientation",
+      "teaser"     : "A UC Riverside webapp that guides incoming students through orientation registration.",
+      "description": "UC Riverside requires all incoming students to attend Orientation, preparing them for the transition to college. To dramatically simplify a complex signup process, UCR needed a complete redesign of their online registration system.",
       "thumbnail"  :
         {
           "src"    : "thumb-highlander-orientation.jpg",
           "caption": "UCR's Highlander New Student Orientation"
         },
-      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "hero_img"   : "img-hero-ucr-orientation",
+      "gallery"  :
+        [
+          {
+            "image"      : "img-ucr-orientation-1",
+            "caption"    : "Highlander Orientation offers different sessions tailored to specific groups of students. The redesigned webapp makes it easy for students to chose the right session."
+          },
+          {
+            "image"      : "img-ucr-orientation-2",
+            "caption"    : "The form is broken up into multiple steps with discrete sections, contextual tips and validation, making a long and complex process seem less overwhelming." 
+          },
+          {
+
+            "image"      : "img-ucr-orientation-3",
+            "caption"    : "Getting students to read the fine print about the Orientation experience is challenging. Conversational copywriting and good IA help bring important details to the fore."
+          },
+          {
+
+            "image"      : "img-ucr-orientation-4",
+            "caption"    : "Detailed wireframes were created to model the registration form's complex flows and decision logic, from signin to payment."
+          }
+        ],
       "link"       :
         {
           "title"  : "",
           "href"   : ""
         },
-      "company"    : "KPCC",
-      "services"   : "Product strategy, User interface design" 
+      "company"    : "UC Riverside",
+      "services"   : "Product Strategy, UI Design, Copywriting",
+      "problem"    : "<p>Navigating the college admissions process is downright frightening for many wide-eyed high school seniors. At UC Riverside, we knew that our in-person New Student Orientation sessions were of the most confusing parts of the process.</p><p>Deciding what session to attend, registering your parents for their own information sessions, reading the fine print, paying your fees, knowing what to bring for your overnight stay on campus...many students wound up arriving unprepared, or not attending Orientation at all.</p><p>UCR found that students who attend Orientation were far less likely to struggle during their freshman year, and also less likely to drop out. Radically simplifying the online Orientation registration process was deemed critical to the success of the program: UCR wants to create positive feelings in incoming students during these early touchpoints as students begin to form impressions of their new home.",
+      "outcomes"    :
+        [
+          {"item"  : "Designed the entire user journey through the registration process, from communication plans and email notifications down to every field in the multi-step form. Used user-centered approaches to shifted the design focus away from UCR's business process and toward students' needs."},
+          {"item"  : "Reviewed call center databases and identified the most common student pain points. Used this data to guide UI refinements to reduce confusion and guide students successfully through the registration form."},
+          {"item"  : "Introduced new visual design to bring increased clarity and structure to our webapps. The app's design focuses on making users feel confident and in control of the registration process, and subtly reinforces UCR's brand."}
+        ]
     }
   ]
 }

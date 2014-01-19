@@ -3,6 +3,7 @@ activate :bourbon
 activate :neat
 activate :imageoptim
 activate :livereload
+activate :directory_indexes
 
 ###
 # Compass

@@ -83,12 +83,10 @@
     }
 
     .marquee {
-      @include clearfix();
-      text-align:left;
-
       header {
-        float:left;
-        width:30em;
+        float:none;
+        width:auto;
+        text-align:left;
 
         .meta {
           text-align:left;
@@ -99,16 +97,17 @@
     .project-details {
 
       .product-shot {
-        float:right;
-        margin-top:-21em;
-        position:relative;
-        width:20em;
+        float:none;
+        margin-top:0;
+        width:auto;
 
         .button {
-          position:absolute;
-          bottom:11em;
-          left:-35em;
-          font-size:1em;
+          display:block;
+          font-size:1.4em;
+          margin:0 auto;
+          position:relative;
+          bottom:auto;
+          width:14em;
         }
       }
 
@@ -201,33 +200,6 @@
       > a {
         float:right;
         width:33%;
-      }
-    }
-  }
-}
-
-// Tweakpoint between max-width and medium screens
-@media (min-width:40em) and (max-width:63.25em) {
-  .work {
-    .marquee {
-      header {
-        float:none;
-        width:auto;
-      }
-    }
-    .project-details {
-      .product-shot {
-        float:none;
-        margin-top:0;
-        width:auto;
-        .button {
-          display:block;
-          font-size:1.4em;
-          margin:0 auto;
-          position:relative;
-          bottom:auto;
-          width:14em;
-        }
       }
     }
   }

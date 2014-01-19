@@ -162,20 +162,47 @@
       "slug"       : "kpcc-newsletters",
       "title"      : "KPCC Email Newsletters",
       "teaser"     : "A visual system and front-end solution for mobile-friendly email newsletters.",
-      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "description": "A visual overhaul and responsive redesign of all KPCC's email templates, along with a front-end project that makes HTML emails a pleasure to code.",
       "thumbnail"  :
         {
           "src"    : "thumb-kpcc-email.jpg",
           "caption": "Emal newsletters for KPCC"
         },
-      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "hero_img"   : "img-hero-laup",
+      "gallery"  :
+        [
+          {
+            "image"      : "img-laup-1",
+            "caption"    : "After making an initial emotional impact, the landing page encourages users to launch a video that explains LAUP's values and mission."
+          },
+          {
+            "image"      : "img-laup-2",
+            "caption"    : "The landing page draws users through LAUP's story, touching down on an email signup form so LAUP can communicate directly with KPCC's audience." 
+          },
+          {
+
+            "image"      : "img-laup-3",
+            "caption"    : "Cinematic background images bolster the copywriting and reinforce LAUP's focus on improving the educational futures of young children in Los Angeles."
+          },
+          {
+
+            "image"      : "img-laup-4",
+            "caption"    : "The landing page is fully responsive, giving LAUP high-quality impressions across all devices."
+          }
+        ],
       "link"       :
         {
-          "title"  : "",
-          "href"   : ""
+          "title"  : "View the code on Github",
+          "href"   : "https://github.com/SCPR/kpcc-email-newsletters"
         },
       "company"    : "KPCC",
-      "services"   : "Design, front-end development" 
+      "services"   : "Design, Front-end Development",
+      "problem"    : "<p>Email is a critical channel for KPCC to communicate with its audience. From fundraising to breaking news, email help KPCC fulfill its editorial mission and sustain its business.</p><p>With more than a half-million emails sent each month and over 40% of email opens happening on mobile devices, KPCC needed a complete overhaul of its email design system. The system needed to be modular, flexible and on-brand while also being responsive.</p><p>In addition to the design challenges of the project, anyone who's had to code HTML email will tell you it's painful. Very painful. Between gnarly nested tables and inline CSS, any sane developer would run screaming.</p>",
+      "outcomes"    :
+        [
+          {"item"  : "Created a design system of reusable components and patterns that empowered email authors to assemble custom email campaigns."},
+          {"item"  : "Created a project with a sane front-end development workflow (SCSS, Slim, helpers), along with a build process to inline CSS and generate battle-tested HTML email that's ready to send."}
+        ]
     },
     {
       "slug"       : "laup-landing-page",
@@ -216,7 +243,7 @@
         },
       "company"    : "KPCC, LAUP",
       "services"   : "UI Design, Front-end Development",
-      "problem"    : "<p>Like most news organizations, KPCC is trying to go beyond banner ads to find new forms of digital ad revenue that are sustainable, lucrative, and provide a better user experience. So when LA Universal Preschool expressed interest in being the exclusive sponsor of KPCC's education coverage for an entire year, we knew we needed to design a solution that gave LAUP unique exposure, while remaining true to KPCC's member-supported, mission-driven values and ethics.</p><p>Finding the right solution required us to move into uncharted territory, both for KPCC and LAUP. Ensuring advertising impact while preserving the clear distinction between advertising and editorial required close collaboration with KPCC's editorial leadership and the corporate underwriter.</p>",
+      "problem"    : "<p>Like most news organizations, KPCC is trying to go beyond banner ads to find new forms of digital ad revenue that are sustainable, lucrative, and provide a better user experience.</p> <p>So when LA Universal Preschool expressed interest in being the exclusive sponsor of KPCC's education coverage for an entire year, we knew we needed to design a solution that gave LAUP unique exposure, while remaining true to KPCC's member-supported, mission-driven values and ethics.</p><p>Finding the right solution required us to move into uncharted territory, both for KPCC and LAUP. Ensuring advertising impact while preserving the clear distinction between advertising and editorial required close collaboration with KPCC's editorial leadership and the corporate underwriter.</p>",
       "outcomes"    :
         [
           {"item"  : "Designed a bespoke landing page as a destination for LAUP's campaign, creating unique ad inventory and enabling KPCC to secure premium sponsorship revenue."},

@@ -1,6 +1,5 @@
 require "slim"
 activate :bourbon
-activate :neat
 activate :imageoptim
 activate :livereload
 activate :directory_indexes
@@ -74,6 +73,9 @@ end
 
 # Set slim-lang output style
 Slim::Engine.set_default_options :pretty => true
+
+# Enable Slim templates to use frontmatter
+set :frontmatter_extensions, %w(.html .slim)
 
 set :css_dir, 'stylesheets'
 

@@ -15,7 +15,7 @@ section.work-list
         hr
         header
           h2: a href="#{i.slug}/" = i.title
-          p = i.teaser
+          p = i.description
         a href="#{i.slug}/"
           figure
             img src="../images/#{i.thumbnail.src}" alt=(i.thumbnail.caption)

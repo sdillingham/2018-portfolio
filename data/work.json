@@ -60,21 +60,21 @@
         [
           {
             "image"      : "img-halfinten-1",
-            "caption"    : "Caption"
+            "caption"    : "Breakdowns by state allow you to see at a glance how your state compares to the rest of the U.S. Carefully selected icons add impact to each indicator."
           },
           {
             "image"      : "img-halfinten-2",
-            "caption"    : "Caption" 
+            "caption"    : "Informmation priorities on each page were carefully considered so that top-line numbers are clear at a glance on any device." 
           },
           {
 
             "image"      : "img-halfinten-3",
-            "caption"    : "Caption"
+            "caption"    : "A new landing page concept was created to give users clear points of entry and provide additional context and narrative in support of Half In Ten's misison."
           },
           {
 
             "image"      : "img-halfinten-4",
-            "caption"    : "Caption"
+            "caption"    : "As the user reaches the end of the page, clear calls to action and resources get advocates engaged in the fight to reduce poverty in their city or state."
           }
         ],
       "link"       :
@@ -84,15 +84,15 @@
         },
       "company"    : "Center for American Progress",
       "services"   : "UI Design, Copywriting",
-      "problem"    : "<p>Problem Description</p>",
+      "problem"    : "<p>The Center for American Progress has been workoing to reduce poverty by 50% in the U.S. by 2020 - a project they call Half in Ten. As part of that effort, CAP needed to rethink the way they visualized povery data to maximize its impact and catalyze action.</p><p>Half In Ten's leadership team identified a clear set of challenges. Their current visualizations were hard to follow and didn't tell a clear story. Also, while the charts and graphs looked good on desktops, they needed a solution that commiunicated poverty data with equal impact across all devices and screens. And finally, they wanted to use their data to reinforce the powerful story of poverty in the U.S., and catalyze users to act.</p>",
       "outcomes"    :
         [
-          {"item"  : "Outcome 1"},
-          {"item"  : "Outcome 2"},
-          {"item"  : "Outcome 3"}
+          {"item"  : "Through improved balance, heirarchy and copywriting, redesigned pages help the data speak more powerfully by bringing much-needed clarity in the relationships between data points."},
+          {"item"  : "Wireframes were created for large and small screens, reimagining complex charts for effective display on smartphones and other personal devices."},
+          {"item"  : "The new design increases the visibility of state-level breakdowns, giving users a better sense of how their state is trending over time, and compared to other states in the U.S."}
         ]
     },
-    {
+/*    {
       "slug"       : "kpcc-reader",
       "title"      : "KPCC Reader",
       "teaser"     : "A fast, mobile-first, infinite-scroll news experience for KPCC.",
@@ -138,25 +138,51 @@
           {"item"  : "Outcome 2"},
           {"item"  : "Outcome 3"}
         ]
-    },
+    },*/
     {
       "slug"       : "kpcc-redesign",
       "title"      : "KPCC.org Redesign",
       "teaser"     : "A responsive redesign for Southern California Public Radio.",
-      "description": "The flagship iPad app for KPCC, public radio for Southern California. KPCC for iPad positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "description": "KPCC is the second largest public radio station in the U.S., and the second-largest newsroom in Los Angeles. To serve the daily news needs of a major metropolis, KPCC's website was redesigned responsively and rebuilt from the ground up.",
       "thumbnail"  :
         {
           "src"    : "thumb-kpcc-responsive.jpg",
           "caption": "KPCC.org homepage"
         },
-      "hero_img"   : "img-hero-kpcc-ipad.png",
+      "hero_img"   : "img-hero-kpcc-redesign",
+      "gallery"  :
+        [
+          {
+            "image"      : "img-kpcc-redesign-1",
+            "caption"    : "In addition to supporting a large-scale daily newsgathering operation, great care was also taken to shine a spotlight on KPCC's live community events platform."
+          },
+          {
+            "image"      : "img-kpcc-redesign-2",
+            "caption"    : "KPCC's homepage not only responds to the daily news cycle, but also can adapt to focus on major events like the results of the 2012 presidential election." 
+          },
+          {
+            "image"      : "img-kpcc-redesign-3",
+            "caption"    : "On small screens, an unobtrusive off-canvas navigation provides access to all of KPCC's news and program content, as well as a point of entry to KPCC's donation form."
+          },
+          {
+            "image"      : "img-kpcc-redesign-4",
+            "caption"    : "Across the site, multiple content types are presented in a unified interface: blog posts, radio segments, live events and visual journalism all coexist on thei KPCC homepage."
+          }
+        ],
       "link"       :
         {
           "title"  : "View KPCC.org",
           "href"   : "http://www.scpr.org"
         },
       "company"    : "KPCC",
-      "services"   : "Product strategy, Product design, front-end development" 
+      "services"   : "Product strategy, Product design, front-end development",
+      "problem"    : "<p>My first major project when I arrived at KPCC was to rethink and redesign KPCC's website from the ground up. The orgnaization was in the midst of transformational change, attempting to merge its radio and digital editorial operations. It was also growing like crazy, doubling the size of its newsroom in less than a year.</p><p>As we embarked on the project in late 2011, KPCC's goals were manifold: it needed to refresh its digital brand, serve audiences across devices, continue to serve loyal radio listeners, and establish itself as a premiere news brand in Los Angeles.</p>",
+      "outcomes"    :
+        [
+          {"item"  : "By focusing on de-siloing the many types of content KPCC publishes, and designing to support a large volume of daily journalism, the redesign bolstered KPCC.org as it grew from a half-million monthly visits to over 1 million monthly visits in 12 months."},
+          {"item"  : "Launched in May 2012, KPCC's responsive design positioned it to support a proliferation of smartphones and tablets. Total share of traffic coming from mobile devices has increased from 20% (May '12) to 42% (Dec '13)."},
+          {"item"  : "The first public media organization to launch a responsive website, KPCC.org received numerous national design awards from the journalism and publishing industry."}
+        ]
     },
     {
       "slug"       : "kpcc-newsletters",
@@ -168,26 +194,26 @@
           "src"    : "thumb-kpcc-email.jpg",
           "caption": "Emal newsletters for KPCC"
         },
-      "hero_img"   : "img-hero-laup",
+      "hero_img"   : "img-hero-kpcc-emails",
       "gallery"  :
         [
           {
-            "image"      : "img-laup-1",
-            "caption"    : "After making an initial emotional impact, the landing page encourages users to launch a video that explains LAUP's values and mission."
+            "image"      : "img-kpcc-emails-1",
+            "caption"    : "KPCC's email newsletters were redesigned and coded from scratch to ensure they look amazing on mobile devices."
           },
           {
-            "image"      : "img-laup-2",
-            "caption"    : "The landing page draws users through LAUP's story, touching down on an email signup form so LAUP can communicate directly with KPCC's audience." 
-          },
-          {
-
-            "image"      : "img-laup-3",
-            "caption"    : "Cinematic background images bolster the copywriting and reinforce LAUP's focus on improving the educational futures of young children in Los Angeles."
+            "image"      : "img-kpcc-emails-2",
+            "caption"    : "Images and typography are responsive and scale up to larger screens and desktop email clients." 
           },
           {
 
-            "image"      : "img-laup-4",
-            "caption"    : "The landing page is fully responsive, giving LAUP high-quality impressions across all devices."
+            "image"      : "img-kpcc-emails-3",
+            "caption"    : "Design patterns are matched with front-end code patterns, allowing content creators to take a 'building block' approach to email creation."
+          },
+          {
+
+            "image"      : "img-kpcc-emails-4",
+            "caption"    : "A single visual design system unifies our communications across breaking news, regular newsletters and membership appeals."
           }
         ],
       "link"       :
@@ -197,10 +223,10 @@
         },
       "company"    : "KPCC",
       "services"   : "Design, Front-end Development",
-      "problem"    : "<p>Email is a critical channel for KPCC to communicate with its audience. From fundraising to breaking news, email help KPCC fulfill its editorial mission and sustain its business.</p><p>With more than a half-million emails sent each month and over 40% of email opens happening on mobile devices, KPCC needed a complete overhaul of its email design system. The system needed to be modular, flexible and on-brand while also being responsive.</p><p>In addition to the design challenges of the project, anyone who's had to code HTML email will tell you it's painful. Very painful. Between gnarly nested tables and inline CSS, any sane developer would run screaming.</p>",
+      "problem"    : "<p>Email is a critical channel for KPCC to communicate with its audience. From fundraising to breaking news, email helps KPCC fulfill its editorial mission and sustain its business.</p><p>With more than a half-million emails sent each month and over 40% of email opens happening on mobile devices, KPCC needed a complete overhaul of its email design system. The system needed to be modular, flexible and on-brand while also being responsive.</p><p>In addition to the design challenges of the project, anyone who's had to code HTML email will tell you it's painful. Very painful. Between gnarly nested tables and inline CSS, any sane developer would run screaming.</p>",
       "outcomes"    :
         [
-          {"item"  : "Created a design system of reusable components and patterns that empowered email authors to assemble custom email campaigns."},
+          {"item"  : "Created a design system of reusable components and patterns that enabled email authors to assemble custom email campaigns."},
           {"item"  : "Created a project with a sane front-end development workflow (SCSS, Slim, helpers), along with a build process to inline CSS and generate battle-tested HTML email that's ready to send."}
         ]
     },

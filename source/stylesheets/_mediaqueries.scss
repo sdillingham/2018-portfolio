@@ -25,21 +25,31 @@
 
     // global header elements
     .global-header {
-      position:relative;
+      background:transparent;
+      position:absolute;
     }
 
     h1 {
       float:left;
+      font-size:1.375em;
+      padding:17px 0;
+      a {
+        color:$white;
+      }
+    }
+
+    hr.ledge {
+      display:none;
     }
 
     // display full site nav in the masthead
     .site-nav {
       background:transparent;
       float:right;
+      height:auto;
       overflow:visible;
       position:relative;
       width:auto;
-      height:auto;
 
       // hide some costmetic elements we don't need on larger screens  
       h1, .nav-close, hr, h4 {
@@ -55,7 +65,7 @@
             display:none;
           }
           a {
-            color:$deepGray;
+            color:$linkMenu;
             font-size:1em;
             margin:18px 0;
             padding:0 10px;
@@ -63,9 +73,16 @@
             &:hover {
               color:$brightAccent;
             }
+            &:active {
+              background:transparent;
+            }
             &.active {
+              color:$lightAccent;
               &:before {
                 display:none;
+              }
+              &:hover {
+                color:$brightAccent;
               }
             }
             i {
@@ -83,15 +100,68 @@
     }
 
     .marquee {
+      background:$subduedAccent url('../images/bg-marquee-work-landing.jpg') no-repeat left top;
+      background-size:cover;
+      padding:6em 0 4em;
       header {
         float:none;
+        opacity:1;
         width:auto;
-        text-align:left;
+      }
+      h2 {
+        font-size:2.625em;
+        margin-bottom:0;
+      }
+      .description {
+        color:$lightAccent;
+        font-size:1.375em;
+        margin-top:0;
+      }
+      &.single-project {
+        background-color:$subduedAccent;
+        background-position:center center;
+        background-repeat:no-repeat;
+        padding:8em 0 20em;
+      }
+    }
 
-        .meta {
-          text-align:left;
+      &.work_kpcc-ipad {
+        .marquee.single-project {
+          background-image:url('../images/bg-marquee-kpcc-ipad.jpg');
+          background-size:cover;
         }
       }
+
+      &.work_half-in-ten {
+        .marquee.single-project {
+          background-image:url('../images/bg-marquee-half-in-ten.jpg');
+          background-size:cover;
+        }
+      }
+
+      &.work_kpcc-redesign {
+        .marquee.single-project {
+          background-image:url('../images/bg-marquee-kpcc-redesign.jpg');
+          background-size:cover;
+        }
+      }
+
+      &.work_kpcc-newsletters {
+        .marquee.single-project {
+          background-image:url('../images/bg-marquee-kpcc-emails.jpg');
+          background-size:cover;
+        }
+      }
+
+      &.work_highlander-orientation {
+        .marquee.single-project {
+          background-image:url('../images/bg-marquee-ucr-orientation.jpg');
+          background-size:cover;
+        }
+      }
+
+    .meta {
+      text-align:left;
     }
 
     .project-details {
@@ -99,20 +169,28 @@
       .product-shot {
         float:none;
         margin-top:0;
+        position:relative;
         width:auto;
+        z-index:199;
 
         .button {
+          bottom:auto;
           display:block;
           font-size:1.4em;
           margin:0 auto;
           position:relative;
-          bottom:auto;
           width:14em;
+        }
+
+        img {
+          margin-top:-16em;
+          position:relative;
+          z-index:200;
         }
       }
 
       .problem {
-        padding:5em 0 1em;
+        padding:8em 0 1em;
       }
     }
 
@@ -166,7 +244,7 @@
 
     .slider-nav {
       background:$white;
-      opacity:0.25;
+      opacity:0.2;
       &.next {
         border-color:$deepGray;
         &:after {
@@ -178,6 +256,12 @@
         &:after {
           border-right-color:$deepGray;
         }
+      }
+    }
+
+    .gallery:hover {
+      .slider-nav {
+        opacity:0.5;
       }
     }
   }

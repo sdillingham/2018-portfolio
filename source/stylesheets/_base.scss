@@ -40,6 +40,7 @@ hr {
 
 // Containers and Grid
 .bound {
+  @include clearfix();
   margin:0 auto;
   max-width:33.75em;
   width:87.5%;

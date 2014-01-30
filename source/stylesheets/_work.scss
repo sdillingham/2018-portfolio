@@ -163,12 +163,26 @@
 
 // Marquee - introductory section for pages that need one.
 .marquee {
-  background:$darkAccent;
+  background:$subduedAccent;
   color:$white;
   padding:2em 0;
   text-align:center;
   &.single-project {
     padding-bottom:8em;
+    position:relative;
+    .marquee-overlay {
+      background:$black;
+      opacity:0;
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      z-index:150;
+    }
+    .bound {
+      z-index:180;
+    }
   }
 
   h2 {
@@ -243,7 +257,7 @@
   position:relative;
 
   .section-header {
-    padding-top:1em;
+    padding:1em 0;
     h4 {
       span {
         background:$black;

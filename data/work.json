@@ -4,7 +4,7 @@
       "slug"       : "kpcc-ipad",
       "title"      : "KPCC for iPad",
       "teaser"     : "Product design for KPCC's native tablet app.",
-      "description": "The flagship iPad app for KPCC, public radio for Southern California. The app positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "description": "A custom iPad app for KPCC, public radio for Southern California. The app positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
       "thumbnail"  : 
         {
           "src"    : "thumb-kpcc-ipad.jpg",
@@ -37,23 +37,23 @@
         },
       "company"    : "KPCC",
       "services"   : "Product strategy, Product design",
-      "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned it as a news brand that delivered more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build a product that would draw our audience in with a great listening experience, but also create addictive reading habits.</p> <p>And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
+      "problem"    : "<p>With the second-largest newsroom in Los Angeles and dozens of articles published every day, KPCC needed a product that positioned it as a news brand that delivers more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build an app that would draw our audience in with a great listening experience, but focus primarily on creating addictive reading habits.</p> <p>And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with our brand, building increased loyalty that could drive membership.</p>",
       "outcomes"    :
         [
           {"item"  : "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon."},
-          {"item"  : "KPCC for iPad is the first product to succeessfully switch KPCC's loyal listeners to readers. Users read an average of more thant 2 stories per session, and engage in reading seven times more often than listening."},
-          {"item"  : "Built a product that users love: 94% 5-star ratings in the first 30 days, and more than 50% of active users use the app multiple times per day."}
+          {"item"  : "KPCC for iPad is the first product to successfully switch KPCC's loyal listeners to readers. Users engage in reading seven times more often than listening, and read an average of 3 stories per session."},
+          {"item"  : "KPCC for iPad is a product that our audience loves. It received 94% 5-star ratings in its first 30 days in the App Store, and more than half of active users use the app multiple times per day."}
         ]
     },
     {
       "slug"       : "half-in-ten",
       "title"      : "Half In Ten",
       "teaser"     : "A redesign of poverty data visualizations for Center for American Progress.",
-      "description": "The Center for American Progress has been workoing to reduce poverty by 50% in the U.S. by 2020 - a project they call Half in Ten. As part of that effort, CAP needed to rethink the way they visualized povery data to maximize its impact and catalyze action.",
+      "description": "The Center for American Progress has been working to reduce poverty by 50% in the U.S. by 2020 - a project they call Half in Ten. As part of that effort, CAP needed to rethink the way they visualized poverty data to maximize its impact and catalyze action.",
       "thumbnail"  :
         {
           "src"    : "thumb-half-in-ten.jpg",
-          "caption": "Poverty data vizualization for halfinten.org"
+          "caption": "Poverty data visualization for halfinten.org"
         },
       "hero_img"   : "img-hero-halfinten",
       "gallery"  :
@@ -64,17 +64,17 @@
           },
           {
             "image"      : "img-halfinten-2",
-            "caption"    : "Informmation priorities on each page were carefully considered so that top-line numbers are clear at a glance on any device." 
+            "caption"    : "Information priorities on each page were carefully considered so that top-line numbers are at your fingertips on any device." 
           },
           {
 
             "image"      : "img-halfinten-3",
-            "caption"    : "A new landing page concept was created to give users clear points of entry and provide additional context and narrative in support of Half In Ten's misison."
+            "caption"    : "A new landing page concept was created to give users clear points of entry, as well as providing additional narrative in support of Half In Ten's mission."
           },
           {
 
             "image"      : "img-halfinten-4",
-            "caption"    : "As the user reaches the end of the page, clear calls to action and resources get advocates engaged in the fight to reduce poverty in their city or state."
+            "caption"    : "As the user reaches the end of the page, resources and clear calls to action get advocates engaged in the fight to reduce poverty in their area."
           }
         ],
       "link"       :
@@ -84,61 +84,14 @@
         },
       "company"    : "Center for American Progress",
       "services"   : "UI Design, Copywriting",
-      "problem"    : "<p>The Center for American Progress has been workoing to reduce poverty by 50% in the U.S. by 2020 - a project they call Half in Ten. As part of that effort, CAP needed to rethink the way they visualized povery data to maximize its impact and catalyze action.</p><p>Half In Ten's leadership team identified a clear set of challenges. Their current visualizations were hard to follow and didn't tell a clear story. Also, while the charts and graphs looked good on desktops, they needed a solution that commiunicated poverty data with equal impact across all devices and screens. And finally, they wanted to use their data to reinforce the powerful story of poverty in the U.S., and catalyze users to act.</p>",
+      "problem"    : "<p>In 2010, the Center for American Progress set out to reduce poverty by 50% in the U.S. by 2020 - a project they call Half in Ten. As part of that effort, CAP needed to rethink the way they visualized poverty data to maximize its impact and catalyze action.</p><p>Half In Ten's leadership team identified a clear set of challenges. Their current visualizations were hard to follow and didn't tell a clear story. Also, while the charts and graphs looked good on desktops, they needed a solution that commiunicated poverty data with equal impact across all devices and screens. And finally, they wanted to use their data to reinforce the powerful story of poverty in the U.S., and catalyze users to act.</p>",
       "outcomes"    :
         [
-          {"item"  : "Through improved balance, heirarchy and copywriting, redesigned pages help the data speak more powerfully by bringing much-needed clarity in the relationships between data points."},
-          {"item"  : "Wireframes were created for large and small screens, reimagining complex charts for effective display on smartphones and other personal devices."},
+          {"item"  : "Through improved balance, hierarchy and copywriting, these redesigned pages help the data speak more powerfully, dramatically improving clarity in the relationships between data points."},
+          {"item"  : "Wireframes were created for large and small screens, re-imagining complex charts for effective display on smartphones and other personal devices."},
           {"item"  : "The new design increases the visibility of state-level breakdowns, giving users a better sense of how their state is trending over time, and compared to other states in the U.S."}
         ]
     },
-/*    {
-      "slug"       : "kpcc-reader",
-      "title"      : "KPCC Reader",
-      "teaser"     : "A fast, mobile-first, infinite-scroll news experience for KPCC.",
-      "description": "Description",
-      "thumbnail"  :
-        {
-          "src"    : "thumb-kpcc-reader.jpg",
-          "caption": "KPCC Reader - a mobile-first reading experience"
-        },
-      "hero_img"   : "img-hero-kpcc-reader",
-      "gallery"  :
-        [
-          {
-            "image"      : "img-kpcc-reader-1",
-            "caption"    : "Caption"
-          },
-          {
-            "image"      : "img-kpcc-reader-2",
-            "caption"    : "Caption" 
-          },
-          {
-
-            "image"      : "img-kpcc-reader-3",
-            "caption"    : "Caption"
-          },
-          {
-
-            "image"      : "img-kpcc-reader-4",
-            "caption"    : "Caption"
-          }
-        ],
-      "link"       :
-        {
-          "title"  : "Visit KPCC Reader",
-          "href"   : "http://reader.scprdev.org"
-        },
-      "company"    : "KPCC",
-      "services"   : "User interface design, front-end development",
-      "problem"    : "<p>Problem Description</p>",
-      "outcomes"    :
-        [
-          {"item"  : "Outcome 1"},
-          {"item"  : "Outcome 2"},
-          {"item"  : "Outcome 3"}
-        ]
-    },*/
     {
       "slug"       : "kpcc-redesign",
       "title"      : "KPCC.org Redesign",
@@ -154,11 +107,11 @@
         [
           {
             "image"      : "img-kpcc-redesign-1",
-            "caption"    : "In addition to supporting a large-scale daily newsgathering operation, great care was also taken to shine a spotlight on KPCC's live community events platform."
+            "caption"    : "In addition to supporting a large-scale daily newsgathering operation, the redesign also heavily feature KPCC's live community events platform."
           },
           {
             "image"      : "img-kpcc-redesign-2",
-            "caption"    : "KPCC's homepage not only responds to the daily news cycle, but also can adapt to focus on major events like the results of the 2012 presidential election." 
+            "caption"    : "KPCC's homepage not only responds to the daily news cycle, but also can adapt to focus on major events like election night coverage." 
           },
           {
             "image"      : "img-kpcc-redesign-3",
@@ -166,7 +119,7 @@
           },
           {
             "image"      : "img-kpcc-redesign-4",
-            "caption"    : "Across the site, multiple content types are presented in a unified interface: blog posts, radio segments, live events and visual journalism all coexist on thei KPCC homepage."
+            "caption"    : "Across the site, multiple content types are presented in a unified interface: blog posts, radio segments, live events and visual journalism all coexist on the KPCC homepage."
           }
         ],
       "link"       :
@@ -176,10 +129,10 @@
         },
       "company"    : "KPCC",
       "services"   : "Product strategy, Product design, front-end development",
-      "problem"    : "<p>My first major project when I arrived at KPCC was to rethink and redesign KPCC's website from the ground up. The orgnaization was in the midst of transformational change, attempting to merge its radio and digital editorial operations. It was also growing like crazy, doubling the size of its newsroom in less than a year.</p><p>As we embarked on the project in late 2011, KPCC's goals were manifold: it needed to refresh its digital brand, serve audiences across devices, continue to serve loyal radio listeners, and establish itself as a premiere news brand in Los Angeles.</p>",
+      "problem"    : "<p>My first major project when I arrived at KPCC was to rethink and redesign KPCC's website from the ground up. The organization was in the midst of transformational change, attempting to merge its radio and digital editorial operations. It was also growing like crazy, doubling the size of its newsroom in less than a year.</p><p>As we embarked on the project in late 2011, KPCC's goals were manifold: it needed to refresh its digital brand, serve audiences across devices, continue to delight loyal radio listeners, and establish itself as a premiere news brand in Los Angeles.</p>",
       "outcomes"    :
         [
-          {"item"  : "By focusing on de-siloing the many types of content KPCC publishes, and designing to support a large volume of daily journalism, the redesign bolstered KPCC.org as it grew from a half-million monthly visits to over 1 million monthly visits in 12 months."},
+          {"item"  : "By focusing on de-siloing the many types of content KPCC publishes, and designing to support a large volume of daily journalism, the redesign bolstered KPCC.org as it doubled its traffic to over 1 million monthly visits in just 12 months."},
           {"item"  : "Launched in May 2012, KPCC's responsive design positioned it to support a proliferation of smartphones and tablets. Total share of traffic coming from mobile devices has increased from 20% (May '12) to 42% (Dec '13)."},
           {"item"  : "The first public media organization to launch a responsive website, KPCC.org received numerous national design awards from the journalism and publishing industry."}
         ]
@@ -192,7 +145,7 @@
       "thumbnail"  :
         {
           "src"    : "thumb-kpcc-email.jpg",
-          "caption": "Emal newsletters for KPCC"
+          "caption": "Email newsletters for KPCC"
         },
       "hero_img"   : "img-hero-kpcc-emails",
       "gallery"  :
@@ -223,18 +176,18 @@
         },
       "company"    : "KPCC",
       "services"   : "Design, Front-end Development",
-      "problem"    : "<p>Email is a critical channel for KPCC to communicate with its audience. From fundraising to breaking news, email helps KPCC fulfill its editorial mission and sustain its business.</p><p>With more than a half-million emails sent each month and over 40% of email opens happening on mobile devices, KPCC needed a complete overhaul of its email design system. The system needed to be modular, flexible and on-brand while also being responsive.</p><p>In addition to the design challenges of the project, anyone who's had to code HTML email will tell you it's painful. Very painful. Between gnarly nested tables and inline CSS, any sane developer would run screaming.</p>",
+      "problem"    : "<p>Email is a critical channel for KPCC to connect with its audience. From fundraising to breaking news, email helps KPCC fulfill its editorial mission and sustain its business.</p><p>With more than a half-million emails sent each month and more email opens happening on mobile devices each day, KPCC needed a complete overhaul of its email design system. The system needed to be modular, flexible and on-brand while also being responsive.</p><p>In addition to the design challenges of the project, anyone who's had to code HTML email will tell you it's painful. Very painful. Between gnarly nested tables and inline CSS, any sane developer would run screaming.</p>",
       "outcomes"    :
         [
-          {"item"  : "Created a design system of reusable components and patterns that enabled email authors to assemble custom email campaigns."},
-          {"item"  : "Created a project with a sane front-end development workflow (SCSS, Slim, helpers), along with a build process to inline CSS and generate battle-tested HTML email that's ready to send."}
+          {"item"  : "By designing and coding a system of reusable components and patterns, email authors are able to assemble custom email campaigns with ease."},
+          {"item"  : "Created a project with a sane front-end development workflow (SCSS, Slim, helpers), along with a Premailer-based build process to inline CSS and generate battle-tested HTML email that's ready to send."}
         ]
     },
     {
       "slug"       : "laup-landing-page",
       "title"      : "LAUP Marketing Landing Page",
       "teaser"     : "A premium advertising experience for one of KPCC's corporate underwriters.",
-      "description": "As part of an exclusive sponsorship of KPCC's education coverage, the responsive landing page for LA Universal Preschool goes beyond banner ads to deliver a premium experience for KPCC's audience and advertiser.",
+      "description": "As part of an exclusive sponsorship of KPCC's education coverage, the responsive landing page for LA Universal Preschool goes beyond banner ads to deliver a premium experience for KPCC's audience and the corporate underwriter.",
       "thumbnail"  : 
         {
           "src"    : "thumb-laup.jpg",
@@ -269,18 +222,18 @@
         },
       "company"    : "KPCC, LAUP",
       "services"   : "UI Design, Front-end Development",
-      "problem"    : "<p>Like most news organizations, KPCC is trying to go beyond banner ads to find new forms of digital ad revenue that are sustainable, lucrative, and provide a better user experience.</p> <p>So when LA Universal Preschool expressed interest in being the exclusive sponsor of KPCC's education coverage for an entire year, we knew we needed to design a solution that gave LAUP unique exposure, while remaining true to KPCC's member-supported, mission-driven values and ethics.</p><p>Finding the right solution required us to move into uncharted territory, both for KPCC and LAUP. Ensuring advertising impact while preserving the clear distinction between advertising and editorial required close collaboration with KPCC's editorial leadership and the corporate underwriter.</p>",
+      "problem"    : "<p>Like most news organizations, KPCC is trying to go beyond banner ads to find new forms of digital ad revenue that are sustainable, lucrative, and provide a better user experience.</p> <p>So when LA Universal Preschool expressed interest in being the exclusive sponsor of KPCC's education coverage for an entire year, we knew we needed to design a solution that gave LAUP unique exposure, while remaining true to KPCC's member-supported, mission-driven values and ethics.</p><p>Finding the right solution meant moving into uncharted territory for both KPCC and LAUP. Ensuring advertising impact while preserving the clear distinction between advertising and editorial required close collaboration with KPCC's editorial leadership and the corporate underwriter.</p>",
       "outcomes"    :
         [
-          {"item"  : "Designed a bespoke landing page as a destination for LAUP's campaign, creating unique ad inventory and enabling KPCC to secure premium sponsorship revenue."},
-          {"item"  : "Landing page includes an email signup conversation point, giving LAUP a direct way to engage with users that goes beyond impressions and clickthrough."}
+          {"item"  : "By designing a bespoke landing page for LAUP's campaign, KPCC created unique ad inventory that enabled it to secure premium sponsorship revenue."},
+          {"item"  : "The landing page includes an email sign up conversation point, giving LAUP a direct way to engage with users that goes beyond impressions and click-through."}
         ]
     },
     {
       "slug"       : "highlander-orientation",
       "title"      : "Highlander New Student Orientation",
       "teaser"     : "A UC Riverside webapp that guides incoming students through orientation registration.",
-      "description": "UC Riverside requires all incoming students to attend Orientation, preparing them for the transition to college. To dramatically simplify a complex signup process, UCR needed a complete redesign of their online registration system.",
+      "description": "UC Riverside requires all incoming students to attend orientation, preparing them for the transition to college. To dramatically simplify a complex sign up process, UCR needed a complete redesign of their online registration system.",
       "thumbnail"  :
         {
           "src"    : "thumb-highlander-orientation.jpg",
@@ -305,7 +258,7 @@
           {
 
             "image"      : "img-ucr-orientation-4",
-            "caption"    : "Detailed wireframes were created to model the registration form's complex flows and decision logic, from signin to payment."
+            "caption"    : "Detailed wireframes were created to model the registration form's complex flows and decision logic, from sign in to payment."
           }
         ],
       "link"       :
@@ -315,12 +268,12 @@
         },
       "company"    : "UC Riverside",
       "services"   : "Product Strategy, UI Design, Copywriting",
-      "problem"    : "<p>Navigating the college admissions process is downright frightening for many wide-eyed high school seniors. At UC Riverside, we knew that our in-person New Student Orientation sessions were of the most confusing parts of the process.</p><p>Deciding what session to attend, registering your parents for their own information sessions, reading the fine print, paying your fees, knowing what to bring for your overnight stay on campus...many students wound up arriving unprepared, or not attending Orientation at all.</p><p>UCR found that students who attend Orientation were far less likely to struggle during their freshman year, and also less likely to drop out. Radically simplifying the online Orientation registration process was deemed critical to the success of the program: UCR wants to create positive feelings in incoming students during these early touchpoints as students begin to form impressions of their new home.",
+      "problem"    : "<p>Navigating the college admissions process is downright frightening for many wide-eyed high school seniors. At UC Riverside, we knew that our in-person New Student Orientation sessions were one of the most confusing parts of the process.</p><p>Deciding what session to attend, registering your parents for their own information sessions, reading the fine print, paying your fees, knowing what to bring for your overnight stay on campus...many students wound up arriving unprepared, or not attending Orientation at all.</p><p>UCR found that students who attend Orientation were far less likely to struggle during their freshman year, and also less likely to drop out. Radically simplifying the online Orientation registration process was critical to the success of the program: UCR wants to create positive feelings in incoming students during these early touchpoints as students begin to form impressions of their new home.",
       "outcomes"    :
         [
-          {"item"  : "Designed the entire user journey through the registration process, from communication plans and email notifications down to every field in the multi-step form. Used user-centered approaches to shifted the design focus away from UCR's business process and toward students' needs."},
-          {"item"  : "Reviewed call center databases and identified the most common student pain points. Used this data to guide UI refinements to reduce confusion and guide students successfully through the registration form."},
-          {"item"  : "Introduced new visual design to bring increased clarity and structure to our webapps. The app's design focuses on making users feel confident and in control of the registration process, and subtly reinforces UCR's brand."}
+          {"item"  : "The entire user journey through the registration process was redesigned, from communication plans and email notifications down to every field in the multi-step form. Employing user-centered approaches, the product's focus shifted away from UCR's business process and toward students' needs."},
+          {"item"  : "Call center databases were reviewed to identify the most common student pain points. This data informed UI refinements to reduce confusion and guide students successfully through the registration form."},
+          {"item"  : "A new visual design was introduced to bring increased clarity and structure to UCR's webapps. The design focuses on making users feel confident and in control of the registration process, while subtly reinforcing UCR's brand."}
         ]
     }
   ]

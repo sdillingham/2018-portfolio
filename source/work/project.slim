@@ -1,14 +1,11 @@
 - p = locals[:item]
 
 .marquee.single-project
+  span.marquee-overlay
   .bound
     header
       = page_heading p[:title]
       p.description= p[:teaser]
-      .meta
-        dl
-          dt Responsibilities
-          dd= p[:services]
 article.project-details
   .bound
     section.product-shot
@@ -27,6 +24,10 @@ article.project-details
       header.section-header
         h4: span The Results
         hr
+      .meta
+        dl
+          dt Responsibilities
+          dd= p[:services]
     span.slider-nav.prev onclick="mySwipe.prev()"
     span.slider-nav.next onclick="mySwipe.next()"
     #slider.swipe

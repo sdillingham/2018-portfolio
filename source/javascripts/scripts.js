@@ -35,9 +35,12 @@ $(document).ready(function() {
   //
 
   // Cache
-  var $content = $('.img-src')
-    , $blur    = $('.img-src.color')
-    , wHeight  = $(window).height();
+  var $content          = $('.img-src')           
+    , $crossFade        = $('.img-src.color')
+    , $blackFade        = $('.no-touch .marquee-overlay')
+    , $productShot      = $('.no-touch .product-shot')
+    , $marqueeHeading   = $('.no-touch .single-project header')
+    , wHeight       = $(window).height();     
 
   $(window).on('resize', function(){
     wHeight = $(window).height();
@@ -87,11 +90,33 @@ $(document).ready(function() {
       this.ticking       = false;
       
       // Do The Dirty Work Here
-      var blurScroll = currentScrollY * 4;
+      var crossFadeScroll = currentScrollY * 4
+        , blackScroll = currentScrollY * 0.95
+        , imgScroll = currentScrollY / 3
+        , marqueeScroll = currentScrollY * 2;
       
-      $blur.css({
-        'opacity' : blurScroll / wHeight
+      // Cross-fade for Homepage
+      $crossFade.css({
+        'opacity' : crossFadeScroll / wHeight
       });
+
+      // Fade marquee to black and parallax scroll product shot for project pages
+      $blackFade.css({
+        'opacity' : blackScroll / wHeight
+      });
+      if (imgScroll < 120) {
+        $productShot.css({
+          'transform'         : 'translateY(' + imgScroll + 'px)',
+          '-moz-transform'    : 'translateY(' + imgScroll + 'px)',
+          '-webkit-transform' : 'translateY(' + imgScroll + 'px)'
+        });
+        $marqueeHeading.css({
+          'opacity' : 1 - (marqueeScroll / wHeight),
+          'transform'         : 'translateY(' + imgScroll + 'px)',
+          '-moz-transform'    : 'translateY(' + imgScroll + 'px)',
+          '-webkit-transform' : 'translateY(' + imgScroll + 'px)'
+        });
+      }
     }
   };
 

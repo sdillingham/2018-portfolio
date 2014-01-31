@@ -16,8 +16,12 @@ section.work-list
         header
           h2: a href="#{i.slug}/" = i.title
           p = i.description
+          p: a.button href="#{i.slug}/"
+            | View this project 
+            span.icon-chevron
         a href="#{i.slug}/"
           figure
+            = partial(:img_helper, :locals => { :img => i.thumbnail.src, :alt => i.thumbnail.caption, :format => 'jpg' })
             img src="../images/#{i.thumbnail.src}" alt=(i.thumbnail.caption)
             figcaption
                 p

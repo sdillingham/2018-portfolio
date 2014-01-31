@@ -404,17 +404,18 @@
     @extend .marquee-heading;
     font-size:3em;
     line-height:1em;
-    margin:0;
+    margin:0 0 0.25em;
     a {
       color:$darkGray;
     }
   }
 
   p {
+    @extend .marquee-heading;
     color:$lightGray;
-    font-size:1.3em;
+    font-size:1.1em;
     line-height:1.4em;
-    margin:0 0 0.8em;
+    margin:0 0 1em;
   }
 
   figure {

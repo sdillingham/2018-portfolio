@@ -11,7 +11,7 @@ section.work-list
       h4: span Selected Work
       hr
     - data.work.items.each do |i|
-      article.work-item
+      article.work-item class="#{i.slug}"
         hr
         header
           h2: a href="#{i.slug}/" = i.title
@@ -21,8 +21,7 @@ section.work-list
             span.icon-chevron
         a href="#{i.slug}/"
           figure
-            = partial(:img_helper, :locals => { :img => i.thumbnail.src, :alt => i.thumbnail.caption, :format => 'jpg' })
-            img src="../images/#{i.thumbnail.src}" alt=(i.thumbnail.caption)
+            = partial(:img_helper, :locals => { :img => i.thumbnail.src, :alt => i.thumbnail.caption, :format => 'jpg', :largebreak => '640' })
             figcaption
                 p
                   | View this project

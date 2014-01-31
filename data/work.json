@@ -7,7 +7,7 @@
       "description": "KPCC for iPad positions Southern California's largest public radio station as a digital news leader in Los Angeles, and connects audiences to the public radio they love.",
       "thumbnail"  : 
         {
-          "src"    : "thumb-kpcc-ipad.jpg",
+          "src"    : "thumb-kpcc-ipad",
           "caption": "KPCC for iPad"
         },
       "hero_img"   : "img-hero-kpcc-ipad",
@@ -52,7 +52,7 @@
       "description": "The Center for American Progress has been working to reduce poverty by 50% in the U.S. by 2020 - a project they call Half in Ten. To achieve their goal, they needed to visualize poverty data to maximize impact and catalyze action.",
       "thumbnail"  :
         {
-          "src"    : "thumb-half-in-ten.jpg",
+          "src"    : "thumb-half-in-ten",
           "caption": "Poverty data visualization for halfinten.org"
         },
       "hero_img"   : "img-hero-halfinten",
@@ -99,7 +99,7 @@
       "description": "KPCC is the second largest public radio station in the U.S., and the second-largest newsroom in Los Angeles. To serve the daily news needs of a major metropolis, KPCC's website was redesigned responsively and rebuilt from the ground up.",
       "thumbnail"  :
         {
-          "src"    : "thumb-kpcc-responsive.jpg",
+          "src"    : "thumb-kpcc-responsive",
           "caption": "KPCC.org homepage"
         },
       "hero_img"   : "img-hero-kpcc-redesign",
@@ -144,7 +144,7 @@
       "description": "A visual overhaul and responsive redesign of all KPCC's email templates, along with a front-end project that makes HTML emails a pleasure to code.",
       "thumbnail"  :
         {
-          "src"    : "thumb-kpcc-email.jpg",
+          "src"    : "thumb-kpcc-email",
           "caption": "Email newsletters for KPCC"
         },
       "hero_img"   : "img-hero-kpcc-emails",
@@ -190,7 +190,7 @@
       "description": "As part of an exclusive sponsorship of KPCC's education coverage, the responsive landing page for LA Universal Preschool goes beyond banner ads to deliver a premium underwritingexperience.",
       "thumbnail"  : 
         {
-          "src"    : "thumb-laup.jpg",
+          "src"    : "thumb-laup",
           "caption": "LAUP corporate underwriter landing page"
         },
       "hero_img"   : "img-hero-laup",
@@ -236,7 +236,7 @@
       "description": "UC Riverside prepares incoming students for the transition to college through its in-person orientation programs. To start students off on the right foot, UCR needed to dramatically simplify its orientation registration process.",
       "thumbnail"  :
         {
-          "src"    : "thumb-highlander-orientation.jpg",
+          "src"    : "thumb-highlander-orientation",
           "caption": "UCR's Highlander New Student Orientation"
         },
       "hero_img"   : "img-hero-ucr-orientation",

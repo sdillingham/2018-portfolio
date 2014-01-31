@@ -275,19 +275,57 @@
 
     .work-item {
       @include clearfix();
+      margin-bottom:0;
+
+      &:nth-child(odd) {
+        header {
+          float:right;
+        }
+        > a {
+          float:left;
+        }
+        figure {
+          margin-left:1em;
+          margin-right:0;
+        }
+      }
 
       header {
         float:left;
-        width:60%;
+        width:36%;
+      }
+
+      hr {
+        margin-top:0;
+        margin-bottom:5em;
       }
 
       > a {
         float:right;
-        width:33%;
+        width:58%;
+      }
+
+      h2 {
+        font-size:2.625em;
+        margin-top:1em;
       }
 
       p  {
         font-size:1em;
+      }
+
+      .button {
+        display:inline-block;
+      }
+
+      figure {
+        margin-right:1em;
+        img {
+          border:0;
+        }
+        figcaption {
+          display:none;
+        }
       }
     }
   }

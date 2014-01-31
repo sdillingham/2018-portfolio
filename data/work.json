@@ -4,7 +4,7 @@
       "slug"       : "kpcc-ipad",
       "title"      : "KPCC for iPad",
       "teaser"     : "Product design for KPCC's native tablet app.",
-      "description": "A custom iPad app for KPCC, public radio for Southern California. The app positions KPCC as a digital news leader in Los Angeles, and connects our audiences to the public radio they love.",
+      "description": "KPCC for iPad positions Southern California's largest public radio station as a digital news leader in Los Angeles, and connects audiences to the public radio they love.",
       "thumbnail"  : 
         {
           "src"    : "thumb-kpcc-ipad.jpg",
@@ -49,7 +49,7 @@
       "slug"       : "half-in-ten",
       "title"      : "Half In Ten",
       "teaser"     : "A redesign of poverty data visualizations for Center for American Progress.",
-      "description": "The Center for American Progress has been working to reduce poverty by 50% in the U.S. by 2020 - a project they call Half in Ten. As part of that effort, CAP needed to rethink the way they visualized poverty data to maximize its impact and catalyze action.",
+      "description": "The Center for American Progress has been working to reduce poverty by 50% in the U.S. by 2020 - a project they call Half in Ten. To achieve their goal, they needed to visualize poverty data to maximize impact and catalyze action.",
       "thumbnail"  :
         {
           "src"    : "thumb-half-in-ten.jpg",
@@ -187,7 +187,7 @@
       "slug"       : "laup-landing-page",
       "title"      : "LAUP Marketing Landing Page",
       "teaser"     : "A premium advertising experience for one of KPCC's corporate underwriters.",
-      "description": "As part of an exclusive sponsorship of KPCC's education coverage, the responsive landing page for LA Universal Preschool goes beyond banner ads to deliver a premium experience for KPCC's audience and the corporate underwriter.",
+      "description": "As part of an exclusive sponsorship of KPCC's education coverage, the responsive landing page for LA Universal Preschool goes beyond banner ads to deliver a premium underwritingexperience.",
       "thumbnail"  : 
         {
           "src"    : "thumb-laup.jpg",
@@ -233,7 +233,7 @@
       "slug"       : "highlander-orientation",
       "title"      : "Highlander New Student Orientation",
       "teaser"     : "A UC Riverside webapp that guides incoming students through orientation registration.",
-      "description": "UC Riverside requires all incoming students to attend orientation, preparing them for the transition to college. To dramatically simplify a complex sign up process, UCR needed a complete redesign of their online registration system.",
+      "description": "UC Riverside prepares incoming students for the transition to college through its in-person orientation programs. To start students off on the right foot, UCR needed to dramatically simplify its orientation registration process.",
       "thumbnail"  :
         {
           "src"    : "thumb-highlander-orientation.jpg",

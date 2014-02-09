@@ -21,12 +21,6 @@ activate :directory_indexes
 page "/",       :layout => :index_layout
 page "work/*",  :layout => :work_layout
 
-data.work.items.each do |project|
-  proxy "/work/#{project[:slug]}.html", "/work/project.html", :locals => { 
-    :item => project 
-  }, 
-  :ignore => true
-end
 
 # Per-page layout changes:
 #

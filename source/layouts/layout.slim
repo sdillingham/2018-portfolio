@@ -33,14 +33,19 @@ html lang="en"
 
   body class=(page_classes) ontouchstart=""
     = yield
-    footer
+    footer.colophon
       .bound
         hr
         - if current_page.url == '/'
             p.fineprint 
-                | &copy; 2014 Sean Dillingham. Photo credit: 
+                | &copy; 
+                = Time.now.year 
+                |  Sean Dillingham. Photo credit: 
                 a href="http://www.flickr.com/photos/neilarmstrong2/5608567621/" Neil Kremer
         - else
-            p.fineprint &copy; 2014 Sean Dillingham.
+            p.fineprint 
+                | &copy; 
+                = Time.now.year 
+                |  Sean Dillingham.
     = javascript_include_tag  "body"
 

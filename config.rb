@@ -1,4 +1,5 @@
-require "slim"
+require  "slim"
+require  "builder"
 activate :bourbon
 activate :neat
 activate :imageoptim
@@ -18,8 +19,9 @@ activate :directory_indexes
 # Page options, layouts, aliases and proxies
 ###
 
-page "/",       :layout => :index_layout
-page "work/*",  :layout => :work_layout
+page "/",               :layout => :index_layout
+page "work/*",          :layout => :work_layout
+page "/sitemap.xml",    :layout => false
 
 
 # Per-page layout changes:
@@ -90,7 +92,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   # activate :relative_assets

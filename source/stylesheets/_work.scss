@@ -485,18 +485,12 @@
   margin-bottom:-8em;
   position:relative;
 
-  .next-overlay {
-    background:$black;
-    position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    z-index:-2;
+  footer {
+    padding-top:3em;
   }
+
   .next-bg {
-    background:$subduedAccent url('../images/bg-marquee-kpcc-ipad.jpg') no-repeat center center;
-    background-size:cover;
+    background:darken($subduedAccent, 13%);
     position:absolute;
     left:0;
     right:0;
@@ -516,6 +510,7 @@
     }
     h3 {
       font-size:2em;
+      margin-bottom:0;
     }
     h5 {
       color:$lightAccent;
@@ -523,12 +518,15 @@
       font-weight:400;
     }
     p {
-
+      margin-top:0;
+      a {
+        color:$white;
+      }
     }
     a {
       color:$white;
       &:hover {
-        color:$darkAccent;
+        color:$brightAccent;
       }
     }
   }
@@ -538,7 +536,10 @@
   &:not(.work_index) {
     .colophon {
       hr {
-        background:$darkAccent;
+        background:rgba($white, 0.1);
+      }
+      .fineprint {
+        color:$medGray;
       }
     }
   }

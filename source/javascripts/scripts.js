@@ -41,8 +41,7 @@ $(document).ready(function() {
     , $blackFade        = $('.no-touch .marquee-overlay')
     , $productShot      = $('.no-touch .product-shot')
     , $marqueeHeading   = $('.no-touch .single-project header')
-    , $nextProject      = $('.no-touch .next-overlay')
-    , wHeight           = $(window).height();     
+    , wHeight           = $(window).height()    
 
   $(window).on('resize', function(){
     wHeight = $(window).height();
@@ -95,22 +94,12 @@ $(document).ready(function() {
       var crossFadeScroll       = currentScrollY * 4
         , blackScroll           = currentScrollY * 0.95
         , imgScroll             = currentScrollY / 3
-        , marqueeScroll         = currentScrollY * 2
-        , nextProjectScroll     = $(window).scrollTop() + $(window).height()
-        , nextProjectOpacity    = (nextProjectScroll / 1000) - 3.2
-        , nearBottom            = $(document).height() - 400;
-      
-      // Cross-fade for Homepage
+        , marqueeScroll         = currentScrollY * 2;
+
+      // Cross-fade for homepage
       $crossFade.css({
         'opacity' : crossFadeScroll / wHeight
       });
-
-      // Fade into next project
-      if (nextProjectScroll > nearBottom) {
-        $nextProject.css({
-          'opacity' : 1 - nextProjectOpacity
-        });
-      }
 
       // Fade marquee to black and parallax scroll product shot for project pages
       $blackFade.css({

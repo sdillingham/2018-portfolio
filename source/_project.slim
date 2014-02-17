@@ -54,15 +54,13 @@ article.project-details
           li = o.item
 
 - content_for :postproject do
-  aside.next-project
-    footer
-      .bound
-        - @sibling = current_page.siblings.find { |s| s.ext == ".html" && s.data.title && s.data.order == p[:order] + 1 }
-        - if @sibling
-            h5 Next Project:
-            h3= link_to @sibling.data.title, @sibling
-            p= link_to @sibling.data.teaser, @sibling
-        - else
-            h3 fin.
-    .next-overlay
-    .next-bg
+  - @sibling = current_page.siblings.find { |s| s.ext == ".html" && s.data.title && s.data.order == p[:order] + 1 }
+  - if @sibling
+    aside.next-project
+      footer
+        .bound
+          h5 Next Project
+          = link_to @sibling do
+            h3= @sibling.data.title
+            p= @sibling.data.teaser
+      .next-bg

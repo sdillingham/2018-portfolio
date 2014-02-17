@@ -12,7 +12,6 @@ section.work-list
       hr
     - data.work.items.each do |i|
       article.work-item class="#{i.slug}"
-        hr
         header
           h2: a href="#{i.slug}/" = i.title
           p = i.description
@@ -26,3 +25,4 @@ section.work-list
                 p
                   | View this project
                   span.icon-chevron
+        hr

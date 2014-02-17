@@ -41,7 +41,7 @@ $(document).ready(function() {
     , $blackFade        = $('.no-touch .marquee-overlay')
     , $productShot      = $('.no-touch .product-shot')
     , $marqueeHeading   = $('.no-touch .single-project header')
-    , wHeight           = $(window).height()    
+    , wHeight           = $(window).height();   
 
   $(window).on('resize', function(){
     wHeight = $(window).height();

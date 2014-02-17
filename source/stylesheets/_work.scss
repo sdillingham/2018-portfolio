@@ -207,6 +207,9 @@
 }
 
 // Styles for single project view
+.project-details {
+  background:$white;
+}
 .product-shot {
   text-align:center;
 
@@ -228,6 +231,9 @@
     h4 {
       color:$darkGray;
     }
+  }
+  &.outcomes {
+    padding-bottom:8em;
   }
 
   .section-header {
@@ -459,7 +465,6 @@
 
   .work-item {
     margin-bottom:4em;
-
     hr {
       background:$paleGray;
       margin-bottom:3em;
@@ -473,8 +478,74 @@
   }
 }
 
-.work.work_index {
-  .bound {
-    max-width:64em;
+// Next Project
+.next-project {
+  color:$white;
+  height:24em;
+  margin-bottom:-8em;
+  position:relative;
+
+  footer {
+    padding-top:3em;
+  }
+
+  .next-bg {
+    background:darken($subduedAccent, 13%);
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:-3;
+  }
+  footer {
+    height:20em;
+    position:fixed;
+    bottom:4em;
+    left:0;
+    right:0;
+    text-align:center;
+    h3, p {
+      @extend .marquee-heading;
+    }
+    h3 {
+      font-size:2em;
+      margin-bottom:0;
+    }
+    h5 {
+      color:$lightAccent;
+      font-size:1em;
+      font-weight:400;
+    }
+    p {
+      margin-top:0;
+      a {
+        color:$white;
+      }
+    }
+    a {
+      color:$white;
+      &:hover {
+        color:$brightAccent;
+      }
+    }
+  }
+}
+
+.work {
+  &:not(.work_index) {
+    .colophon {
+      hr {
+        background:rgba($white, 0.1);
+      }
+      .fineprint {
+        color:$medGray;
+      }
+    }
+  }
+  .work_index {
+    .bound {
+      max-width:64em;
+    }
   }
 }

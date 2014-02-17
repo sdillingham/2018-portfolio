@@ -9,12 +9,13 @@ $(document).ready(function() {
 
 
   //
-  // Initialize Swipe.js for galleries
+  // Swipe.js for image galleries
   //
 
-    // Set vars
+    // Set var
     var bullets = $('#position').children('li');
 
+    // Initialize Swipe.js
     window.mySwipe = Swipe(document.getElementById('slider'), {
       continuous: true,
       callback: function(pos) {
@@ -31,7 +32,7 @@ $(document).ready(function() {
   
   
   //
-  // Blurry Image Scrolling
+  // onScroll Image Transitions
   //
 
   // Cache
@@ -40,7 +41,7 @@ $(document).ready(function() {
     , $blackFade        = $('.no-touch .marquee-overlay')
     , $productShot      = $('.no-touch .product-shot')
     , $marqueeHeading   = $('.no-touch .single-project header')
-    , wHeight       = $(window).height();     
+    , wHeight           = $(window).height()    
 
   $(window).on('resize', function(){
     wHeight = $(window).height();
@@ -90,12 +91,12 @@ $(document).ready(function() {
       this.ticking       = false;
       
       // Do The Dirty Work Here
-      var crossFadeScroll = currentScrollY * 4
-        , blackScroll = currentScrollY * 0.95
-        , imgScroll = currentScrollY / 3
-        , marqueeScroll = currentScrollY * 2;
-      
-      // Cross-fade for Homepage
+      var crossFadeScroll       = currentScrollY * 4
+        , blackScroll           = currentScrollY * 0.95
+        , imgScroll             = currentScrollY / 3
+        , marqueeScroll         = currentScrollY * 2;
+
+      // Cross-fade for homepage
       $crossFade.css({
         'opacity' : crossFadeScroll / wHeight
       });

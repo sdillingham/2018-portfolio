@@ -21,7 +21,7 @@ section.work-list
             span.icon-chevron
         a href="#{i.slug}/"
           figure
-            = partial(:img_helper, :locals => { :img => i.thumbnail.src, :alt => i.thumbnail.caption, :format => 'jpg', :largebreak => '640' })
+            = partial(:image, :locals => { :img => i.thumbnail.src, :alt => i.thumbnail.caption, :format => 'jpg', :largebreak => '640' })
             figcaption
                 p
                   | View this project

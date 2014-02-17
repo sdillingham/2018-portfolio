@@ -65,8 +65,14 @@ hr {
     }
   }
 
+// Global Body
+main {
+  position:relative;
+  z-index:1;
+}
+
 // Global Footer
-footer {
+.colophon {
   margin-top:4em;
   hr {
     background:$paleGray;

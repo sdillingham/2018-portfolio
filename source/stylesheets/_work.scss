@@ -163,7 +163,8 @@
 
 // Marquee - introductory section for pages that need one.
 .marquee {
-  background:$subduedAccent;
+  background:$subduedAccent url('../images/bg-marquee-work-landing.jpg') no-repeat left top;
+  background-size:cover;
   color:$white;
   padding:2em 0;
   text-align:center;
@@ -206,6 +207,43 @@
   }
 }
 
+.work {
+  &.work_kpcc-ipad {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-kpcc-ipad.jpg');
+      background-size:cover;
+    }
+  }
+
+  &.work_half-in-ten {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-half-in-ten.jpg');
+      background-size:cover;
+    }
+  }
+
+  &.work_kpcc-redesign {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-kpcc-redesign.jpg');
+      background-size:cover;
+    }
+  }
+
+  &.work_kpcc-newsletters {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-kpcc-emails.jpg');
+      background-size:cover;
+    }
+  }
+
+  &.work_highlander-orientation {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-ucr-orientation.jpg');
+      background-size:cover;
+    }
+  }
+}
+
 // Styles for single project view
 .project-details {
   background:$white;
@@ -215,6 +253,8 @@
 
   img {
     margin:-6em 0 4em;
+    position:relative;
+    z-index: 200;
   }
 
   .button {
@@ -467,7 +507,7 @@
     margin-bottom:4em;
     hr {
       background:$paleGray;
-      margin-bottom:3em;
+      margin-top:3em;
     }
 
     &:nth-of-type(1) {
@@ -543,9 +583,11 @@
       }
     }
   }
-  .work_index {
-    .bound {
-      max-width:64em;
+  &.work_index {
+    .colophon {
+      hr {
+        display:none;
+      }
     }
   }
 }

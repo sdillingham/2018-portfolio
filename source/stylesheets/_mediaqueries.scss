@@ -100,8 +100,6 @@
     }
 
     .marquee {
-      background:$subduedAccent url('../images/bg-marquee-work-landing.jpg') no-repeat left top;
-      background-size:cover;
       padding:6em 0 4em;
       header {
         float:none;
@@ -125,40 +123,6 @@
       }
     }
 
-      &.work_kpcc-ipad {
-        .marquee.single-project {
-          background-image:url('../images/bg-marquee-kpcc-ipad.jpg');
-          background-size:cover;
-        }
-      }
-
-      &.work_half-in-ten {
-        .marquee.single-project {
-          background-image:url('../images/bg-marquee-half-in-ten.jpg');
-          background-size:cover;
-        }
-      }
-
-      &.work_kpcc-redesign {
-        .marquee.single-project {
-          background-image:url('../images/bg-marquee-kpcc-redesign.jpg');
-          background-size:cover;
-        }
-      }
-
-      &.work_kpcc-newsletters {
-        .marquee.single-project {
-          background-image:url('../images/bg-marquee-kpcc-emails.jpg');
-          background-size:cover;
-        }
-      }
-
-      &.work_highlander-orientation {
-        .marquee.single-project {
-          background-image:url('../images/bg-marquee-ucr-orientation.jpg');
-          background-size:cover;
-        }
-      }
 
     .meta {
       text-align:left;
@@ -271,61 +235,54 @@
     display:none;
   }
 
+  // Work Landing page
   .work-list {
 
     .work-item {
-      @include clearfix();
-      margin-bottom:0;
+      margin-bottom:10em;
+      text-align:center;
 
-      &:nth-child(odd) {
-        header {
-          float:right;
-        }
-        > a {
-          float:left;
-        }
-        figure {
-          margin-left:1em;
-          margin-right:0;
+      &:nth-of-type(1) {
+        hr {
+          display:block;
         }
       }
 
-      header {
-        float:left;
-        width:36%;
+      &:last-child {
+        margin-bottom:3em;
+      }
+
+      h2 + p {
+        margin:0 4em 3em;
       }
 
       hr {
         margin-top:0;
-        margin-bottom:5em;
       }
 
-      > a {
-        float:right;
-        width:58%;
-      }
+    }
 
-      h2 {
-        font-size:2.625em;
-        margin-top:1em;
-      }
+    figure {
+      margin:0 auto;
+      max-width:46.25em;
+      text-align:center;
 
-      p  {
-        font-size:1em;
-      }
-
-      .button {
-        display:inline-block;
-      }
-
-      figure {
-        margin-right:1em;
-        img {
-          border:0;
+      figcaption {
+        background:$brightAccentAlt;
+        border-radius:3px;
+        left:35%;
+        right:35%;
+        bottom:-1.5em;
+        &:hover {
+          background:saturate($brightAccentAlt, 30%);
         }
-        figcaption {
-          display:none;
-        }
+      }
+
+      img {
+        border:0;
+        display:block;
+        max-width:100%;
+        text-align:center;
       }
     }
   }

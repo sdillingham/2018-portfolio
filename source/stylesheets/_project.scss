@@ -1,4 +1,4 @@
-// Styles for single project view
+// STYLES FOR SINGLE PROJECT VIEW
 
 .work {
   &.work_kpcc-ipad {
@@ -42,11 +42,13 @@
 }
 .product-shot {
   text-align:center;
+  position:relative;
+  z-index:199;
 
   img {
     margin:-6em 0 4em;
     position:relative;
-    z-index: 200;
+    z-index:200;
   }
 
   .button {

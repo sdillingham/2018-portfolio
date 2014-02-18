@@ -35,7 +35,7 @@ article.project-details
         - p[:gallery].each do |g|
           div
             figure
-              = partial(:image, :locals => { :img => g.image, :alt => g.caption, :format => 'jpg' })
+              = partial(:image, :locals => { :img => g.image, :alt => g.caption, :format => 'jpg', :hidpi => 'false' })
               figcaption
                 p.caption= g.caption
     nav

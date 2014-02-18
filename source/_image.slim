@@ -1,12 +1,14 @@
 - medbreak   ||= '400'
 - largebreak ||= '800'
+- hidpi      ||= 'true'
 - hidpibreak ||= '1.5'
 
 span data-alt="#{alt}" data-picture=""
   span data-src="../../images/#{img}-small.#{format}"
   span data-media="(min-width: #{medbreak}px)" data-src="../../images/#{img}-med.#{format}"
   span data-media="(min-width: #{largebreak}px)" data-src="../../images/#{img}-large.#{format}"
-  span data-media="(min-width: #{largebreak}px) and (-webkit-min-device-pixel-ratio: #{hidpibreak}), (min-width: #{largebreak}px) and (min-device-pixel-ratio: #{hidpibreak})" data-src="../../images/#{img}-xlarge.#{format}" class="img xlarge"
+  - if hidpi == 'true'
+    span data-media="(min-width: #{largebreak}px) and (-webkit-min-device-pixel-ratio: #{hidpibreak}), (min-width: #{largebreak}px) and (min-device-pixel-ratio: #{hidpibreak})" data-src="../../images/#{img}-xlarge.#{format}" class="img xlarge"
   /! Fallback
   noscript
     img alt="#{alt}" src="../../images/#{img}-small.#{format}"

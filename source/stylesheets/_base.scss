@@ -20,6 +20,7 @@ img {
 a {
   color:$linkAccent;
   text-decoration:none;
+  transition: background-color 0.2s linear, color 0.2s linear;
 }
 
 .button {

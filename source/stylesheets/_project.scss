@@ -1,0 +1,292 @@
+// STYLES FOR SINGLE PROJECT VIEW
+
+.work {
+  &.work_kpcc-ipad {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-kpcc-ipad.jpg');
+      background-size:cover;
+    }
+  }
+
+  &.work_half-in-ten {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-half-in-ten.jpg');
+      background-size:cover;
+    }
+  }
+
+  &.work_kpcc-redesign {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-kpcc-redesign.jpg');
+      background-size:cover;
+    }
+  }
+
+  &.work_kpcc-newsletters {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-kpcc-emails.jpg');
+      background-size:cover;
+    }
+  }
+
+  &.work_highlander-orientation {
+    .marquee.single-project {
+      background-image:url('../images/bg-marquee-ucr-orientation.jpg');
+      background-size:cover;
+    }
+  }
+}
+
+.project-details {
+  background:$white;
+}
+.product-shot {
+  text-align:center;
+  position:relative;
+  z-index:199;
+
+  img {
+    margin:-6em 0 4em;
+    position:relative;
+    z-index:200;
+  }
+
+  .button {
+    font-size:1.4em;
+    span {
+      font-size:0.8em;
+      margin-left:8px;
+    }
+  }
+}
+
+.checklist {
+  &.problem {
+    h4 {
+      color:$darkGray;
+    }
+  }
+  &.outcomes {
+    padding-bottom:8em;
+  }
+
+  .section-header {
+    padding-bottom:1em;
+    hr {
+      top:61%;
+    }
+  }
+
+  ul, p {
+    color:$darkGray;
+    font-size:1.25em;
+  }
+  ul {
+    padding-left:26px;
+    li {
+      margin-bottom:0.75em;
+    }
+  }
+}
+
+.gallery {
+  background:$black;
+  overflow:hidden;
+  margin:3em 0 2em;
+  padding:1em 0;
+  position:relative;
+
+  .section-header {
+    padding:1em 0;
+    h4 {
+      span {
+        background:$black;
+      }
+    }
+    hr {
+      background:lighten($black, 15%);
+      top:30%;
+    }
+  }
+
+  nav {
+    text-align:center;
+
+    .bullets {
+      @include clearfix();
+      padding:0;
+      li {
+        border:1px solid $deepGray;
+        border-radius:4px;
+        display:inline-block;
+        margin:0 5px;
+        width:8px;
+        height:8px;
+        &.on {
+          background:$white;
+          border:0;
+        }
+      }
+    }
+
+  }
+}
+
+  .swipe {
+    margin:0 auto;
+    max-width:540px; 
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+  }
+
+  .swipe-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swipe-wrap > div {
+    float:left;
+    width:100%;
+    padding:0 1em;
+    position: relative;
+
+    figure  {
+      position:relative;
+    }
+
+    figcaption {
+      background:rgba($black, 0.85);
+      color:$paleGray;
+      font-size:0.9em;
+      margin:0;
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+
+      p {
+        @extend .marquee-heading;
+        padding:0 10px;
+      }
+    }
+  }
+
+  .no-touch .slider-nav {
+    background:rgba(0,0,0,0.4);
+    border:2px solid $white;
+    border-radius:22px;
+    display:block;
+    margin-top:-22px;
+    opacity:0.65;
+    position:absolute;
+    width:44px;
+    height:44px;
+    top:55%;
+    z-index:400;
+    &:hover {
+      cursor:pointer;
+      opacity:1;
+    }
+    &:active {
+      opacity:0.6;
+    }
+    &:after {
+      content:"";
+      display:block;
+      position:absolute;
+      top:10px;
+    }
+    &.prev {
+      left:2%;
+      &:after { 
+        @include triangle(20px, $white, left);
+        left:3px;
+      }
+    }
+    &.next {
+      right:2%;
+      &:after { 
+        @include triangle(20px, $white, right);
+        right:3px;
+      }
+    }
+  }
+
+
+.meta {
+  margin-bottom:2em;
+  text-align:center;
+
+  dl {
+    margin-bottom:1em;
+    dd, dt {
+      @extend .marquee-heading;
+      color:$deepGray;
+      display:block;
+      font-size:1.1em;
+    }
+    dt {
+      font-size:0.8em;
+      text-transform:uppercase;
+    }
+    dd {
+      color:$lightGray;
+      margin-left:2px;
+    }
+  }
+}
+
+// Next Project
+.next-project {
+  color:$white;
+  height:24em;
+  margin-bottom:-8em;
+  position:relative;
+
+  footer {
+    padding-top:3em;
+  }
+
+  .next-bg {
+    background:darken($subduedAccent, 13%);
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:-3;
+  }
+  footer {
+    height:20em;
+    position:fixed;
+    bottom:4em;
+    left:0;
+    right:0;
+    text-align:center;
+    h3, p {
+      @extend .marquee-heading;
+    }
+    h3 {
+      font-size:2em;
+      margin-bottom:0;
+    }
+    h5 {
+      color:$lightAccent;
+      font-size:1em;
+      font-weight:400;
+    }
+    p {
+      margin-top:0;
+      a {
+        color:$white;
+      }
+    }
+    a {
+      color:$white;
+      &:hover {
+        color:$brightAccent;
+      }
+    }
+  }
+}

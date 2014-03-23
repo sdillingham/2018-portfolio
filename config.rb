@@ -25,6 +25,7 @@ activate :directory_indexes
 ###
 
 page "/",               :layout => :index_layout
+page "blog/*",          :layout => :work_layout
 page "work/*",          :layout => :work_layout
 page "/sitemap.xml",    :layout => false
 
@@ -70,6 +71,12 @@ page "/sitemap.xml",    :layout => false
     else
       @page_heading
     end
+  end
+
+  # Combine Middleman's default page_classes with custom classes
+  # and append them to the <body> element
+  def custom_page_classes
+    page_classes + " " + yield_content(:pageclasses).to_s
   end
  end
 

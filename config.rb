@@ -4,6 +4,11 @@ activate :bourbon
 activate :neat
 activate :imageoptim
 activate :livereload
+activate :blog do |blog|
+  blog.layout = "work_layout"
+  blog.prefix = "/blog"
+  blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
+end
 activate :directory_indexes
 
 ###
@@ -81,7 +86,9 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 # Add path to Bower components directory
-sprockets.append_path File.join "#{root}", "components"
+after_configuration do
+ sprockets.append_path File.join "#{root}", "components"
+end
 
 # Build-specific configuration
 configure :build do

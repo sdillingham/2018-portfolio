@@ -25,10 +25,15 @@ activate :directory_indexes
 ###
 
 page "/",               :layout => :index_layout
-page "blog/*",          :layout => :work_layout
-page "work/*",          :layout => :work_layout
 page "/sitemap.xml",    :layout => false
-
+with_layout :interior_layout do
+  page "blog/*" do
+    @current_section_blog = true
+  end
+  page "work/*" do
+    @current_section_work = true
+  end
+end
 
 # Per-page layout changes:
 #

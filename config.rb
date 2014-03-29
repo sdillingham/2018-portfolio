@@ -5,7 +5,7 @@ activate :neat
 activate :imageoptim
 activate :livereload
 activate :blog do |blog|
-  blog.layout = "work_layout"
+  blog.layout = "blog_layout"
   blog.prefix = "/blog"
   blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
 end
@@ -27,11 +27,13 @@ activate :directory_indexes
 page "/",               :layout => :index_layout
 page "/sitemap.xml",    :layout => false
 with_layout :interior_layout do
-  page "blog/*" do
-    @current_section_blog = true
-  end
   page "work/*" do
     @current_section_work = true
+  end
+end
+with_layout :blog_layout do
+  page "blog/*" do
+    @current_section_blog = true
   end
 end
 

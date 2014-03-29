@@ -310,8 +310,11 @@
 
   // Blog styles
   .blog {
-    h1 a {
-      color:$nearBlack;
-    }  
+    .global-header {
+      position:relative;
+    }
+      h1 a {
+        color:$nearBlack;
+      }  
   }
 }

@@ -1,9 +1,11 @@
 .bound
-  h1 Blog
 - blog.articles[0...5].each do |article|
-  article
-    h1
-      a href=article.url = article.title
+  article.blog-entry
+    header
+      h1
+        a href=article.url = article.title
+      hr
       time= article.date.strftime('%b %e %Y')
-    = article.summary
-    a href=article.url  Read more
+      a href=article.url Permalink
+      hr
+    = article.body

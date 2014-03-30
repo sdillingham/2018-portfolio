@@ -27,15 +27,19 @@
     .global-header {
       background:transparent;
       position:absolute;
+      h1 {
+        float:left;
+        font-size:1.375em;
+        padding:17px 0;
+        a {
+          color:$white;
+        }
+      }
     }
 
     h1 {
-      float:left;
-      font-size:1.375em;
-      padding:17px 0;
-      a {
-        color:$white;
-      }
+      
+      
     }
 
     hr.ledge {
@@ -78,11 +82,25 @@
             }
             &.active {
               color:$lightAccent;
+              position:relative;
               &:before {
                 display:none;
               }
+              &:after {
+                bottom:-1px;
+                content:"";
+                background:$lightAccent;
+                display:block;
+                height:1px;
+                left:10px;
+                position:absolute;
+                right:10px;
+              }
               &:hover {
                 color:$brightAccent;
+                &:after {
+                  background:$brightAccent;
+                }
               }
             }
             i {
@@ -311,10 +329,18 @@
   // Blog styles
   .blog {
     .global-header {
+      background:#013F4A;
+      background-size:cover;
+      margin-bottom:4em;
       position:relative;
     }
-      h1 a {
-        color:$nearBlack;
-      }  
+
+
+    .blog-entry {
+      p, ul, ol, blockquote {
+        padding-left:9.0909091%;
+        padding-right:9.0909091%;
+      }
+    } 
   }
 }

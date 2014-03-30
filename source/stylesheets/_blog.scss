@@ -1,5 +1,28 @@
-.blog {
-  h1 a {
-    color:$nearBlack;
-  }  
+.blog.interior {
+
+}
+
+.blog-entry {
+  margin-bottom:6em;
+  header {
+    margin-bottom:2em;
+    h1 {
+      font-size:3.875em;
+      font-weight:300;
+      //text-align:left;
+      a {
+        color:$brightAccentAlt;
+      }
+    }
+    hr {
+      background:$nearWhite;
+    }
+  }
+  p, ul, ol {
+    color:$darkGray;
+    font-size:1.25em;
+    line-height:1.5em;
+    margin-bottom:30px;
+    margin-top:0;
+  }
 }

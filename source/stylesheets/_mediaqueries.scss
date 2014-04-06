@@ -337,6 +337,11 @@
 
 
     .blog-entry {
+      header {
+        h1 {
+          text-align:center;
+        }
+      }
       p, ul, ol, blockquote {
         padding-left:9.0909091%;
         padding-right:9.0909091%;

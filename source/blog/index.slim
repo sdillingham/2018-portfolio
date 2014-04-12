@@ -5,7 +5,7 @@ pageable: true
 .bound
 /! Build articles list
 - page_articles.each_with_index do |article|
-  = partial(:article, :locals => { :article => article })
+  = partial(:article, :locals => { :current_article => article })
 
 /! Build pagination if needed
 - if paginate && num_pages > 1

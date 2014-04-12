@@ -184,6 +184,10 @@
         font-family:"freight-sans-pro", sans-serif;
         line-height:1em;
         padding:8px;
+        &:hover {
+          border-color:$lightGray;
+          color:$brightAccentAlt;
+        }
       }
     }
   }

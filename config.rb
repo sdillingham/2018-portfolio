@@ -5,7 +5,7 @@ activate :neat
 activate :imageoptim
 activate :livereload
 activate :blog do |blog|
-  blog.layout = "blog_layout"
+  blog.layout = "article_layout"
   blog.paginate = true
   blog.page_link = "page/:num"
   blog.per_page = 2
@@ -29,9 +29,17 @@ with_layout      :interior_layout do
 
 end
 
-with_layout      :blog_layout do
+with_layout      :article_layout do
 
   page "blog/*" do
+    @current_section_blog = true
+  end
+
+end
+
+with_layout      :blog_layout do
+
+  page "blog/index.html" do
     @current_section_blog = true
   end
 

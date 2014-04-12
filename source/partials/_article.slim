@@ -1,12 +1,12 @@
 article.post
-  h1: a href=article.url = article.title
+  h1: a href=current_article.url = current_article.title
   aside.post-meta
-    time= article.date.strftime('%b %e %Y') 
+    time= current_article.date.strftime('%b %e %Y') 
     span.divider • 
     span.tags
-      - article.tags.each do |tag| 
+      - current_article.tags.each do |tag| 
         span.tag=tag
     span.divider • 
-    a href=article.url Permalink
-  = article.body
+    a href=current_article.url Permalink
+  = current_article.body
   hr.terminus

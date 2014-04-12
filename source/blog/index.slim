@@ -1,11 +1,16 @@
 .bound
 - blog.articles[0...5].each do |article|
-  article.blog-entry
-    header
-      h1
-        a href=article.url = article.title
-      hr
-      time= article.date.strftime('%b %e %Y')
+  article.post
+    h1: a href=article.url = article.title
+    aside.post-meta
+      time= article.date.strftime('%b %e %Y') 
+      span.divider • 
+      span.tags
+        - article.tags.each do |tag| 
+          span.tag=tag
+      span.divider • 
       a href=article.url Permalink
-      hr
     = article.body
+    hr.terminus
+nav.pagination
+  

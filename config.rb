@@ -75,6 +75,8 @@ Slim::Engine.set_default_options :pretty => true
 # Enable Slim templates to use frontmatter
 set :frontmatter_extensions, %w(.html .slim)
 
+set :partials_dir, 'partials'
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

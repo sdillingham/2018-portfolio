@@ -162,3 +162,29 @@
     }
   }
 }
+
+// Blog Pagination
+.pagination {
+  ul {
+    list-style:none;
+    padding:0;
+    position:relative;
+    li {
+      position:absolute;
+      &.previous {
+        right:0px;
+      }
+      &.next {
+        left:0px;
+      }
+      a {
+        border:1px solid $paleGray;
+        border-radius:3px;
+        display:block;
+        font-family:"freight-sans-pro", sans-serif;
+        line-height:1em;
+        padding:8px;
+      }
+    }
+  }
+}

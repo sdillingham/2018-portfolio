@@ -1,5 +1,10 @@
+---
+pageable: true
+---
+
 .bound
-- blog.articles[0...5].each do |article|
+/! Build articles list
+- page_articles.each_with_index do |article|
   article.post
     h1: a href=article.url = article.title
     aside.post-meta
@@ -12,5 +17,14 @@
       a href=article.url Permalink
     = article.body
     hr.terminus
-nav.pagination
-  
+
+/! Build pagination if needed
+- if paginate && num_pages > 1
+  nav.pagination
+    ul.pager
+      - if prev_page
+        li.previous
+          = link_to 'Newer &rarr;', prev_page
+      - if next_page
+        li.next
+          = link_to '&larr; Older', next_page

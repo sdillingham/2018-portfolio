@@ -6,6 +6,9 @@ activate :imageoptim
 activate :livereload
 activate :blog do |blog|
   blog.layout = "blog_layout"
+  blog.paginate = true
+  blog.page_link = "page/:num"
+  blog.per_page = 2
   blog.prefix = "/blog"
   blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
 end
@@ -16,18 +19,21 @@ activate :directory_indexes
 # Page options, layouts, aliases and proxies
 ###
 
-page "/",               :layout => :index_layout
-page "/sitemap.xml",    :layout => false
+page "/",        :layout => :index_layout
+
 with_layout :interior_layout do
   page "work/*" do
     @current_section_work = true
   end
 end
+
 with_layout :blog_layout do
   page "blog/*" do
     @current_section_blog = true
   end
 end
+
+page "*.xml",    :layout => false
 
 ###
 # Helpers

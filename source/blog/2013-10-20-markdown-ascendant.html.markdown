@@ -1,8 +1,7 @@
 ---
 title: Markdown Ascendant
 date: 2013-10-20 02:05 UTC
-tags: nothing
-
+tags: development
 ---
 
 Are there bands you love that you rarely bother trying to share with anyone?
@@ -29,6 +28,6 @@ For the first time ever, [people other than developers have discovered](https://
 
 I think this younger, web-native generation of writers and journalists will turn the tide in favor of Markdown. Like Steve Jobs said about not being able to sell tablets to older users accustomed to physical keyboards: “one day we realized that death would eventually take care of this.” 
 
-Markdown sits in the early stages of a renaissance. Yes, it still has problems to overcome: an incomplete standard syntax, and different [proprietary implementations](https://help.github.com/articles/github-flavored-markdown) trying to fill in the gaps). On top of that, developers of publishing systems have to sweat the details of parsing Markdown to HTML in elegant and performant ways.
+Markdown sits in the early stages of a renaissance. Yes, it still has problems to overcome: an incomplete standard syntax, and different [proprietary implementations](https://help.github.com/articles/github-flavored-markdown) trying to fill in the gaps. On top of that, developers of publishing systems have to sweat the details of parsing Markdown to HTML in elegant and performant ways.
 
 But between these problems and the inherent clunkiness of WYSIWYG HTML editors, I'm all in for Markdown.

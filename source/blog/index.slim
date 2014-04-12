@@ -5,18 +5,7 @@ pageable: true
 .bound
 /! Build articles list
 - page_articles.each_with_index do |article|
-  article.post
-    h1: a href=article.url = article.title
-    aside.post-meta
-      time= article.date.strftime('%b %e %Y') 
-      span.divider • 
-      span.tags
-        - article.tags.each do |tag| 
-          span.tag=tag
-      span.divider • 
-      a href=article.url Permalink
-    = article.body
-    hr.terminus
+  = partial(:article, :locals => { :article => article })
 
 /! Build pagination if needed
 - if paginate && num_pages > 1

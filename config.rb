@@ -9,8 +9,8 @@ activate :blog do |blog|
   blog.paginate = true
   blog.page_link = "page/:num"
   blog.per_page = 2
-  blog.prefix = "/blog"
   blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
+  blog.prefix = "/blog"
 end
 activate :directory_indexes
 
@@ -21,16 +21,20 @@ activate :directory_indexes
 
 page "/",        :layout => :index_layout
 
-with_layout :interior_layout do
+with_layout      :interior_layout do
+
   page "work/*" do
     @current_section_work = true
   end
+
 end
 
-with_layout :blog_layout do
+with_layout      :blog_layout do
+
   page "blog/*" do
     @current_section_blog = true
   end
+
 end
 
 page "*.xml",    :layout => false

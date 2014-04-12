@@ -22,4 +22,4 @@ And what about aggregators sharing revenue with content creators? It's foolish t
 
 I understand the challenge: building great products is hard. But so is making great content, and our content gives us great leverage.
 
-Let's get down to business and start building world-class products and experiences that we own. If public radio can do that, we can preserve our unique relationship with our audience and control our destiny.
+My hope is that we get down to business and start building world-class products and experiences that we own. If public radio can do that, we'll remain close to our audience and control our destiny.

@@ -17,6 +17,30 @@
   }
 }
 
+// Blog post styles for larger screens
+@media (min-width:58em) {
+  .blog {
+
+    .post {
+      margin-left:8.125em;
+      margin-right:8.125em;
+    }
+
+    // pull post title out beyond the boundaries of the text column
+    h1 {
+      margin-left:-2.321428571em;
+      margin-right:-2.321428571em;
+    }
+
+    // pull figures and big blockquotes out beyond the boundaries of the text column
+    figure, blockquote.big {
+      margin-left:-8.125em;
+      margin-right:-8.125em;
+    }
+    
+  }
+}
+
 // We're on a larger screen, let's use that extra real estate
 @media (min-width:40em) {
 
@@ -328,6 +352,7 @@
 
   // Blog styles
   .blog {
+
     .global-header {
       background:#013F4A;
       background-size:cover;
@@ -335,17 +360,5 @@
       position:relative;
     }
 
-
-    .blog-entry {
-      header {
-        h1 {
-          text-align:center;
-        }
-      }
-      p, ul, ol, blockquote {
-        padding-left:9.0909091%;
-        padding-right:9.0909091%;
-      }
-    } 
   }
 }

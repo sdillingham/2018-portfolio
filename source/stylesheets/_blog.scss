@@ -1,10 +1,15 @@
 // STYLES FOR BLOG
+.blog {
+  main {
+    background:$white;
+  }
+}
 
 // Single Blog Post
 .post {
   color:$copyGray;
   line-height:1.5em;
-  margin:0 8.125em 6em;
+  margin:0 0 6em;
 
   // metadata bits that preceed article body
   .post-meta {
@@ -33,19 +38,13 @@
     }
   }
 
-  // pull figures and big blockquotes out beyond the boundaries of the text column
-  figure, blockquote.big {
-    margin-left:-8.125em;
-    margin-right:-8.125em;
-  }
-
   // base styles for text elements
   h1 {
     color:$black;
     font-size:3.49em;
     font-weight:300;
     line-height:1.095em;
-    margin:0.762em -2.321428571em 0 -2.321428571em;
+    margin:0.762em 0 0;
     padding:1.142857143em 0;
     text-align:center;
     a {
@@ -188,6 +187,55 @@
           border-color:$lightGray;
           color:$brightAccentAlt;
         }
+      }
+    }
+  }
+}
+
+// Single Entry - "Next Post" tease
+.blog .next-post {
+  color:$black;
+  height:24em;
+  margin-bottom:-8em;
+  position:relative;
+
+  .next-bg {
+    background:$nearWhite;
+    border-top:1px solid darken($nearWhite, 10%);
+    bottom:0;
+    left:0;
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:-3;
+  }
+  .wrapper {
+    bottom:4em;
+    height:20em;
+    left:0;
+    padding-top:5em;
+    position:fixed;
+    right:0;
+    text-align:center;
+    h3, p {
+      @extend .marquee-heading;
+    }
+    h3 {
+      font-size:2.5em;
+      font-weight:300;
+      margin-bottom:0;
+      margin-top:0;
+    }
+    h5 {
+      color:$medGray;
+      font-size:0.875em;
+      font-weight:400;
+      margin-bottom:0;
+    }
+    a {
+      color:$linkAccent;
+      &:hover {
+        color:$nearBlack;
       }
     }
   }

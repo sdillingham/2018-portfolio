@@ -5,12 +5,16 @@ $(document).ready(function() {
   //
   $('.nav-toggle, .nav-close').click(function() {
     $('.site-nav').toggleClass("active");
-    if ($('.site-nav').hasClass("active")) {
-      document.ontouchmove = function(e){ e.preventDefault(); }
+
+    document.ontouchmove = function(e){ 
+      if ($('.site-nav').hasClass("active")) {
+        e.preventDefault();
+      }
+      else {
+      return true; 
+      }
     }
-    else {
-      document.ontouchmove = function(e){ return true; }
-    }
+    
   });
 
 

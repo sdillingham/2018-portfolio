@@ -3,13 +3,14 @@ $(document).ready(function() {
   //
   // Toggle menu visibility for smaller screens
   //
-  $('.nav-toggle').click(function() {
+  $('.nav-toggle, .nav-close').click(function() {
     $('.site-nav').toggleClass("active");
-    document.ontouchmove = function(e){ e.preventDefault(); }
-  });
-  $('.nav-close').click(function() {
-    $('.site-nav').toggleClass("active");
-    document.ontouchmove = function(e){ return true; }
+    if ($('.site-nav').hasClass("active")) {
+      document.ontouchmove = function(e){ e.preventDefault(); }
+    }
+    else {
+      document.ontouchmove = function(e){ return true; }
+    }
   });
 
 

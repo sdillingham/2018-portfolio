@@ -1,0 +1,242 @@
+// STYLES FOR BLOG
+.blog {
+  main {
+    background:$white;
+  }
+}
+
+// Single Blog Post
+.post {
+  color:$copyGray;
+  line-height:1.5em;
+  margin:0 0 6em;
+
+  // metadata bits that preceed article body
+  .post-meta {
+    border-color:$paleGray;
+    border-style:solid;
+    border-width:1px 0;
+    color:$medGray;
+    font-family:"freight-sans-pro", sans-serif;
+    font-size:0.83em;
+    line-height:1.25em;
+    margin:0.2em 0 2.2em 0;
+    padding:0.5em 0;
+    text-transform:uppercase;
+    .divider {
+      display:inline-block;
+      margin:0 10px;
+    }
+    .tag+.tag {
+      margin-left:5px;
+      &:before {
+        color:$paleGray;
+        content:" | ";
+        display:inline-block;
+        margin-right:5px;
+      }
+    }
+  }
+
+  // base styles for text elements
+  h1 {
+    color:$black;
+    font-size:3.49em;
+    font-weight:300;
+    line-height:1.095em;
+    margin:0.762em 0 0;
+    padding:1.142857143em 0;
+    text-align:center;
+    a {
+      color:$brightAccentAlt;
+    }
+  }
+
+  h2 {
+    font-size:1.5em;
+    line-height:1.188em;
+    margin:2em 0 0.5em 0;
+  }
+
+  h3 {
+    font-size:1.625em;
+    line-height:1.231em;
+    margin:2.462em 0 0.615em 0;
+  }
+
+  p {
+    font-size:1.25em;
+    line-height:1.5em;
+    margin:0 0 1.5em 0;
+  }
+
+  // embiggen the first graph in a post
+  .post-meta+p {
+    font-size:1.5em;
+    line-height:1.7em;
+    margin:0.9em 0 1.1em 0;
+  }
+
+  ul {
+    font-size:1.25em;
+    line-height:1.6em;
+    list-style:disc outside;
+    margin:0 0 1.5em 1.5em;
+    padding:0;
+    li {
+      margin-bottom:1.5em;
+    }
+  }
+
+  ol {
+    font-size:1.25em;
+    line-height:1.6em;
+    list-style:decimal outside;
+    margin:0 0 1.6em 3.2em;
+  }
+
+  hr {
+    border-top:1px solid $paleGray;
+    display:block;
+    margin:4em auto;
+    width:20%;
+    &.terminus {
+      border-top-color:$medGray;
+    }
+  }
+
+  blockquote {
+    border-color:$medGray;
+    border-style:solid;
+    border-width:0 0 0 4px;
+    margin:0em 0 2.9em 0em;
+    padding:0 0 0 1em;
+    p {
+      color:$medGray;
+    }
+    &.big {
+      border-width:0;
+      margin:2.9em -80;
+      padding:0 0 0 0em;
+      text-align:center;
+      p {     
+        font-family:"freight-sans-pro", sans-serif;
+        font-size:1.92em;
+        font-style:italic;
+        font-weight:300;       
+        line-height:1.4em;
+        margin:0 0 1.2em 0;
+      }
+    }
+  }
+
+  .footnotes {
+    h2 {
+      font-family:"freight-sans-pro", sans-serif;
+      font-size:1.5em;
+      font-weight:400;
+      line-height:1.188em;
+      margin:2em 0 0.5em 0;
+    }
+    ol {
+      font-size:0.88em;
+      line-height:1.778em;
+      margin:0 0 1.778em 0;
+      padding:1.5em;
+    }
+  }
+
+  // base styles for figures
+  figure {
+    margin-bottom:3em;
+    margin-top:2em;
+    text-align:center;
+    figcaption {
+      color:$medGray;
+      font-size:0.875em;
+      font-style:italic;
+      font-weight:400;
+      line-height:1em;
+      margin:0 0 1em 0;
+    }
+  }
+}
+
+// Blog Pagination
+.pagination {
+  ul {
+    list-style:none;
+    padding:0;
+    position:relative;
+    li {
+      position:absolute;
+      &.previous {
+        right:0px;
+      }
+      &.next {
+        left:0px;
+      }
+      a {
+        border:1px solid $paleGray;
+        border-radius:3px;
+        display:block;
+        font-family:"freight-sans-pro", sans-serif;
+        line-height:1em;
+        padding:8px;
+        &:hover {
+          border-color:$lightGray;
+          color:$brightAccentAlt;
+        }
+      }
+    }
+  }
+}
+
+// Single Entry - "Next Post" tease
+.blog .next-post {
+  color:$black;
+  height:24em;
+  margin-bottom:-8em;
+  position:relative;
+
+  .next-bg {
+    background:$nearWhite;
+    border-top:1px solid darken($nearWhite, 10%);
+    bottom:0;
+    left:0;
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:-3;
+  }
+  .wrapper {
+    bottom:4em;
+    height:20em;
+    left:0;
+    padding-top:5em;
+    position:fixed;
+    right:0;
+    text-align:center;
+    h3, p {
+      @extend .marquee-heading;
+    }
+    h3 {
+      font-size:2.5em;
+      font-weight:300;
+      margin-bottom:0;
+      margin-top:0;
+    }
+    h5 {
+      color:$medGray;
+      font-size:0.875em;
+      font-weight:400;
+      margin-bottom:0;
+    }
+    a {
+      color:$linkAccent;
+      &:hover {
+        color:$nearBlack;
+      }
+    }
+  }
+}

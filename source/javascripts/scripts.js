@@ -5,6 +5,16 @@ $(document).ready(function() {
   //
   $('.nav-toggle, .nav-close').click(function() {
     $('.site-nav').toggleClass("active");
+
+    document.ontouchmove = function(e){ 
+      if ($('.site-nav').hasClass("active")) {
+        e.preventDefault();
+      }
+      else {
+        return true; 
+      }
+    }
+
   });
 
 

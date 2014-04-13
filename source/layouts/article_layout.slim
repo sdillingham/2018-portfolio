@@ -1,0 +1,16 @@
+- wrap_layout :interior_layout do
+
+  /! Post content
+  .bound
+    = partial(:article, :locals => { :current_article => current_article, :context => 'single' })
+
+  - content_for :postproject do
+    /! Tease to next article
+    - next_article = current_article.next_article
+    - if next_article
+      aside.next-post
+        .next-bg
+        .wrapper
+          .bound
+            h5 Next Post
+            h3 =link_to current_article.next_article.title, current_article.next_article.url

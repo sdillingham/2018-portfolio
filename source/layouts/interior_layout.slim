@@ -1,3 +1,6 @@
+- content_for :pageclasses do
+  | interior
+
 - wrap_layout :layout do
   header.global-header
     .bound
@@ -9,8 +12,8 @@
         h4 Menu
         ul.menu-main
           li.home: a href="/" Home
-          li: a.active href="/work/" Work
-          li: a href="/blog/" Blog
+          li: a class=('active' if @current_section_work) href="/work/" Work
+          li: a class=('active' if @current_section_blog)  href="/blog/" Blog
         hr
         h4 Elsewhere
         ul.menu-elsewhere

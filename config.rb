@@ -9,7 +9,7 @@ activate :blog do |blog|
   blog.paginate = true
   blog.page_link = "page/:num"
   blog.per_page = 2
-  blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
+  blog.permalink = "{year}/{month}/{day}/{title}.html"
   blog.prefix = "/blog"
 end
 activate :directory_indexes

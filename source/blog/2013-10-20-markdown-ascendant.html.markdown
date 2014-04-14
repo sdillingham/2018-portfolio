@@ -20,7 +20,7 @@ And I'm not the only one. Look at the [Google trends for searches containing “
 
 <figure>
 
-<script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=markdown&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=880&h=358"></script>
+![Google search trends for Markdown, 2004-2013](/blog/images/markdown-trends.png)
 
 </figure>
 

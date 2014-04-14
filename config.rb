@@ -1,6 +1,8 @@
 require  "slim"
 require  "builder"
 activate :bourbon
+activate :directory_indexes
+activate :fix_perm
 activate :neat
 activate :imageoptim
 activate :livereload
@@ -12,7 +14,6 @@ activate :blog do |blog|
   blog.permalink = "{year}/{month}/{day}/{title}.html"
   blog.prefix = "/blog"
 end
-activate :directory_indexes
 
 
 ###
@@ -96,6 +97,18 @@ after_configuration do
  sprockets.append_path File.join "#{root}", "components"
 end
 
+# Fix image file permissions after imageoptim screws them up during build
+class FixPermissions < Middleman::Extension
+  def initialize(app, options_hash={}, &block)
+    super
+    app.after_build do |builder|
+      builder.run 'chmod 644 build/images/*'
+      builder.run 'chmod 644 build/blog/images/*'
+    end
+  end
+end
+::Middleman::Extensions.register(:fix_perm, FixPermissions)
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -110,4 +123,14 @@ configure :build do
   # Use relative URLs
   # activate :relative_assets
 
+end
+
+# Deployment
+user = ENV["USER"]
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = "dillingh.am"
+  deploy.path   = "/var/www/seandillingham"
+  deploy.user  = user
 end

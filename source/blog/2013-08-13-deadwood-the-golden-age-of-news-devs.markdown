@@ -1,5 +1,6 @@
 ---
 title: Deadwood, The golden age of news devs
+teaser: It's a great time to be a designer or developer working in a newsroom. The profession is vibrant and thriving, in part because it's allowed to experiment, fail, and live on the edge of chaos.
 date: 2013-08-13 10:00 UTC
 tags: news, pubmedia, strategy
 ---

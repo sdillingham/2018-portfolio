@@ -1,5 +1,6 @@
 ---
 title: On public radio, aggregators, and building products
+teaser: For those paying attention, it's no secret that public radio has a product problem. That is, we don't know how to build great products, and we're often confused about whether it should be part of our core mission.
 date: 2013-09-25 02:05 UTC
 tags: pubmedia, strategy
 ---

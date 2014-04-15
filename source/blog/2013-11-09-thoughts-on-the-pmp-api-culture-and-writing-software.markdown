@@ -1,5 +1,6 @@
 ---
 title: Thoughts on the PMP API, culture, and why KPCC writes its own software
+teaser: If public media is to thrive for another 40 years, we must get better at attracting and retaining great developers, and that begins by investing in fully modern software tools and workflow.
 date: 2013-11-09 12:00 UTC
 tags: pubmedia, strategy, development
 ---

@@ -1,5 +1,6 @@
 ---
 title: Markdown Ascendant
+teaser: After years of believing it was only for developers, it's become clear that Markdown is the future of web-native writing.
 date: 2013-10-20 02:05 UTC
 tags: development
 ---

@@ -1,5 +1,6 @@
 ---
 title: Slides and audio from responsive design panel at iMA
+teaser: Slides and audio from my talk at the responsive design panel at 2013 iMA Conference in Austin, TX.
 date: 2013-03-08 05:00 UTC
 tags: pubmedia, design
 ---

@@ -1,5 +1,6 @@
 ---
 title: KPCC wins six Editor & Publisher awards
+teaser: I'm delighted to share the news that KPCC took home awards for all six of our EPPY nominations, a milestone achievement for the digital editorial and product teams at the station.
 date: 2013-11-06 12:00 UTC
 tags: pubmedia, design
 ---

@@ -18,14 +18,17 @@
     border-width:1px 0;
     color:$medGray;
     font-family:"freight-sans-pro", sans-serif;
-    font-size:0.83em;
+    font-size:1em;
     line-height:1.25em;
     margin:0.2em 0 2.2em 0;
     padding:0.5em 0;
     text-transform:uppercase;
+    time, .tags, a {
+      display:block;
+      margin-bottom:0.2em;
+    }
     .divider {
-      display:inline-block;
-      margin:0 10px;
+      display:none;
     }
     .tag+.tag {
       margin-left:5px;
@@ -41,7 +44,7 @@
   // base styles for text elements
   h1 {
     color:$black;
-    font-size:3.49em;
+    font-size:2.9em;
     font-weight:300;
     line-height:1.095em;
     margin:0.762em 0 0;

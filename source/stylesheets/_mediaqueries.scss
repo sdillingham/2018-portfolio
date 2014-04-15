@@ -24,10 +24,22 @@
     .post {
       margin-left:8.125em;
       margin-right:8.125em;
+
+      .post-meta {
+        font-size:0.83em;
+        time, .tags, a {
+          display:inline-block;
+        }
+        .divider {
+          display:inline-block;
+          margin:0 10px;
+        }
+      }
     }
 
     // pull post title out beyond the boundaries of the text column
     h1 {
+      font-size:3.49em;
       margin-left:-2.321428571em;
       margin-right:-2.321428571em;
     }
@@ -358,6 +370,12 @@
       background-size:cover;
       margin-bottom:4em;
       position:relative;
+    }
+
+    .post {
+      .post-meta {
+        font-size:0.83em;
+      }
     }
 
   }

@@ -27,6 +27,8 @@ html lang="en"
         = stylesheet_link_tag "all", media: "all"
 
         = javascript_include_tag  "head"
+
+        = yield_content :additional_head
         script src="//use.typekit.net/rnz6xzs.js" type="text/javascript"
         javascript:
           try{Typekit.load();}catch(e){}

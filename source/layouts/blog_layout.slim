@@ -1,3 +1,6 @@
+- content_for :additional_head do
+  link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feed.xml"
+
 - wrap_layout :interior_layout do
   .bound 
     = yield

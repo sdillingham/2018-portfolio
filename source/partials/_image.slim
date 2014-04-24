@@ -3,12 +3,13 @@
 - hidpi      ||= 'true'
 - hidpibreak ||= '1.5'
 
-span data-alt="#{alt}" data-picture=""
-  span data-src="../../images/#{img}-small.#{format}"
-  span data-media="(min-width: #{medbreak}px)" data-src="../../images/#{img}-med.#{format}"
-  span data-media="(min-width: #{largebreak}px)" data-src="../../images/#{img}-large.#{format}"
+picture
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
   - if hidpi == 'true'
-    span data-media="(min-width: #{largebreak}px) and (-webkit-min-device-pixel-ratio: #{hidpibreak}), (min-width: #{largebreak}px) and (min-device-pixel-ratio: #{hidpibreak})" data-src="../../images/#{img}-xlarge.#{format}" class="img xlarge"
-  /! Fallback
-  noscript
-    img alt="#{alt}" src="../../images/#{img}-small.#{format}"
+    source srcset="../../images/#{img}-xlarge.#{format}" media="(min-width: #{largebreak}px) and (-webkit-min-device-pixel-ratio: #{hidpibreak}), (min-width: #{largebreak}px) and (min-device-pixel-ratio: #{hidpibreak})"  class="img xlarge"
+  source srcset="../../images/#{img}-large.#{format}" media="(min-width: #{largebreak}px)" 
+  source srcset="../../images/#{img}-med.#{format}" media="(min-width: #{medbreak}px)"
+  source srcset="../../images/#{img}-small.#{format}" 
+  <!--[if IE 9]></video><![endif]-->
+  img alt="#{alt}" src="../../images/#{img}-small.#{format}"
+    

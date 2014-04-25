@@ -1,6 +1,6 @@
 ---
 title: "Developing a podcasting habit"  
-teaser: You're such a tease
+teaser: In which I discover podcasts, the same way Columbus discovered America.
 date: 2014-04-22 00:00 UTC
 tags: technology, strategy, listening 
 
@@ -16,7 +16,7 @@ Of course, I subscribed to all the obvious podcasts that everyone listens to: WT
 
 I also entirely avoided subscribing to public radio shows' podcasts. I get plenty of public radio in my daily routine, and was interested in exploring podcasts as a fringe space, a place that (I hoped) was populated with weirdos wielding microphones.
 
-I subscribe to about 30 different podcasts across a range of topics, and these are obscure or delightful enough to be worth sharing:
+I currently listen to about 30 different podcasts across a range of topics. Here's a handful obscure or delightful enough to be worth sharing:
 
 * [Storming Mortal](http://stormingmortal.com/): Anže Tomić does great interviews with technologists. He's Slovene, and he combines a bit of an outsider's perspective with a really supple mind. He treats his guests with deep generousity and respect, and his interview style has a refreshing amount of sincerity and depth.  
 * [Hired](http://hired.fm/): Cameron Moll hosts this great but too infrequent podcast, where he talks to (mainly) designers about leasership, mentoring others and creating company culture. Fantastic stuff for anyone who aspires to design or UX leadership.

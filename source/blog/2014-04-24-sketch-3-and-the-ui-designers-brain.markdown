@@ -6,9 +6,9 @@ tags: design
 
 ---
 
-[Sketch 3](http://bohemiancoding.com/sketch/) was releaseed last week to my utter delight. Since giving Sketch 2 a try last fall, it's become my primary design tool, making me feel dramatically happier and more productive.
+[Sketch 3](http://bohemiancoding.com/sketch/) was released last week to my utter delight. Since giving Sketch 2 a try last fall, it's become my primary design tool, making me feel dramatically happier and more productive.
 
-I began using Sketch in the middle of designing KPCC's iPad app, and was hesitant to try switching in the middle of such a big project. But it took just two days- one spent converting a set of views from Photoshop to Sketch, another spent toggling between documentation and my designs- for me to feel completely at home in Sketch. Since then, I've been hooked, and having to use Creative Suite feels like a chore. 
+I began using Sketch in the middle of designing KPCC's iPad app, and was hesitant to try switching in the middle of such a big project. But it took just two days- one spent converting a set of views from Photoshop to Sketch, another spent toggling between documentation and my designs- for me to feel totally at home in Sketch. Since then, I've been hooked, and having to use Creative Suite feels like a chore. 
 
 With this latest update, I'm convinced I'll never open Illustrator ever again, and Photoshop only if I absolutely have to. The new symbols feature is an essential addition, and while Adobe's apps have had similar features for years, the addition of symbols allows Sketch to fully realize its promise as a UI designer's primary tool. I felt a momentary pinch having to fork over another $50 for this update, but when you consider the insane cost of Creative Cloud, Sketch 3 is *so* worth it.
 

@@ -35,6 +35,12 @@
           margin:0 10px;
         }
       }
+
+      figure {
+        figcaption {
+          line-height:1.25em;
+        }
+      }
     }
 
     // pull post title out beyond the boundaries of the text column

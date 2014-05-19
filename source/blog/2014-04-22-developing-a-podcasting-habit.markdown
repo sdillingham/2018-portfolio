@@ -10,18 +10,18 @@ Of all the things I set out to accomplish in 2014, the most frivolous goal I gav
 
 Frivolous, because other than "read more books," who makes it a personal goal to consume media? But there I was in January, combing through the Podcasts app on my iPhone in search of new shows to listen to. I also got some great recommendations from friends and colleagues. 
 
-Podcasting survived some lean years and now both creates and attracts superstar entertainers. I approached it as a curiousoutsider, wondering how its ethos differed from the public radio I'm surrounded by everyday. Four months in, I'm enjoying my new habit and have a handful of observations as a listener coming late to the party.
+Podcasting survived some lean years and now both creates and attracts superstar entertainers. I approached it as a curious outsider, wondering how its ethos differed from the public radio I'm surrounded by every day. Four months in, I'm enjoying my new habit and have a handful of observations as a listener coming late to the party.
 
 Of course, I subscribed to all the obvious podcasts that everyone listens to: WTF, 99% Invisible, The Talk Show, Accidental Tech, How Stuff Works. Each of these are enjoyable, well-produced and often compelling, but they're also pretty ubiquitous so I won't waste time repeating what many others have written.
 
-I also entirely avoided subscribing to public radio shows' podcasts. I get plenty of public radio in my daily routine, and was interested in exploring podcasts as a fringe space, a place that (I hoped) was populated with weirdos wielding microphones.
+I also entirely avoided subscribing to public radio podcasts. I get plenty of public radio in my daily routine, and was interested in exploring podcasts as a fringe space, a place that (I hoped) was populated with weirdos wielding microphones.
 
 I currently listen to about 30 different podcasts across a range of topics. Here's a handful obscure or delightful enough to be worth sharing:
 
 * [Storming Mortal](http://stormingmortal.com/): Anže Tomić does great interviews with technologists. He's Slovene, and he combines a bit of an outsider's perspective with a really supple mind. He treats his guests with deep generousity and respect, and his interview style has a refreshing amount of sincerity and depth.  
 * [Hired](http://hired.fm/): Cameron Moll hosts this great but too infrequent podcast, where he talks to (mainly) designers about leasership, mentoring others and creating company culture. Fantastic stuff for anyone who aspires to design or UX leadership.
 * [Why We Listen](http://whywelisten.wordpress.com/): Also too infrequently updated, Why We Listen is the smartest and most original podcast I've come across about music. It focuses on the deeply human stories behind the listening habits of artists and musicians.
-* [Back to Work](http://5by5.tv/b2w): Back to Work is a well knownpodcast, but I mentionit for two reasons. First, because it's one of the few podcasts that can be irreverent enough to make me genuinely laugh. And second, I'm drawn to how Merlin Mann comingles down-to-earth  Buddhist practice with the detritus of a working life. 
+* [Back to Work](http://5by5.tv/b2w): Back to Work is a well known podcast, but I mentionit for two reasons. First, because it's one of the few podcasts that can be irreverent enough to make me genuinely laugh. And second, I'm drawn to how Merlin Mann comingles down-to-earth  Buddhist practice with the detritus of a working life. 
 * [Let's Make Mistakes](http://www.muleradio.net/mistakes/): Mike Monteiro is a deeply empathetic, ethical designer- a pleasure in the current landscape of glossy Dribbble shots and social app startups. He's also an awesome cranky old man with a soapbox, who is foiled perfectly by the pluck and joie-de-vivre of his co-host, Jessie Char. 
 * [Meditation in the City](http://ny.shambhala.org/blog/): Smart talks from a rotating cast of weekly guests, produced by the Shambhala Meditation Center of New York.
 * [Giant Robots Smashing Into Other Giant Robots](http://podcasts.thoughtbot.com/giantrobots): Produced by Thoughtbot, GRSIOGR is my favorite podcast done by and for developers. It's willing to dive deep on the technology side, but also frequently reaches beyond the myopic tech scene to pull in guests like Seth Godin and Cards Against Humanity creator Max Temkin. 

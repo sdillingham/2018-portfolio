@@ -15,7 +15,7 @@ As an employee and manager working in an open floor plan, this rings true - both
 
 In practice, however, I find I get my best work done in solitary environments with fewer disruptions. There's something about the mere *possibility* of interruption in an open office that engenders a constant level of mild anxiety, wrecking my creativity and flow. I'm plagued by a nagging internal voice constantly wondering, "how long until the next person taps me on the shoulder?"
 
-Each person on my team has developed their own tactics to work around the shortcomings of an open office: some start their day from home to get a couple of hours' uninterrupted time each day, others will work the occasional day offsite to do some heads-down work. We all use headphones as a way to try to drown out noise, but I've found it seldom improves my focus. While these tactics help, they still feel like applying a band-aid on an injury that requires major surgery.
+Each person on my team has developed their own tactics to work around the shortcomings of an open office: some start their morning from home to get a couple of hours' uninterrupted time each day, others will work the occasional day offsite to do some heads-down work. We all use headphones as a way to try to drown out noise, but I've found it seldom improves my focus. While these tactics help, they still feel like applying a band-aid on an injury that requires major surgery.
 
 The New Yorker article dovetails nicely with Jason Fried's TED Talk, ["Why work doesn't happen at work."](http://www.npr.org/2013/10/04/191621516/is-too-much-collaboration-a-bad-thing) His full talk is worth watching, as is the companion TED Radio Hour conversation with Guy Raz. Jason, in classic 37Signals style, sums up the whole problem in a single sentence: 
 
@@ -29,7 +29,7 @@ Fried himself showed a great deal of care in building his company's current offi
 ![The interior of 37Signals HQ.](/blog/images/office-37signals.jpg)
 
 <figcaption>
-From walls of stacked felt to well-appointed and soundproofed private rooms, 37Signals' office space manages to feel open while optimizing for quiet to encourage long uninterrupted periods of focused work.
+From walls of stacked felt to well-appointed and soundproofed private rooms, 37Signals' office space manages to feel open while optimizing for quiet, encouraging long uninterrupted periods of focused work.
 </figcaption>
 
 </figure>

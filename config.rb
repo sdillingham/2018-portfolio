@@ -2,9 +2,7 @@ require  "slim"
 require  "builder"
 activate :bourbon
 activate :directory_indexes
-activate :fix_perm
 activate :neat
-activate :imageoptim
 activate :livereload
 activate :blog do |blog|
   blog.layout = "article_layout"
@@ -76,6 +74,14 @@ page "*.xml",    :layout => false
   def custom_page_classes
     page_classes + " " + yield_content(:pageclasses).to_s
   end
+
+  def typekit_id
+    if current_page.url == '/resume/'
+      "pfj5vxy"
+    else
+      "rnz6xzs"
+    end
+  end
  end
 
 # Set slim-lang output style
@@ -97,18 +103,6 @@ after_configuration do
  sprockets.append_path File.join "#{root}", "components"
 end
 
-# Fix image file permissions after imageoptim screws them up during build
-class FixPermissions < Middleman::Extension
-  def initialize(app, options_hash={}, &block)
-    super
-    app.after_build do |builder|
-      builder.run 'chmod 644 build/images/*'
-      builder.run 'chmod 644 build/blog/images/*'
-    end
-  end
-end
-::Middleman::Extensions.register(:fix_perm, FixPermissions)
-
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -120,8 +114,8 @@ configure :build do
   # Enable cache buster
   activate :asset_hash
 
-  # Use relative URLs
-  # activate :relative_assets
+  # Compress images
+  activate :imageoptim
 
 end
 

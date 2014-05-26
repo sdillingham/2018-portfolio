@@ -1,0 +1,175 @@
+---
+title: "Resume"
+teaser: "Resume of Sean Dillingham, a product designer and front-end developer living in Los Angeles."
+---
+
+- content_for :additional_head do
+  = stylesheet_link_tag "resume", media: "all"
+
+article.cv
+
+  section.section.titling
+    h1 Sean Dillingham
+    section.contact
+      p: a.website href="http://sean.dillingh.am" http://sean.dillingh.am
+      p: a.email href="mailto:sean.dillingham@gmail.com" sean.dillingham@gmail.com
+
+  .primary
+    section.section.summary
+      header.section-heading
+        h2 Summary
+      .contents
+        p: strong I’m a digital product designer and front-end developer living in Los Angeles.
+        p Since 2011, I’ve been the head of product design and engineering at KPCC, a public radio station in L.A.
+        p Prior to joining KPCC, I worked for the University of California, an Idealab startup, and the San Francisco Bay Guardian. I’ve been designing and coding for the web since 1996.
+
+    hr
+
+    section.section.work
+      header.section-heading
+        h2 Work & Recognition
+      .contents
+        .project
+          h3 KPCC for iPad
+          p.link: a href="http://sean.dillingh.am/work/kpcc-ipad/" http://sean.dillingh.am/work/kpcc-ipad/
+          ul.roles
+            li Product Design & Strategy
+            li Project Management
+        .project
+          h3 KPCC.org
+          p.link: a href="http://sean.dillingh.am/work/kpcc-redesign/" http://sean.dillingh.am/work/kpcc-redesign/
+          ul.roles
+            li Design
+            li Product Management
+            li Front-end Development
+          aside.recognition
+            .award
+              h4 Best News Website with under 1 million uniques
+              h4 Best Mobile Website with under 1 million uniques
+              p.organization
+                | Editor & Publisher, 
+                time October 2013 & November 2012
+            .award
+              h4 Best Website - National Online News Organizations
+              p.organization
+                | Edward R. Murrow Awards, 
+                time June 2013
+        .project
+          h3 KPCC Fire Tracker
+          p.link: a href="http://projects.scpr.org/firetracker/" http://projects.scpr.org/firetracker/
+          ul.roles
+            li Product Management
+            li Creative Direction
+          aside.recognition
+            .award
+              h4 Best Community Service Media Website with under 1 million uniques
+              p.organization
+                | Editor & Publisher, 
+                time October 2013
+        .project
+          h3 KPCC Audiovision
+          p.link: a href="http://audiovision.scpr.org/" http://audiovision.scpr.org/
+          ul.roles
+            li Product Management
+            li Creative Direction
+          aside.recognition
+            .award
+              h4 Best Overall Website Design with under 1 million uniques
+              p.organization
+                | Editor & Publisher, 
+                time October 2013
+        .project
+          h3 UCR Highlander New Student Orientation
+          p.link: a href="http://sean.dillingh.am/work/highlander-orientation/" http://sean.dillingh.am/work/highlander-orientation/
+          ul.roles
+            li Product Design & Strategy
+            li Project Management
+
+    hr
+
+    section.section.experience
+      header.section-heading
+        h2 Experience
+      .contents
+        .company
+          h3
+            | KPCC, Southern California Public Radio
+            .employment-duration
+              | (
+              time April 2011
+              span -
+              time datetime="#{Time.now}" Present
+              | )
+          .position
+            h4.position-title Manager, UX Design & Development
+            p.position-description I lead the design and development of digital products for KPCC, the second largest public radio station in the U.S. I am responsible for the user experience, design, and engineering of KPCC's digital products.
+          .position
+            h4.position-title Sr. User Experience Designer
+            p.position-description I led the design and UX of digital products for KPCC, Southern California's largest public radio station.
+        .company
+          h3
+            | UC Riverside
+            .employment-duration
+              | (
+              time June 2001
+              span -
+              time April 2011
+              | ) 
+          .position
+            h4.position-title Manager, Web/UI Design
+            p.position-description I led a team of UI designers responsible for web application design, front-end engineering, and CMS development.
+          .position
+            h4.position-title Director, VCSA Technology Services
+            p.position-description I directed an organization of 18 staff delivering technology to support student recruitment and academic success. I was responsible for project management, UI design, and software development services, as well as operation of the division’s server infrastructure.
+          h4.position-title
+            span Other positions held: 
+            | Manager, Software Engineering; Web Developer
+
+  .secondary
+
+    section.section.skills
+      header.section-heading
+        h2 Skills
+      hr
+      .contents
+        .skillset
+          h3 Design
+          h4 Able to work across disciplines - from experience strategy to nudging pixels.
+          dl
+            dt Sketching/Prototyping 
+            dt Product Strategy
+            dt Interface Design 
+            dt Interaction Design
+            dt Visual Design
+            dt User Research
+            dt Information Architecture
+            dt Copywriting
+            dt Sketch
+            dt Photoshop
+            dt Illustrator
+        .skillset
+          h3 Engineering
+          h4 Deep front-end dev skills; broad experience with the entire software stack.
+          dl
+            dt SASS
+            dt HTML
+            dt Javascript
+            dt Git
+            dt Ruby
+            dt Rails
+            dt Ember
+            dt MySQL
+            dt Chef
+            dt Python
+            dt ASP.NET
+
+    section.section.education
+      header.section-heading
+        h2 Education
+      hr
+      .contents
+        .degree
+          time 2000
+          h3 University of California, Riverside
+          p B.A., English
+          p Minor, Economics

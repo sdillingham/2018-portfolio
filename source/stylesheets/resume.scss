@@ -1,0 +1,319 @@
+// IMPORT VENDOR DEPENDENCIES
+@import "bourbon";
+@import "neat";
+
+// IMPORT AUTHOR DEPENDENCIES
+@import "variables";
+@import "mixins";
+
+// SYLING ON BASE ELEMENTS
+body {
+  color:$black;
+  font-family:"freight-text-pro", Cambria, Georgia, "Droid Serif", serif; 
+  font-size:0.875em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+}
+
+h1, h2 {
+  font-family:"freight-sans-pro", "Avenir Next", Helvatica, "Droid Sans", sans-serif; 
+}
+
+h1 {
+  font-size:1.571428571em;
+  line-height:1em;
+  margin-bottom:0.2em;
+}
+
+h2 {
+  color:$lightGray;
+  font-size:1.25em;
+  font-weight:300;
+  text-transform:uppercase;
+}
+
+h3 {
+  font-size:1.285714286em;
+  .secondary & {
+    font-size:1.142857143em;
+  }
+}
+
+p {
+  &:first-child {
+    margin-top:0;
+  }
+}
+
+a {
+  color:$medGray;
+  text-decoration:none;
+  &:hover {
+    text-decoration:underline;
+  }
+}
+
+hr {
+  border-top:1px solid $paleGray;
+}
+
+// LAYOUT STYLES
+.cv {
+  @include clearfix();
+  margin:1em auto;
+  max-width:56em;
+  position:relative;
+}
+
+  .primary {
+    float:right;
+    margin-left:5%;
+    position:relative;
+    width:75%;
+    &:before {
+      background:$paleGray;
+      content:"";
+      display:block;
+      height:100%;
+      left:-2.5%;
+      position:absolute;
+      top:0;
+      width:1px;
+    }
+
+    .section {
+      @include clearfix();
+      &:last-child {
+        border-bottom:0;
+      }
+      .section-heading {
+        float:left;
+        margin-right:8%;
+        width:15%;
+      }
+
+      .contents {
+        float:right;
+        width:77%;
+      }
+    }
+
+  }
+
+  .secondary {
+    float:left;
+    margin-top:8em;
+    width:20%;
+  }
+
+.colophon {
+  display:none;
+}
+
+// SECTION-SPECIFIC STYLES
+
+// titling
+.titling {
+  @include clearfix();
+  border-bottom:1px solid $lightGray; 
+  margin-bottom:1em;
+  left:0;
+  padding-bottom:1em;
+  position:absolute;
+  top:0;
+}
+
+  .contact {
+    p {
+      font-size:0.875em;
+      margin:0;
+      a {
+        color:$lightGray;
+      }
+    }
+  }
+
+// work
+.project {
+  margin-bottom:1.5em;
+  h3 {
+    margin-bottom:0em;
+  }
+  .link {
+    margin:0;
+  }
+}
+  
+  .roles {
+    list-style:none;
+    margin:0;
+    padding:0;
+    li {
+      display:inline;
+      &:after {
+        content:", ";
+        margin-left:-2px;
+      }
+      &:last-child {
+        &:after {
+          content:"";
+        }
+      }
+    }
+  }
+
+  .recognition {
+    border-left:3px solid $paleGray;
+    margin:1em 0;
+    padding-left:1em;
+    .award {
+      margin-bottom:1em;
+      h4 {
+        margin:0;
+      }
+      .organization {
+        margin:0;
+      }
+      time {
+        color:$medGray;
+      }
+    }
+  }
+
+// experience
+.employment-duration {
+  color:$lightGray;
+  display:inline-block;
+  font-size:0.75em;
+  font-weight:400;
+}
+
+.position-description {
+  margin:0 0 1em;
+}
+
+.position-title {
+  span {
+    color:$lightGray;
+  }
+}
+
+// skills
+.skills {
+  h3 {
+    margin-bottom:0;
+  }
+  h4 {
+    color:$medGray;
+    font-family:"freight-text-pro", Cambria, Georgia, "Droid Serif", serif; 
+    font-style:italic;
+    font-weight:400;
+    margin:0.3em 0 0.2em;
+  }
+  dl {
+    margin:0.2em 0 2em;
+    padding-top:0.5em;
+  }
+}
+
+// education
+.degree {
+  h3 {
+    font-size:1em;
+  }
+  p {
+    margin:0;
+  }
+}
+
+// RESPONSIVE & PRINT CSS
+@media print, screen and (max-width:56em) {
+  .cv {
+    padding:0 1em;
+  }
+
+  .titling {
+    border-bottom:1px solid $lightGray; 
+    margin-bottom:1em;
+    padding-bottom:1em;
+    position:relative;
+  }
+
+  .primary, .secondary {
+    float:none;
+    margin-left:0;
+    margin-top:0;
+    width:100%;
+  }
+
+  .primary:before {
+    display:none;
+  }
+
+  .skills, .education {
+    @include clearfix();
+    border-top:1px solid $paleGray;
+    margin-top:2em;
+    padding-top:0.5em;
+
+    hr {
+      display:none;
+    }
+
+    .section-heading {
+      float:left;
+      margin-right:8%;
+      width:15%;
+    }
+
+    .contents {
+      float:right;
+      width:77%;
+    }
+  }
+
+  .skills {
+    @include clearfix();
+
+    dl {
+      &:last-of-type {
+        margin-bottom:0;
+      }
+    }
+  }
+
+    .skillset {
+      float:left;
+      width:50%;
+    }
+}
+
+@media screen and (max-width:43em) {
+  .primary, .secondary {
+    .section {
+      .section-heading, .contents {
+        float:none;
+        margin-right:0;
+        width:100%;
+      }
+      .section-heading {
+        margin-bottom:1em;
+      }
+    }
+  }
+
+  .skillset {
+    &:first-of-type {
+      margin-bottom:1em;
+    }
+  }
+}
+
+@media screen and (max-width:34em) {
+  .skillset {
+    float:none;
+    width:100%;
+  }
+}

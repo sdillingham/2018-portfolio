@@ -1,6 +1,6 @@
 ---
 title: "The Open Office Trap"  
-teaser: With the latest release of the design tool Sketch, Bohemian Coding has realized a near-miraculous mind-meld with UI designers everywhere. 
+teaser: Working in an office is great, until it isn't. 
 date: 2014-05-18 00:00 UTC
 tags: culture 
 

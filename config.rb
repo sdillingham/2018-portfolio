@@ -115,7 +115,7 @@ configure :build do
   activate :asset_hash
 
   # Compress images
-  activate :imageoptim
+  # activate :imageoptim
 
 end
 

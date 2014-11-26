@@ -1,6 +1,6 @@
 ---
 title: "Why Radiotopia's Kickstarter is a Very Big Deal"  
-teaser: Spoiler: traditional public radio should be very afraid. 
+teaser: "Spoiler: traditional public radio should be very afraid."
 date: 2014-11-24 00:00 UTC
 tags: pubmedia, strategy 
 

@@ -12,6 +12,12 @@ That is a staggering amount of money, especially when you think about it in the 
 
  Radiotopia will soon be 10 shows strong, and has a much leaner staff than most public radio stations. They represent a more efficient model for producing great audio storytelling with far less overhead. Over 21,000 people donated to their Kickstarter, about 30-50% of the total membership of large public radio stations. And Radiotopia did all this without being "on the air" (99% Invisible is only broadcast on 6 stations in the U.S.). Which means that Roman Mars and his crew have built a loyal audience that can sustain them, and can attribute nearly 100% of their success to podcasting.
 
+### The next time I looked there was light in the room[^dylan]
+
+This is a great time to be an aspiring radio storyteller. Everyone has a smartphone and earbuds in their pocket, so people are spending more time listening to audio than ever before. There are plenty of examples of individuals and small collectives telling stories with both artistry and rigor, and those stories seem to be connecting with tribes of people who are willing to listen to and support them.
+
+The options for ways for "radio" producers to make a living have never been more varied. You can be totally independent, try to hitch yourself to an existing podcast network, find a community of podcasters and create your own network, or find a public radio station willing to provide the support and infrastructure you need to do your work. Revenue streams aren't diverse enough yet: there's too few businesses buying podcast ad inventory (Squarespace anyone?), and not enough ways for podcasters to guarantee a steady stream of income, but as the audience for podcasting continues to grow that will improve. There are clear parallels to popular music: you can't count on big fat checks from major labels anymore, but you can build a career for yourself if you're willing to do the work. And like Albini recently said, those good old days [actually kind of sucked](http://www.theguardian.com/music/2014/nov/17/steve-albinis-keynote-address-at-face-the-music-in-full).
+
 ### Admit that the waters around you have grown
 
 If you are a traditional public radio station, this news should worry you. I think we'll look back on 2014 as the year when the best audio storytellers realized that they don't need public radio to survive."Serial" and "99% Invisible"/Radiotopia have shown that it's unnecessary - maybe even unwise - to go to work for a public radio station when you could just get down to the business of making great podcasts and building a direct relationship with your audience. 
@@ -35,3 +41,5 @@ Mars and his army of 21,000 supporters have spoken. The message to public radio?
 
 ---
 [^kickstarter]: The Kickstarter campaign raised $620,412, but Radiotopia received an additional $25,000 when it met a challenge from its sponsor, Hover, to get 20,000 backers.
+
+[^dylan]: Yeah, I know, it's not a lyric from "Times They Are A Changin'. I cheated. Sue me."

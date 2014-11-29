@@ -42,4 +42,4 @@ Mars and his army of 21,000 supporters have spoken. The message to public radio?
 ---
 [^kickstarter]: The Kickstarter campaign raised $620,412, but Radiotopia received an additional $25,000 when it met a challenge from its sponsor, Hover, to get 20,000 backers.
 
-[^dylan]: Yeah, I know, it's not a lyric from "Times They Are A Changin'. I cheated. Sue me."
+[^dylan]: Yeah, I know, it's not a lyric from "Times They Are A Changin'." I cheated. Sue me.

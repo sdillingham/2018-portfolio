@@ -5,11 +5,11 @@ date: 2013-10-20 02:05 UTC
 tags: development
 ---
 
-Are there bands you love that you rarely bother trying to share with anyone?
+Are there bands you love that you rarely try to share with anyone?
 
-I do, not because I want to keep them a secret, but because I've learned from experience that certain bands have limited appeal. You're going to dig [Lungfish](http://www.dischord.com/band/lungfish) if you're into apocalyptic poetry set to portentious glacial riffs that repeat for five minutes straight. For most people, not so much.
+I do, not because I want to keep them a secret, but because certain bands have a specific appeal. You're going to dig [Lungfish](http://www.dischord.com/band/lungfish) if you're into apocalyptic poetry set to portentious glacial riffs that repeat for five minutes straight. For most people, not so much.
 
-Markdown, the web writing syntax [created by John Gruber](http://daringfireball.net/projects/markdown/), always felt that way— like a great band that only a handful would appreciate. Two-and-a-half years ago, when I first started building products for a newsroom,Markdown appeared destined to be a niche web writing tool for geeks-only. I believed developers were stuck enduring HTML-based WYSIWYG editors in our publishing tools.
+Markdown, the web writing syntax [created by John Gruber](http://daringfireball.net/projects/markdown/), always felt that way to me— like a great band that only a handful would appreciate. Two-and-a-half years ago, when I first started building products for a newsroom, Markdown appeared destined to be a niche web writing tool for geeks-only. I believed developers were stuck enduring HTML-based WYSIWYG editors in our publishing tools.
 
 I was wrong. It's clear now that Markdown is the future of web-native writing.
 

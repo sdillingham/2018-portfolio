@@ -1,5 +1,5 @@
 .index {
-  header {
+  .masthead {
     height:27em;
     padding-top:3em;
     position:relative;
@@ -32,12 +32,13 @@
       font-size:2.875em;
     }
     h2 {
-      color:$brightAccent;
+      @extend .marquee-heading;
+      color:$white;
       font-size:2em;
       font-weight:400;
       line-height:1.4375em;
       margin:0 auto;
-      max-width:14em;
+      max-width:13em;
     }
   main {
     background:$white;

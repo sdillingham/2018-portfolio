@@ -1,7 +1,7 @@
 // Typography
 body {
   font-family:"freight-text-pro", "Lucida Bright", "Droid Serif", Georgia, serif;
-  font-size:0.8em;
+  font-size:0.875em;
   -webkit-font-smoothing: antialiased;
   @include respond-to(medium-screens) {
     font-size:1em;

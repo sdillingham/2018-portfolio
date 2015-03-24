@@ -2,6 +2,7 @@
   | interior
 
 - wrap_layout :layout do
+  
   header.global-header
     .bound
       h1: a href="/" Sean Dillingham
@@ -25,6 +26,6 @@
             span Github
       span.nav-toggle.icon-menu aria-hidden="true"
       hr.ledge
-  main
+  main.main
     = yield
   = yield_content :postproject

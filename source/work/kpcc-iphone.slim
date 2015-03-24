@@ -22,42 +22,43 @@ article.single-project.kpcc-iphone
         p Our user interviews uncovered common themes among KPCC's most engaged listeners. They loved our live broadcast, but only had affinity with particular programs and would tune out completely at other times, or listen to podcasts instead.  
         p Using these inputs as a guide, we set to work exploring how to build a compelling listening-focused app. Working with KPCC’s editorial and business leadership, the product team arrived at three desired outcomes:
         ol
-          li Give users compelling listening options beyond the live broadcast
-          li Grow the funnel of potential members KPCC can communicate with
-          li Collect more data about users' content consumption habits and preferences
+          li: em Give users compelling listening options beyond the live broadcast
+          li: em Grow the funnel of potential members KPCC can communicate with
+          li: em Collect more data about users' content consumption habits and preferences
     / CHAPTER: PROJECT DISCOVERY
     section.chapter.discovery
       header.chapter-introduction
         .bound
-          h2 Discovery
-          p To validate our hunch that we could drive listening with interesting collections of segmented audio, I did a deep dive on KPCC's daily output of audio content. By turning each piece of audio into a card with key details like audio duration, topic and publication times, I was able to glimpse the kinds of daily playlists we could curate for users.
+          h2.chapter-title Discovery
+          p.chapter-teaser To validate our hunch that we could drive listening with interesting collections of segmented audio, I did a deep dive on KPCC's daily output of audio content. By turning each piece of audio into a card with key details like audio duration, topic and publication times, I was able to glimpse the kinds of daily playlists we could curate for users.
       .narrative.chapter-narrative
         .bound
           p The first UX sprint focused on key customer journeys where KPCC's app could fit into people's busy lives. Creating customer journey maps helped us to think beyond simple activities and user stories, exploring the emotional and psychological dimensions  of their daily lives and interactions with our app.
           p While there were many potential touchpoints worth exploring, we mapped three key scenarios: waking up to news, the daily commute, and casual listening. While KPCC creates content for several distinct mediums - audio, text, live events - all our customer journeys pointed toward listening as the key use case.
-          figure.triptych
-            b.img-container
-              img src="images/kpcc-iphone/img.jpg"
-              span.brief Casual Listening
-            b.img-container
-              img src="images/kpcc-iphone/img.jpg"
-              span.brief Waking Up To News
-            b.img-container
-              img src="images/kpcc-iphone/img.jpg"
-              span.brief Daily Listening
+          figure.figure.triptych
+            .img-bin
+              b.img-container
+                img src="../../images/kpcc-iphone/maps/map-casuallistening-thumb.png"
+                span.brief Casual Listening
+              b.img-container
+                img src="../../images/kpcc-iphone/maps/map-wakingup-thumb.png"
+                span.brief Waking Up To News
+              b.img-container
+                img src="../../images/kpcc-iphone/maps/map-commute-thumb.png"
+                span.brief Daily Listening
             figcaption.caption
               p User research informed the creation of customer journey maps, which identified key moments where KPCC’s smartphone app could support and enhance users’ daily routines. 
           p The KPCC product team was excited about the opportunity to leverage KPCC’s great audio to build and app that fit into people’s busy lives. But excitement alone isn't enough to get a product built inside an organization - it requires buy-in across the company. Our product manager and I gathered our stakeholders together and presented our vision for a listening-focused app. This wasn't an easy sell, especially since it meant leaving important parts of KPCC's business out of the product.
           p My part of the pitch made the case for an audio-driven, single function app that could distinguish itself in a sea of apps competing for attention. I mapped this vision back to our audience metrics, user research and customer journeys.
-          figure.quadrant
+          figure.figure.quadrant
             b.img-container
-              img src="images/kpcc-iphone/img.jpg"
+              img src="../../images/kpcc-iphone/slides/slide-pitch1.jpg"
             b.img-container
-              img src="images/kpcc-iphone/img.jpg"
+              img src="../../images/kpcc-iphone/slides/slide-pitch2.jpg"
             b.img-container
-              img src="images/kpcc-iphone/img.jpg"
+              img src="../../images/kpcc-iphone/slides/slide-pitch3.jpg"
             b.img-container
-              img src="images/kpcc-iphone/img.jpg"
+              img src="../../images/kpcc-iphone/slides/slide-pitch4.jpg"
             figcaption.caption
               p Slides from our product strategy review meeting. I made the case that we had to go beyond simply repackaging our existing content; that our product had to be both remarkable and respectful of the way our service fit into people’s lives.
           p By putting our best pitching skills to work, we convinced our editorial leaders that we were on the right path.  Creating a compelling vision early in the process was critical to building confidence among our stakeholders and getting the green light to move forward.
@@ -66,8 +67,8 @@ article.single-project.kpcc-iphone
     section.chapter.design
       header.chapter-introduction
         .bound
-          h2 Design
-          p The first design sprint was spent sketching concepts that would support distinct modes of listening beyond the live stream. Through quick rounds of iteration and feedback, I arrived at the idea that the player itself needed to anchor the experience. Screens and flows related to discovery and selection act as paths that all lead back to the player.
+          h2.chapter-title Design
+          p.chapter-teaser The first design sprint was spent sketching concepts that would support distinct modes of listening beyond the live stream. Through quick rounds of iteration and feedback, I arrived at the idea that the player itself needed to anchor the experience. Screens and flows related to discovery and selection act as paths that all lead back to the player.
       .narrative.chapter-narrative
         .bound
           p Once we had established a structure for the app that would support our desired outcomes, I began exhaustively wireframing the app's screens. I created flows around  browsing and discovering great audio; smarter, more personalized membership appeals; and user sign-in and personalization.
@@ -77,7 +78,7 @@ article.single-project.kpcc-iphone
             h3
               b Flow: 
               | Adding Favorites
-            .gallery
+            .slider
               p: strong Wireframe flows go here
         .bound
           p Thanks to our Keynote prototypes, we quickly recognized the shortcomings in some of the flows we created. There were too many discrete concepts and sections, and discovering content felt like too much work. We needed to improve the app’s conceptual clarity and further simplify the experience.  We regrouped and I set to work revising the design with the goal of further reducing the friction of discovering and selecting audio.
@@ -85,34 +86,44 @@ article.single-project.kpcc-iphone
           p Live Rewind, which gave users the ability to time shift their listening seconds or even hours (thanks to some cool streaming server tech developed at KPCC).
           p Recommendations, a daily curated listening experience that gave users the best of public radio in short, easy-to-consume segments.  
           p After this final round of revisions, we were confident we had the right design. Refined comps were produced for all the screens that might be in play for the first version of the app, and I focused on details and polish in Sketch before prepping assets and specs for development. 
-        intermission.screens
-          .gallery        
-            span.slider-nav.prev onclick="mySwipe.prev()"
-            span.slider-nav.next onclick="mySwipe.next()"
-            #slider.swipe
-              .swipe-wrap
-                div
-                  figure
-                    figcaption
-                      p.caption
-            nav
-              ul#position.bullets
-                li.on
-                li
-                li
-                li
+        .intermission.screens
+          .bound
+            .marvel-device.iphone6.silver
+              .top-bar
+              .sleep
+              .volume
+              .camera
+              .sensor
+              .speaker
+              .screen
+                /! Content goes here
+                img src="../../images/kpcc-iphone/screens/screen-iphone-home.jpg"
+              .home
+              .bottom-bar
+
     / CHAPTER: PROJECT PROTOTYPING
     section.chapter.prototyping
       header.chapter-introduction
         .bound
-          h2 Prototyping
-          p Once visual design was complete, I identified areas where comps needed to be prototyped to document detailed animations and transitions. Fortunately,  tools for prototyping  microinteractions and native apps exploded in 2014, so there was no lack of tools to choose from.
+          h2.chapter-title Prototyping
+          p.chapter-teaser Once visual design was complete, I identified areas where comps needed to be prototyped to document detailed animations and transitions. Fortunately,  tools for prototyping  microinteractions and native apps exploded in 2014, so there was no lack of tools to choose from.
       .narrative.chapter-narrative
         .bound
           p I settled on Framer.js as my prototyping tool of choice. Its javascript-driven workflow allowed me to interate quickly, and also allowed me to hack real audio into the prototypes. 
           p I built prototypes to communicate flows in the app where a complex set of transitions and animations needed to occur in order for the microinteractions to feel polished and delightful. I focused on the most important moments in the app: initiating and rewinding the live stream, moving between on-demand episodes, and a carefully sequenced app onboarding experience. 
-          figure.prototypes
-            img src="images/kpcc-iphone/img.jpg"
+          figure.figure.prototypes
+            .marvel-device.iphone6.silver
+              .top-bar
+              .sleep
+              .volume
+              .camera
+              .sensor
+              .speaker
+              .screen
+                /! Content goes here
+                video src="../../images/kpcc-iphone/prototypes/onboarding.mp4" width="332" autoplay="true"
+              .home
+              .bottom-bar
           p Designing KPCC for iPhone was insanely challenging and fun. I enjoyed the opportunity to work across many disciplines: customer research, product strategy, UI and interaction design, and even sound engineering. You can check out the final product by downloading KPCC for iPhone in the App Store.
 
 - content_for :postproject do

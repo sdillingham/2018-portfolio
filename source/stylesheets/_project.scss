@@ -1,91 +1,167 @@
 // STYLES FOR SINGLE PROJECT VIEW
 
-.work {
-  &.work_kpcc-ipad {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-kpcc-ipad.jpg');
-      background-size:cover;
-    }
-  }
+.single-project {
+  background: white;
 
-  &.work_half-in-ten {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-half-in-ten.jpg');
-      background-size:cover;
-    }
-  }
+  // set up default max-width for our content
+  .bound {
+    max-width: grid-calc(6);
+  } 
 
-  &.work_kpcc-redesign {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-kpcc-redesign.jpg');
-      background-size:cover;
-    }
-  }
-
-  &.work_kpcc-newsletters {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-kpcc-emails.jpg');
-      background-size:cover;
-    }
-  }
-
-  &.work_highlander-orientation {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-ucr-orientation.jpg');
-      background-size:cover;
+  &.kpcc-iphone {
+    .project-marquee {
+      background: url('../images/kpcc-iphone/bg-iphone-hero.jpg') no-repeat center top;
+      background-size: cover;
     }
   }
 }
+// Project Marquee
+.project-marquee {
+  color: white;
+  min-height: grid-height(15);
+  text-align: center;
+}
+.marquee-header {
+  @extend .marquee-heading;
+  margin-top: grid-height(3);
+}
+// Project Title and Description
+.project-title {
+  color: white;
+  font-size: em(61);
+  line-height:1em;
+  margin:0;
+  padding:14px 0;
+}
+.project-description {
+  font-size: em(27);
+  line-height: em(31, 27);
+  margin: 0;
+}
+.project-responsibilities {
+  font-size: em(16);
+  dd, dt {
+    display: inline-block;
+    margin: 0;
+  }
+  dt {
+    font-weight: 700;
+  }
+}
 
+// Project Details
 .project-details {
-  background:$white;
+  padding-top: grid-height(2);
 }
-.product-shot {
-  text-align:center;
-  position:relative;
-  z-index:199;
-
-  img {
-    margin:-6em 0 4em;
-    position:relative;
-    z-index:200;
-  }
-
-  .button {
-    font-size:1.4em;
-    span {
-      font-size:0.8em;
-      margin-left:8px;
-    }
+// Project Body Copy Styles 
+.narrative {
+  margin-bottom: grid-height(3);
+  p, li {
+    font-size: em(18);
+    line-height: em(31);
   }
 }
-
-.checklist {
-  &.problem {
-    h4 {
-      color:$darkGray;
+// Project Figure Styles
+.figure {
+  display: block;
+  &.triptych {
+    @include clearfix;
+    margin: grid-height(2) grid-pull-calc(3);
+    .img-container {
+      float: left;
+      margin-right: 2%;
+      text-align: center;
+      width: 32%;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    .caption {
+      margin: 0 grid-push-calc(2);
     }
   }
-  &.outcomes {
-    padding-bottom:8em;
-  }
-
-  .section-header {
-    padding-bottom:1em;
-    hr {
-      top:61%;
+  &.quadrant {
+    @include clearfix;
+    margin: grid-height(2) grid-pull-calc(1);
+    .img-container {
+      float: left;
+      margin-bottom: 21px;
+      margin-right: 3%;
+      text-align: center;
+      width: 48.5%;
+      &:nth-of-type(even) {
+        margin-right: 0;
+      }
     }
   }
-
-  ul, p {
-    color:$darkGray;
-    font-size:1.25em;
+  &.prototypes {
+    text-align: center;
   }
-  ul {
-    padding-left:26px;
-    li {
-      margin-bottom:0.75em;
+}
+.img-bin {
+  @include clearfix;
+}
+.caption {
+  color: $medGray;
+  font-size: em(14);
+  line-height: em(24);
+  text-align: center;
+}
+
+// Chapter Introductions
+.chapter-introduction {
+  @extend .marquee-heading;
+  @include linear-gradient(90deg, #3593C0, #18B180);
+  color: white;
+  margin-bottom: grid-height(3);
+  min-height: grid-height(17);
+  text-align: center;
+  .bound {
+    max-width: grid-calc(8);
+  }
+
+  // iPhone Chapters
+  $chapters: ("discovery", "design", "prototyping");
+
+  @each $chapter in $chapters {
+    .#{$chapter} &  { 
+      background: url('../images/kpcc-iphone/bg-#{$chapter}.jpg') no-repeat center top;
+      background-size: cover;
     }
+  }
+}
+.chapter-title {
+  display: inline-block;
+  font-size: em(41);
+  margin-bottom: grid-height(3.5);
+  &:after {
+    background: white;
+    content: "";
+    display: block;
+    height:1px;
+    margin-top: $grid-height / 2;
+  }
+}
+.chapter-teaser {
+  font-size: em(24);
+  line-height: em(32, 24);
+}
+
+// Chapter Intermissions
+.intermission {
+  @extend .marquee-heading;
+  text-align: center;
+  &.wireframes {
+    background: #12A17A;
+    color: white;
+  }
+}
+
+// Device Mocks
+.marvel-device {
+  margin: grid-height(2) auto;
+  .screen {
+    background: black;
   }
 }
 
@@ -213,29 +289,6 @@
     }
   }
 
-
-.meta {
-  margin-bottom:2em;
-  text-align:center;
-
-  dl {
-    margin-bottom:1em;
-    dd, dt {
-      @extend .marquee-heading;
-      color:$deepGray;
-      display:block;
-      font-size:1.1em;
-    }
-    dt {
-      font-size:0.8em;
-      text-transform:uppercase;
-    }
-    dd {
-      color:$lightGray;
-      margin-left:2px;
-    }
-  }
-}
 
 // Next Project
 .next-project {

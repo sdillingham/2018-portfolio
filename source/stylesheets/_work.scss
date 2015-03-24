@@ -1,26 +1,11 @@
 // STYLES FOR WORK PAGES
 
+// Global nav and site branding styles for interior pages
 .interior {
   padding-top:50px;
 
     .bound {
       max-width:55em;
-    }
-
-    // Site title
-    h1 {
-      @extend .marquee-heading;
-      color:$deepGray;
-      font-size:1.640625em;
-      line-height:1em;
-      margin:0;
-      padding:14px 0;
-      text-align:center;
-      a {
-        color:$black;
-        display:inline-block;
-        text-decoration:none;
-      }
     }
 
     // Style nav for small screens
@@ -131,37 +116,23 @@
     }
 }
 
-// Section headings for main content area
-.section-header {
-  padding:3em 0;
-  position:relative;
-
-  h4 {
-    @extend .marquee-heading;
-    color:$brightAccentAlt;
-    font-size:1.6em;
-    font-weight:700;
-    margin:0;
-    position:relative;
-    text-align:center;
-    z-index:11;
-    span {
-      background:$white;
-      display:inline-block;
-      padding:0 10px;
-    }
-  }
-
-  hr {
-    background:$paleGray;
-    position:absolute;
-    top:45%;
-    width:100%;
-    z-index:10;
+// Site title
+.site-title {
+  @extend .marquee-heading;
+  color:$deepGray;
+  font-size:1.640625em;
+  line-height:1em;
+  margin:0;
+  padding:14px 0;
+  text-align:center;
+  a {
+    color:$black;
+    display:inline-block;
+    text-decoration:none;
   }
 }
 
-// Marquee - introductory section for pages that need one.
+// Marquee - introductory section for project landing page.
 .marquee {
   background:$subduedAccent url('../images/bg-marquee-work-landing.jpg') no-repeat left top;
   background-size:cover;
@@ -206,8 +177,6 @@
     line-height:1.7em;
   }
 }
-
-
 
 // List of Selected Work
 .work-list {

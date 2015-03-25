@@ -31,7 +31,7 @@ article.single-project.kpcc-iphone
         .bound
           = partial(:svg, :locals => { :img => 'kpcc-iphone/ico-discovery' })
           h2.chapter-title Discovery
-          p.chapter-teaser To validate our hunch that we could drive listening with interesting collections of segmented audio, I did a deep dive on KPCC's daily output of audio content. By turning each piece of audio into a card with key details like audio duration, topic and publication times, I was able to glimpse the kinds of daily playlists we could curate for users.
+          p.chapter-teaser To validate our hunch that we could drive listening with interesting collections of segmented audio, I did a deep dive on KPCC's daily audio output. By turning each piece of audio into a card with key details like audio duration, topic and publication times, I was able to glimpse the kinds of daily playlists we could curate for users.
       .narrative.chapter-narrative
         .bound
           p The first UX sprint focused on key customer journeys where KPCC's app could fit into people's busy lives. Creating customer journey maps helped us to think beyond simple activities and user stories, exploring the emotional and psychological dimensions  of their daily lives and interactions with our app.
@@ -77,16 +77,44 @@ article.single-project.kpcc-iphone
           p These wireframes were imported into Keynote and rough prototypes were created to begin exploring transitions and animations. Keynote was a great tool for quickly validating the app’s design, giving me just the right level of fidelity to communicate how users would move through the app.
         .intermission.wireframes
           .bound
-            h3
-              b Flow: 
-              | Adding Favorites
-            .slider
-              p: strong Wireframe flows go here
+            h3.intermission-heading
+              b.heading-label Flow: 
+              span Adding Favorites
+          .slider
+            .slider-navigation
+              .prev
+              .next
+            .bound
+              ol.flow.four-steps
+                li.flow-item
+                  span.flow-arrow
+                  figure
+                    img src="../../images/kpcc-iphone/wires/wire-favorites-step1.png"
+                    figcaption
+                      span.brief First-time “blank slate”
+                li.flow-item
+                  span.flow-arrow
+                  figure
+                    img src="../../images/kpcc-iphone/wires/wire-favorites-step2.png"
+                    figcaption
+                      span.brief Add your favorite shows
+                li.flow-item
+                  span.flow-arrow
+                  figure
+                    img src="../../images/kpcc-iphone/wires/wire-favorites-step3.png"
+                    figcaption
+                      span.brief Add your favorite topics
+                li.flow-item
+                  span.flow-arrow
+                  figure
+                    img src="../../images/kpcc-iphone/wires/wire-favorites-step4.png"
+                    figcaption
+                      span.brief Build “Favorites” playlist
         .bound
           p Thanks to our Keynote prototypes, we quickly recognized the shortcomings in some of the flows we created. There were too many discrete concepts and sections, and discovering content felt like too much work. We needed to improve the app’s conceptual clarity and further simplify the experience.  We regrouped and I set to work revising the design with the goal of further reducing the friction of discovering and selecting audio.
           p In the process of revising the design, we converged on two marquee features for the app:
-          p Live Rewind, which gave users the ability to time shift their listening seconds or even hours (thanks to some cool streaming server tech developed at KPCC).
-          p Recommendations, a daily curated listening experience that gave users the best of public radio in short, easy-to-consume segments.  
+          p <strong>Live Rewind</strong>, which gave users the ability to time shift their listening seconds or even hours (thanks to some cool streaming server tech developed at KPCC).
+          p <strong>Recommendations</strong>, a daily curated listening experience that gave users the best of public radio in short, easy-to-consume segments.  
           p After this final round of revisions, we were confident we had the right design. Refined comps were produced for all the screens that might be in play for the first version of the app, and I focused on details and polish in Sketch before prepping assets and specs for development. 
         .intermission.screens
           .bound
@@ -132,7 +160,7 @@ article.single-project.kpcc-iphone
 - content_for :postproject do
     
     / NEXT PROJECT: OUTPOST
-    aside.next-project
+    aside.next-project.outpost
       footer
         .bound
           h5 Next Project

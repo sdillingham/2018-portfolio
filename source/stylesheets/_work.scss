@@ -4,6 +4,12 @@
 .interior {
   padding-top:50px;
 
+    &.work {
+      .global-header .bound {
+        max-width: grid-calc(12);
+      }
+    }
+
     .bound {
       max-width:55em;
     }

@@ -19,6 +19,12 @@ $(document).ready(function() {
 
 
   //
+  // Fluidbox for zooming in on thumbnails
+  //
+  $('.fluidbox').fluidbox();
+
+
+  //
   // Swipe.js for image galleries
   //
 

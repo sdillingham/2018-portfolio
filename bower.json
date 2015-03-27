@@ -7,7 +7,8 @@
     "swipe": "2.0.0",
     "picturefill": "2.0.0-beta",
     "devices.css": "*",
-    "fluidbox": "~1.4.3"
+    "fluidbox": "~1.4.3",
+    "slick.js": "~1.4.1"
   },
   "authors": [
     "Sean Dillingham <sean.dillingham@gmail.com>"

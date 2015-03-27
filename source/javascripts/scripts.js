@@ -22,29 +22,6 @@ $(document).ready(function() {
   // Fluidbox for zooming in on thumbnails
   //
   $('.fluidbox').fluidbox();
-
-
-  //
-  // Swipe.js for image galleries
-  //
-
-    // Set var
-    var bullets = $('#position').children('li');
-
-    // Initialize Swipe.js
-    window.mySwipe = Swipe(document.getElementById('slider'), {
-      continuous: true,
-      callback: function(pos) {
-
-        var i = bullets.length;
-
-        while (i--) {
-          bullets[i].className = ' ';
-        }
-        
-        bullets[pos].className = 'on';
-      }
-    });
   
   
   //

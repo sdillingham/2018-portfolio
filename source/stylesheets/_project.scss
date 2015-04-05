@@ -402,13 +402,29 @@
   height:24em;
   margin-bottom:-8em;
   position:relative;
+  overflow: hidden;
+  &:hover {
+    .next-bg {
+      left:0px;
+      right:0px;
+      top:0px;
+      bottom:0px;
+    }
+    footer {
+      p {
+        margin-top: -10px;
+        opacity: 1;
+      }
+    }
+  }
   .next-bg {
+    transition: all 0.3s;
     background:darken($subduedAccent, 13%);
     position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
+    left:-20px;
+    right:-20px;
+    top:-20px;
+    bottom:-20px;
     z-index:-3;
   }
   footer {
@@ -423,6 +439,7 @@
       @extend .marquee-heading;
     }
     h3 {
+      color:$white;
       font-size: em(41);
       margin:0 0 grid-height(1);
     }
@@ -434,11 +451,11 @@
       text-transform: uppercase;
     }
     p {
+      transition: all 0.3s;
+      color:$white;
       font-size: em(18);
       margin-top:0;
-      a {
-        color:$white;
-      }
+      opacity: 0;
     }
     a {
       color:$white;
@@ -449,7 +466,7 @@
   }
 }
 .next-project.viewable {
-  &.outpost {
+  &.outpost .next-bg {
     background: url('../images/next-project-outpost.jpg');
     background-size: cover;
   }

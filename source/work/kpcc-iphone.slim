@@ -29,7 +29,7 @@ article.single-project.kpcc-iphone
     section.chapter.discovery
       header.chapter-introduction
         .bound
-          = partial(:svg, :locals => { :img => 'kpcc-iphone/ico-discovery' })
+          = partial(:svg, :locals => { :img => 'kpcc-iphone/ico-discovery', :id => 'svg-discovery' })
           h2.chapter-title Discovery
           p.chapter-teaser To validate our hunch that we could drive listening with interesting collections of segmented audio, I did a deep dive on KPCC's daily audio output. By turning each piece of audio into a card with key details like audio duration, topic and publication times, I was able to glimpse the kinds of daily playlists we could curate for users.
       .narrative.chapter-narrative
@@ -52,17 +52,17 @@ article.single-project.kpcc-iphone
                 span.brief Daily Commute
             figcaption.caption
               p User research informed the creation of customer journey maps, which identified key moments where KPCC’s smartphone app could support and enhance users’ daily routines. 
-          p The KPCC product team was excited about the opportunity to leverage KPCC’s great audio to build and app that fit into people’s busy lives. But excitement alone isn't enough to get a product built inside an organization - it requires buy-in across the company. Our product manager and I gathered our stakeholders together and presented our vision for a listening-focused app. This wasn't an easy sell, especially since it meant leaving important parts of KPCC's business out of the product.
+          p The KPCC product team was excited about the opportunity to leverage KPCC’s great audio to build and app that fit into people’s busy lives. But excitement alone isn't enough to get a product built inside an organization - it requires buy-in across the company. Our product manager and I gathered our stakeholders together and presented our vision for a listening-focused app. This wasn't an easy sell, especially since it meant leaving important parts of KPCC's content out of the product.
           p My part of the pitch made the case for an audio-driven, single function app that could distinguish itself in a sea of apps competing for attention. I mapped this vision back to our audience metrics, user research and customer journeys.
           figure.figure.quadrant
             b.img-container
-              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch1.jpg" src=""
+              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch1.jpg" src="../../images/kpcc-iphone/slides/slide-pitch1.jpg"
             b.img-container
-              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch2.jpg" src=""
+              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch2.jpg" src="../../images/kpcc-iphone/slides/slide-pitch2.jpg"
             b.img-container
-              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch3.jpg" src=""
+              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch3.jpg" src="../../images/kpcc-iphone/slides/slide-pitch3.jpg"
             b.img-container
-              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch4.jpg" src=""
+              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch4.jpg" src="../../images/kpcc-iphone/slides/slide-pitch4.jpg"
             figcaption.caption
               p Slides from our product strategy review meeting. I made the case that we had to go beyond simply repackaging our existing content - that our product had to be both remarkable and respectful of the way our service fit into people’s lives.
           p By putting our best pitching skills to work, we convinced our editorial leaders that we were on the right path.  Creating a compelling vision early in the process was critical to building confidence among our stakeholders and getting the green light to move forward.
@@ -71,7 +71,7 @@ article.single-project.kpcc-iphone
     section.chapter.design
       header.chapter-introduction
         .bound
-          = partial(:svg, :locals => { :img => 'kpcc-iphone/ico-design' })
+          = partial(:svg, :locals => { :img => 'kpcc-iphone/ico-design', :id => 'svg-design' })
           h2.chapter-title Design
           p.chapter-teaser The first design sprint was spent sketching concepts that would support distinct modes of listening beyond the live stream. Through quick rounds of iteration and feedback, I arrived at the idea that the player itself needed to anchor the experience. Screens and flows related to discovery and selection act as paths that all lead back to the player.
       .narrative.chapter-narrative
@@ -148,7 +148,7 @@ article.single-project.kpcc-iphone
                     figure
                       img data-lazy="../../images/kpcc-iphone/wires/wire-voice-step2.png"
                       figcaption
-                        span.brief Ask for input
+                        span.brief Asking for input
                   li.flow-item
                     span.flow-arrow
                     figure
@@ -234,9 +234,9 @@ article.single-project.kpcc-iphone
     section.chapter.prototyping
       header.chapter-introduction
         .bound
-          = partial(:svg, :locals => { :img => 'kpcc-iphone/ico-prototyping' })
+          = partial(:svg, :locals => { :img => 'kpcc-iphone/ico-prototyping', :id => 'svg-prototyping' })
           h2.chapter-title Prototyping
-          p.chapter-teaser Once visual design was complete, I identified areas where comps needed to be prototyped to document detailed animations and transitions. Fortunately,  tools for prototyping  microinteractions and native apps exploded in 2014, so there was no lack of tools to choose from.
+          p.chapter-teaser Once visual design was complete, I identified areas where comps needed to be prototyped to document detailed animations and transitions. Fortunately,  tools for prototyping  microinteractions and native apps exploded in 2014, so there were plenty of tools to choose from.
       .narrative.chapter-narrative
         .bound
           p I settled on Framer.js as my prototyping tool of choice. Its javascript-driven workflow allowed me to interate quickly, and also allowed me to hack real audio into the prototypes. 
@@ -266,13 +266,13 @@ article.single-project.kpcc-iphone
     
     / NEXT PROJECT: OUTPOST
     aside.next-project.outpost
-      footer
-        .bound
-          h5 Next Project
-          a href="../outpost/"
+      a href="../outpost/"
+        footer
+          .bound
+            h5 Next Project
             h3 Outpost CMS Redesign
             p Designing a better newsroom publishing platform.
-      .next-bg
+        .next-bg
 
 - content_for :additional_footer do
 
@@ -325,13 +325,13 @@ article.single-project.kpcc-iphone
         //
         // Set up Waypoints for lazy loading images
         // 
-        var imgWaypoints = $(".lazy-img").waypoint({
-          handler: function(direction) {
-            var el = $(this.element);
-            $(this.element).attr("src", $(this.element).attr("data-src"));
-          },
-          offset: -100
-        })
+        // var imgWaypoints = $(".lazy-img").waypoint({
+        //   handler: function(direction) {
+        //     var el = $(this.element);
+        //     $(this.element).attr("src", $(this.element).attr("data-src"));
+        //   },
+        //   offset: -100
+        // })
 
         //
         // Set up Waypoints for CSS transitions on UI controls
@@ -340,8 +340,15 @@ article.single-project.kpcc-iphone
           handler: function(direction) {
             $(this.element).addClass("active");
           },
-          offset: 100
+          offset: 200
         })
+
+        //
+        // Set up inline SVG icon animations for chapter introductions
+        //
+        new Vivus(document.querySelector("#svg-discovery svg"), {type: 'async', duration: 60, start : 'inViewport'});
+        new Vivus(document.querySelector("#svg-design svg"), {type: 'async', duration: 60, start : 'inViewport'});
+        new Vivus(document.querySelector("#svg-prototyping svg"), {type: 'async', duration: 120, start : 'inViewport'});
 
         //
         // Basic video controls just to get started

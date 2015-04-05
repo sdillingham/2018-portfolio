@@ -56,13 +56,13 @@ article.single-project.kpcc-iphone
           p My part of the pitch made the case for an audio-driven, single function app that could distinguish itself in a sea of apps competing for attention. I mapped this vision back to our audience metrics, user research and customer journeys.
           figure.figure.quadrant
             b.img-container
-              img src="../../images/kpcc-iphone/slides/slide-pitch1.jpg"
+              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch1.jpg" src=""
             b.img-container
-              img src="../../images/kpcc-iphone/slides/slide-pitch2.jpg"
+              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch2.jpg" src=""
             b.img-container
-              img src="../../images/kpcc-iphone/slides/slide-pitch3.jpg"
+              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch3.jpg" src=""
             b.img-container
-              img src="../../images/kpcc-iphone/slides/slide-pitch4.jpg"
+              img.lazy-img data-src="../../images/kpcc-iphone/slides/slide-pitch4.jpg" src=""
             figcaption.caption
               p Slides from our product strategy review meeting. I made the case that we had to go beyond simply repackaging our existing content - that our product had to be both remarkable and respectful of the way our service fit into people’s lives.
           p By putting our best pitching skills to work, we convinced our editorial leaders that we were on the right path.  Creating a compelling vision early in the process was critical to building confidence among our stakeholders and getting the green light to move forward.
@@ -191,12 +191,13 @@ article.single-project.kpcc-iphone
                       figcaption
                         span.brief View more info
         .bound
-          p Thanks to our Keynote prototypes, we quickly recognized the shortcomings in some of the flows we created. There were too many discrete concepts and sections, and discovering content felt like too much work. We needed to improve the app’s conceptual clarity and further simplify the experience.  We regrouped and I set to work revising the design with the goal of further reducing the friction of discovering and selecting audio.
+          p Thanks to our Keynote prototypes, we quickly recognized the shortcomings in some of the flows we created. There were too many discrete concepts and sections, and discovering content felt like too much work. I needed to improve the app’s conceptual clarity and further simplify the experience.  We regrouped and I set to work revising the design with the goal of further reducing the friction of discovering and selecting audio.
           p In the process of revising the design, we converged on two marquee features for the app:
-          p <strong>Live Rewind</strong>, which gave users the ability to time shift their listening seconds or even hours (thanks to some cool streaming server tech developed at KPCC).
+          p <strong>Live Rewind</strong>, which gave users the ability to time shift their listening back seconds or even hours (thanks to some cool <a href="https://github.com/StreamMachine/StreamMachine">streaming server tech</a> developed at KPCC).
           p <strong>Recommendations</strong>, a daily curated listening experience that gave users the best of public radio in short, easy-to-consume segments.  
           p After this final round of revisions, we were confident we had the right design. Refined comps were produced for all the screens that might be in play for the first version of the app, and I focused on details and polish in Sketch before prepping assets and specs for development. 
-        .intermission.screens
+        .intermission.device.screens
+          .slider-navigation
           .bound
             .marvel-device.iphone6.silver
               .top-bar
@@ -206,10 +207,28 @@ article.single-project.kpcc-iphone
               .sensor
               .speaker
               .screen
-                /! Content goes here
-                img src="../../images/kpcc-iphone/screens/screen-iphone-home.jpg"
+                /! iPhone screenshots
+                .slider
+                  div
+                    img.asset data-lazy="../../images/kpcc-iphone/screens/screen-iphone-home.jpg" title="Home screen"
+                  div
+                    img.asset data-lazy="../../images/kpcc-iphone/screens/screen-iphone-live.jpg" title="Live stream player"
+                  div
+                    img.asset data-lazy="../../images/kpcc-iphone/screens/screen-iphone-recommendations.jpg" title="Recommendations view"
+                  div
+                    img.asset data-lazy="../../images/kpcc-iphone/screens/screen-iphone-scrubber.jpg"  title="Seeking through audio"
+                  div
+                    img.asset data-lazy="../../images/kpcc-iphone/screens/screen-iphone-program.jpg" title="Single program view"
+                  div
+                    img.asset data-lazy="../../images/kpcc-iphone/screens/screen-iphone-segment.jpg" title="Segment player"
+                  div
+                    img.asset data-lazy="../../images/kpcc-iphone/screens/screen-iphone-segment-swipe.jpg" title="Swiping between segments"
+                  div
+                    img.asset data-lazy="../../images/kpcc-iphone/screens/screen-iphone-notifications.jpg" title="Onboarding notifications"
               .home
               .bottom-bar
+            .screen-captions
+              h3.brief Home screen
 
     / CHAPTER: PROJECT PROTOTYPING
     section.chapter.prototyping
@@ -222,7 +241,8 @@ article.single-project.kpcc-iphone
         .bound
           p I settled on Framer.js as my prototyping tool of choice. Its javascript-driven workflow allowed me to interate quickly, and also allowed me to hack real audio into the prototypes. 
           p I built prototypes to communicate flows in the app where a complex set of transitions and animations needed to occur in order for the microinteractions to feel polished and delightful. I focused on the most important moments in the app: initiating and rewinding the live stream, moving between on-demand episodes, and a carefully sequenced app onboarding experience. 
-          figure.figure.prototypes
+          figure.figure.device.prototypes
+            .slider-navigation
             .marvel-device.iphone6.silver
               .top-bar
               .sleep
@@ -231,11 +251,16 @@ article.single-project.kpcc-iphone
               .sensor
               .speaker
               .screen
-                /! Content goes here
-                video src="../../images/kpcc-iphone/prototypes/onboarding.mp4" width="332"
+                .slider
+                  div
+                    video.asset src="../../images/kpcc-iphone/prototypes/live-preroll.mp4" title="Onboarding" width="332" preload="none" poster="../../images/kpcc-iphone/prototypes/live-preroll-poster.jpg"
+                  div
+                    video.asset src="../../images/kpcc-iphone/prototypes/onboarding.mp4" title="Onboarding 2" width="332" preload="none" poster="../../images/kpcc-iphone/prototypes/onboarding-poster.jpg"
               .home
               .bottom-bar
-          p Designing KPCC for iPhone was an exciting challenge. It was especially rewarding working across many disciplines (customer research, product strategy, UI and interaction design, even sound engineering) to bring a product to life. You can check out the final product by downloading <a href="https://itunes.apple.com/us/app/kpcc/id293825085?mt=8">KPCC for iPhone in the App Store</a>.
+            .screen-captions
+              h3.brief Onboarding
+          p Designing KPCC for iPhone was both a challenge and a delight. It was especially rewarding working across many disciplines (customer research, product strategy, UI and interaction design, even sound engineering) to bring a product to life. You can check out the final product by downloading <a href="https://itunes.apple.com/us/app/kpcc/id293825085?mt=8">KPCC for iPhone in the App Store</a>.
 
 - content_for :postproject do
     
@@ -254,11 +279,79 @@ article.single-project.kpcc-iphone
     javascript:
       $(document).ready(function() {
         //
-        // Slick.js for image galleries
+        // Set up Waypoints for lazy loading content
+        // 
+        var waypoints = $(".chapter-introduction, .next-project, .slider").waypoint({
+          handler: function(direction) {
+            $(this.element).addClass("viewable");
+
+            //
+            // Slick.js for image galleries
+            //
+            $('.wireframes .slider.viewable').slick({
+              appendArrows:   ".wireframes .slider-navigation",
+              dots:           true,
+              lazyLoad:       "ondemand",
+              nextArrow:      '<button type="button" class="slick-next"><span class="next-arrow"></span></button>',
+              prevArrow:      '<button type="button" class="slick-prev"><span class="prev-arrow"></span></button>'
+            });
+            $('.screens .slider.viewable').slick({
+              appendArrows:   ".screens .slider-navigation",
+              dots:           true,
+              lazyLoad:       "ondemand",
+              nextArrow:      '<button type="button" class="slick-next"><span class="next-arrow"></span></button>',
+              prevArrow:      '<button type="button" class="slick-prev"><span class="prev-arrow"></span></button>'
+            });
+
+            $('.screens .slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+              screenCaption = $('.screens .slick-active .asset').attr("title");
+              $('.screens .screen-captions .brief').text(screenCaption);
+            });
+            $('.prototypes .slider.viewable').slick({
+              appendArrows:   ".prototypes .slider-navigation",
+              dots:           true,
+              nextArrow:      '<button type="button" class="slick-next"><span class="next-arrow"></span></button>',
+              prevArrow:      '<button type="button" class="slick-prev"><span class="prev-arrow"></span></button>'
+            });
+
+            $('.prototypes .slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+              screenCaption = $('.prototypes .slick-active .asset').attr("title");
+              $('.prototypes .screen-captions .brief').text(screenCaption);
+            });
+          },
+          offset: "150%"
+        })
+
         //
-        $('.slider').slick({
-          appendArrows:   ".slider-navigation",
-          dots:           true,
-          lazyLoad: 'ondemand'
+        // Set up Waypoints for lazy loading images
+        // 
+        var imgWaypoints = $(".lazy-img").waypoint({
+          handler: function(direction) {
+            var el = $(this.element);
+            $(this.element).attr("src", $(this.element).attr("data-src"));
+          },
+          offset: -100
+        })
+
+        //
+        // Set up Waypoints for CSS transitions on UI controls
+        // 
+        var sliderNavWaypoints = $(".slider-navigation").waypoint({
+          handler: function(direction) {
+            $(this.element).addClass("active");
+          },
+          offset: 100
+        })
+
+        //
+        // Basic video controls just to get started
+        //
+        $('video').click(function() {
+          if ($(this).get(0).paused) {
+            $(this).get(0).play();
+          }
+          else {
+            $(this).get(0).pause();
+          }
         });
       });

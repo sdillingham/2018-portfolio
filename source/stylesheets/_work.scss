@@ -263,10 +263,10 @@
   &:not(.work_index) {
     .colophon {
       hr {
-        background:rgba($white, 0.1);
+        background:rgba($white, 0.2);
       }
       .fineprint {
-        color:$medGray;
+        color:$white;
       }
     }
   }

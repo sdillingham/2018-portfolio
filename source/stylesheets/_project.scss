@@ -237,6 +237,30 @@
   .brief {
     margin-top: grid-height(-2);
   }
+  .video-progress {
+    transition: width 0.4s linear;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    color: $brightAccent;
+    border-radius: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+  }
+  progress[value]::-webkit-progress-bar {
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+  }
+  progress[value]::-webkit-progress-value {
+    background-color: $brightAccent;
+  }
+  progress[value]::-moz-progress-bar {
+    background-color: $brightAccent;
+  }
 }
 
 // Wireframe Flows

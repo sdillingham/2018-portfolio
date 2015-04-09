@@ -253,7 +253,7 @@ article.single-project.kpcc-iphone
               .screen
                 .slider
                   div
-                    video.asset src="../../images/kpcc-iphone/prototypes/live-preroll.mp4" title="Live Stream &amp; Preroll" width="332" preload="none" poster="../../images/kpcc-iphone/prototypes/live-preroll-poster.jpg"
+                    video.asset id="live-preroll" src="../../images/kpcc-iphone/prototypes/live-preroll.mp4" title="Live Stream &amp; Preroll" width="332" preload="none" poster="../../images/kpcc-iphone/prototypes/live-preroll-poster.jpg"
                   div
                     video.asset src="../../images/kpcc-iphone/prototypes/onboarding.mp4" title="Onboarding" width="332" preload="none" poster="../../images/kpcc-iphone/prototypes/onboarding-poster.jpg"
                   div
@@ -262,6 +262,7 @@ article.single-project.kpcc-iphone
                     video.asset src="../../images/kpcc-iphone/prototypes/seeking.mp4" title="Seek Through Episodes" width="332" preload="none" poster="../../images/kpcc-iphone/prototypes/seeking-poster.jpg"
                   div
                     video.asset src="../../images/kpcc-iphone/prototypes/prev-next.mp4" title="Swipe Between Episodes" width="332" preload="none" poster="../../images/kpcc-iphone/prototypes/prev-next-poster.jpg"
+                progress class="video-progress" id="video-progress" max="100" value="0"
               .home
               .bottom-bar
             .screen-captions
@@ -366,5 +367,11 @@ article.single-project.kpcc-iphone
           else {
             $(this).get(0).pause();
           }
+        });
+        var video = document.getElementById('live-preroll');
+        var pBar = document.getElementById('video-progress');
+        video.addEventListener('timeupdate', function() {
+          var percent = Math.floor((100 / video.duration) * video.currentTime);
+          pBar.value = percent;
         });
       });

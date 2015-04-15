@@ -1,17 +1,69 @@
 // STYLES FOR SINGLE PROJECT VIEW
 
+// Declare some breakpoint variables and mixins just for our project pages
+$bp-max                     : 1220px;
+$bp-below-max-wide          : 1040px;
+$bp-below-max-med           : 800px;
+$bp-bound                   : 680px;
+$bp-small-viewport          : 575px;
+$bp-tiny-viewport           : 380px;
+
+@mixin below-max {
+  @media (max-width: #{$bp-max}) {
+    @content;
+  }
+}
+@mixin between-max-wide {
+  @media (min-width: #{$bp-below-max-med}) and (max-width: #{$bp-below-max-wide}) {
+    @content;
+  }
+}
+@mixin between-max-med {
+  @media (min-width: #{$bp-bound}) and (max-width: #{$bp-below-max-med - 1}) {
+    @content;
+  }
+}
+@mixin below-max-med {
+  @media (max-width: #{$bp-below-max-med - 1}) {
+    @content;
+  }
+}
+@mixin below-bound {
+  @media (max-width: #{$bp-bound}) {
+    @content;
+  }
+}
+@mixin small-viewport {
+  @media (max-width: #{$bp-small-viewport}) {
+    @content;
+  }
+}
+@mixin tiny-viewport {
+  @media (max-width: #{$bp-tiny-viewport}) {
+    @content;
+  }
+}
+
 .single-project {
   background: white;
 
   // set up default max-width for our content
   .bound {
     max-width: grid-calc(6);
+
+    @include small-viewport {
+      width: 90%;
+    }
   } 
 
   &.kpcc-iphone {
     .project-marquee {
       background: url('../images/kpcc-iphone/bg-iphone-hero.jpg') no-repeat center top;
       background-size: cover;
+
+      @include below-max-med {
+        background-position: left top;
+      }
     }
   }
 }
@@ -19,11 +71,33 @@
 .project-marquee {
   color: white;
   min-height: grid-height(15);
+  position: relative;
   text-align: center;
+}
+// Add dark overlay to improve legibility of type overlaid over images on small viewports
+.marquee-overlay {
+  @include small-viewport {
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
 }
 .marquee-header {
   @extend .marquee-heading;
-  margin: grid-height(3) grid-pull-calc(2) 0 ;
+  margin: grid-height(3) grid-pull-calc(2) 0;
+  position: relative;
+
+  @include between-max-wide {
+    margin-left: grid-pull-calc(1);
+    margin-right: grid-pull-calc(1);
+  }
+
+  @include below-max-med {
+    margin-left: grid-pull-calc(0);
+    margin-right: grid-pull-calc(0);
+  }
 }
 // Project Title and Description
 .project-title {
@@ -32,6 +106,9 @@
   line-height:1em;
   margin:0;
   padding:14px 0;
+  @include small-viewport {
+    font-size: em(41);
+  }
 }
 .project-description {
   font-size: em(27);
@@ -52,10 +129,23 @@
 // Project Details
 .project-details {
   padding-top: grid-height(2);
+
+  @include small-viewport {
+    padding-top: grid-height(1);
+  }
 }
 // Project Body Copy Styles 
 .narrative {
   padding-bottom: grid-height(3);
+
+  @include small-viewport {
+    padding-bottom: grid-height(2);
+
+    .bound > ol {
+      padding-left: 1em;
+    }
+  }
+
   p, li {
     font-size: em(18);
     line-height: em(31);
@@ -64,9 +154,50 @@
 // Project Figure Styles
 .figure {
   display: block;
+
+  &.triptych, &.quadrant {
+    @include small-viewport {
+      display: table;
+
+      > .caption {
+        display: table-header-group;
+        p {
+          margin-bottom: grid-height(2);
+        }
+      }
+      > .img-bin {
+        display: table-footer-group;
+      }
+    }
+  }
+
   &.triptych {
     @include clearfix;
     margin: grid-height(2) grid-pull-calc(3);
+
+    @include below-max {
+      margin-left: grid-pull-calc(2);
+      margin-right: grid-pull-calc(2);
+    }
+    @include between-max-wide {
+      margin-left: grid-pull-calc(1);
+      margin-right: grid-pull-calc(1);
+    }
+    @include below-max-med {
+      margin-left: grid-pull-calc(0);
+      margin-right: grid-pull-calc(0);
+    }
+    @include below-max-med {
+      margin-left: grid-pull-calc(0);
+      margin-right: grid-pull-calc(0);
+    }
+    @include small-viewport {
+      background: $paleGray;
+      margin-left: -5%;
+      margin-right: -5%;
+      padding: grid-height(1) 5%;
+    }
+
     .img-container {
       float: left;
       margin-right: 2%;
@@ -75,14 +206,42 @@
       &:last-of-type {
         margin-right: 0;
       }
+
+      @include small-viewport {
+        display: block;
+        float: none;
+        margin-bottom: grid-height(1);
+        margin-right: 0;
+        width: 100%;
+      }
     }
     .caption {
       margin: 0 grid-push-calc(2);
+
+      @include below-max {
+        margin: 0;
+      }
+    }
+    .brief {
+      @include small-viewport {
+        margin-top: grid-height(0.25);
+      }
     }
   }
   &.quadrant {
     @include clearfix;
     margin: grid-height(2) grid-pull-calc(1);
+
+    @include below-max-med {
+      margin-left: grid-pull-calc(0);
+      margin-right: grid-pull-calc(0);
+    }
+    @include small-viewport {
+      background: $paleGray;
+      margin-left: -5%;
+      margin-right: -5%;
+      padding: grid-height(1) 5%;
+    }
     .img-container {
       float: left;
       margin-bottom: 21px;
@@ -91,6 +250,14 @@
       width: 48.5%;
       &:nth-of-type(even) {
         margin-right: 0;
+      }
+
+      @include small-viewport {
+        display: block;
+        float: none;
+        margin-bottom: grid-height(1);
+        margin-right: 0;
+        width: 100%;
       }
     }
   }
@@ -109,9 +276,29 @@
 }
 .brief {
   @extend .marquee-heading;
+  display: block;
   font-size: em(14);
   font-weight: 600;
+  line-height: 1.2em;
   text-transform: uppercase;
+}
+
+// Chapter Styles
+.design {
+  .narrative {
+    @include small-viewport {
+      padding-bottom: 0; // On small screens, the Design chapter has a gray device BG that should be flush with the next chapter introduction 
+    }
+  }
+}
+.prototyping {
+  .device {
+    @include small-viewport {
+      margin-left: -5%;
+      margin-right: -5%;
+      margin-bottom: grid-height(1);
+    }
+  }
 }
 
 // Chapter Introductions
@@ -123,8 +310,19 @@
   min-height: grid-height(17);
   padding-top: grid-height(2);
   text-align: center;
+
+  @include below-bound {
+    min-height: grid-height(15);
+  }
+  @include small-viewport {
+    margin-bottom: grid-height(1);
+  }
   .bound {
     max-width: grid-calc(8);
+
+    @include below-bound {
+      max-width: grid-calc(6);
+    }
   }
   .svg {
     display: block;
@@ -146,6 +344,13 @@
   display: inline-block;
   font-size: em(41);
   margin:0 0 grid-height(3);
+
+  @include below-bound {
+    margin-bottom: grid-height(2);
+  }
+  @include small-viewport {
+    margin-bottom: grid-height(1);
+  }
   &:after {
     background: white;
     content: "";
@@ -157,6 +362,13 @@
 .chapter-teaser {
   font-size: em(24);
   line-height: em(36, 24);
+
+  @include below-bound {
+    font-size: em(22);
+  }
+  @include small-viewport {
+    font-size: em(20);
+  }
 }
 
 // Chapter Intermissions
@@ -171,6 +383,10 @@
 .intermission-heading {
   font-size: em(32);
   margin: 0 0 grid-height(2);
+
+  @include small-viewport {
+    font-size: em(28);
+  }
 }
 .intermission.wireframes {
   background: #12A17A;
@@ -178,6 +394,69 @@
   margin: grid-height(2) 0;
   padding: grid-height(1) 0 grid-height(2);
   position: relative;
+
+  @include small-viewport {
+    margin: grid-height(1) 0;
+    padding-top: 0;
+
+    .intermission-heading {
+      font-size: em(20);
+      margin: grid-height(1) 0;
+    }
+    .flow-item {
+      .brief {
+        display: none;
+      }
+    }
+    img {
+      box-shadow: none !important;
+    }
+    .slick-prev, .slick-next {
+      background: transparent;
+      bottom: 0;
+      top: auto;
+      width: 50%;
+      border-top: 1px solid rgba(255,255,255,0.5);
+      &:active, &:hover {
+        background: transparent;
+      }
+      &:after {
+        color: $white;
+        display: block;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .next-arrow, .prev-arrow {
+        height: 1px;
+        width: 12px;
+        top: 23px;
+      }
+      .next-arrow:after {
+        border-width: 5.5px 0 5.5px 7px;
+        right: -7px;
+        top: -5px;
+      }
+      .prev-arrow:after {
+        border-width: 5.5px 7px 5.5px;
+        left: -14px;
+        top: -5px;
+      }
+    }
+    .slick-prev {
+      border-right:1px solid rgba(255,255,255,0.5);
+      &:after {
+        content: "Previous";
+      }
+    }
+    .slick-next {
+      &:after {
+        content: "Next";
+      }
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
   img {
     @include box-shadow(0 2px 9px rgba(0,0,0,0.5)); 
   }
@@ -189,9 +468,61 @@
 // Device Mocks
 .marvel-device {
   margin: grid-height(2) auto;
+
+  &.iphone6 {
+    @include small-viewport {
+      background: transparent;
+      box-shadow: none;
+      margin-top: grid-height(1);
+      padding: 0;
+      width: 280px;
+      height: 498px;
+
+      .asset {
+        width: 280px;
+      }
+    }
+    @include tiny-viewport {
+      width: 220px;
+      height: 391px;
+
+      .asset {
+        width: 220px;
+      }
+    }
+
+    &:before {
+      @include small-viewport {
+        background: transparent;
+      }
+    }
+    &:after {
+      @include small-viewport {
+        box-shadow: none;
+      }
+    }
+  }
+
   .screen {
     background: black;
     z-index: 500;
+    @include small-viewport {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .top-bar, 
+  .sleep, 
+  .volume,
+  .camera,
+  .sensor,
+  .speaker,
+  .home,
+  .bottom-bar {
+    @include small-viewport {
+      display: none;
+    }
   }
 }
 
@@ -199,37 +530,73 @@
 .device {
   margin-bottom: grid-height(2);
   position: relative;
+
+  @include small-viewport {
+    background: $paleGray;
+    margin-bottom: 0;
+    margin-top: grid-height(1);
+    padding: grid-height(1) 0 grid-height(3);
+  }
   .slider-navigation {
     .slick-prev, .slick-next {
       background: #eee;
-      &:hover {
+      top: 50%;
+
+      @include small-viewport {
         background: #bbb;
+        top: 42%;
+      }
+      &:hover {
+        background: $medGray;
       }
     }
     .slick-prev {
-      top: 50%;
       left: 50%;
       margin-left: -150px;
+
+      @include small-viewport {
+        left: 0;
+        margin-left: 0;
+      }
     }
     .slick-next {
-      top: 50%;
       right: 50%;
       margin-right: -150px;
+
+      @include small-viewport {
+        right: 0;
+        margin-right: 0;
+      }
     }
     &.active {
       .slick-prev {
         left: 50%;
         margin-left: -254px;
+
+        @include small-viewport {
+          left: 0;
+          margin-left: 0;
+        }
       }
       .slick-next {
         right: 50%;
         margin-right: -254px;
+
+        @include small-viewport {
+          right: 0;
+          margin-right: 0;
+        }
       }
     }
   }
   .slick-dots {
     margin-top: grid-height(5);
     margin-bottom: grid-height(4);
+
+    @include small-viewport {
+      margin-top: grid-height(2);
+      margin-bottom: 0;
+    }
     button {
       background: #bbb;
     }
@@ -280,8 +647,20 @@
   .four-steps & {
     margin: 0 5%;
     width: 15%;
+
+    @include small-viewport {
+      margin: 0 6% 22px 0;
+      width: 47%;
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+      &:nth-child(3), &:nth-child(4), {
+        margin-bottom: 0;
+      }
+    }
   }
   .brief {
+    margin-top: 10px;
     text-transform: none;
   }
   .flow-arrow {
@@ -293,6 +672,10 @@
     position: absolute;
     top: 44%;
     right: -58%;
+
+    @include below-max-med {
+      display: none; // Hide flow arrows to give each card in the flow more space at smaller viewports
+    }
     &:after {
       border-style: solid;
       border-width: 4.5px 0 4.5px 6px;
@@ -333,12 +716,25 @@
     &:active {
       background: rgba(0,0,0,0.5);
     }
+
+    @include small-viewport {
+      width: 48px;
+      height: 48px;
+    }
   }
   .slick-prev {
     left: -64px;
+
+    @include small-viewport {
+      left: 0;
+    }
   }
   .slick-next {
     right: -64px;
+
+    @include small-viewport {
+      right: 0;
+    }
   }
   .next-arrow, .prev-arrow {
     background: white;
@@ -349,6 +745,10 @@
   }
   .prev-arrow {
     left: 27px;
+
+    @include small-viewport {
+      left: 19px;
+    }
     &:after {
       border-style: solid;
       border-width: 7.5px 10px 7.5px 0;
@@ -363,6 +763,10 @@
   }
   .next-arrow {
     right: 27px;
+
+    @include small-viewport {
+      right: 19px;
+    }
     &:after {
       border-style: solid;
       border-width: 7.5px 0 7.5px 10px;

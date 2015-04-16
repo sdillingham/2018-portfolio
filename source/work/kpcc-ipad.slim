@@ -1,34 +1,160 @@
 ---
 order: 1
 title: "KPCC for iPad"
-teaser: "Product design for KPCC's native tablet app."
-hero_img: "img-hero-kpcc-ipad"
-gallery: 
-  - 
-    image: "img-kpcc-ipad-1"
-    caption: "Users can select their favorite programs and have new episodes automatically added to their queue."
-  - 
-    image: "img-kpcc-ipad-2"
-    caption: "Articles look their best on KPCC for iPad, with gorgeous images and elegant typography. Slideshows, video and audio are always just a tap away."
-  - 
-    image: "img-kpcc-ipad-3"
-    caption: "Audio is surfaced throughout the app, making it easy to discover, queue and play radio segments and episodes."
-  - 
-    image: "img-kpcc-ipad-4"
-    caption: "The app takes full advantage of iPad's canvas to show off the Short List's tightly curated sets of stories and beautiful photography."
-link: 
-  title: "Visit the App Store"
-  href: "https://itunes.apple.com/us/app/kpcc-for-ipad/id744160424?mt=8"
-company: "KPCC"
-services: "Product strategy, Product design"
-problem: "<p>With the second-largest newsroom in Los Angeles and hundreds of articles published every week, KPCC needed a product that positioned it as a news brand that delivers more than just great radio.</p> <p>Focusing on the tablet as a great device for reading, we wondered if we could build an app that would create addictive reading habits in our loyal listening audience.</p> <p>And since our most loyal fans were likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with KPCC, building increased loyalty that could drive membership.</p>"
-outcomes: 
-  - 
-    item: "Created a new editorial feature, The Short List, delivering curated editions of the day's news to iPad users in the early morning and late afternoon."
-  - 
-    item: "KPCC for iPad is the first product to successfully switch KPCC's loyal listeners to readers. Users engage in reading seven times more often than listening, and read an average of 3 stories per session."
-  - 
-    item: "KPCC for iPad is a product that our audience loves. It received 94% 5-star ratings in its first 30 days in the App Store, and more than half of active users use the app multiple times per day."
+teaser: "Positioning Southern California's largest public radio station as a digital news leader in Los Angeles."
 ---
 
-= partial(:project, :locals => { :project => current_page.data  })
+article.single-project.kpcc-ipad
+  section.project-marquee
+    .marquee-overlay
+    .bound
+      header.marquee-header
+        h1.project-title KPCC for iPad
+        p.project-description Positioning Southern California's largest public radio station as a digital news leader in Los Angeles.
+        dl.project-responsibilities
+          dt Responsibilities: 
+          dd Product strategy, Product design
+  .project-details
+    / PROJECT INTRODUCTION
+    section.narrative.introduction
+      .bound
+        p With the second-largest newsroom in Los Angeles and hundreds of articles published every week, KPCC needed a product that positioned it as a brand that delivers more than just great radio.
+        p All of that increased digital coverage costs money, and one of KPCC’s strategic goals is to grow its base of members who support us because of our digital news service. Focusing on the tablet as a great device for reading, we wondered if we could build an app that would create daily reading habits with our loyal listening audience.
+        p And since our loyal fans were most likely to seek out a KPCC native app, we wanted to find ways to deepen the emotional connection with KPCC, building increased loyalty that could drive membership.
+    / CHAPTER: EXPLORE
+    section.chapter.explore
+      header.chapter-introduction
+        .bound
+          = partial(:svg, :locals => { :img => 'kpcc-ipad/ico-explore', :id => 'svg-explore' })
+          h2.chapter-title Explore
+          p.chapter-teaser To jumpstart the project, we started with a two-day workshop led by the brilliant design team from Uncorked Studios, a digital product agency based in Portland. Working collaboratively between editorial, product and revenue stakeholders, we ran through intensive brainstorming and prioritization exercises.
+      .narrative.chapter-narrative
+        .bound
+          p The first UX sprint focused on key customer journeys where KPCC's app could fit into people's busy lives. Creating customer journey maps helped us to think beyond simple activities and user stories, exploring the emotional and psychological dimensions  of their daily lives and interactions with our app.
+          p We reached a point in the project where we had an abundance of ideas but lacked clarity. To hone in on a product that had the greatest chance of resonating with our audience, I ran an experiment to test four different elevator pitches and gather signals from our audience. You can read all about the experiment here: http://sean.dillingh.am/blog/2013/12/22/using-audience-signals-to-validate-product-ideas.html
+          figure.figure.single
+            img src="../../images/kpcc-ipad/figure-ipad-ab-test.jpg" alt="KPCC for iPad landing page experiment"
+            figcaption.caption
+              p To run the experiment, I created four variations of a landing page for our iPad app, each with a distinct value proposition and feature set.
+          p The results of our experiment pointed in the direction of a curated news experience, and also that our audiences expected to be able to consume KPCC audio on their tablets. We began to see more clearly that KPCC’s iPad app was a product that had to act as a bridge for our audience - affirming their love for us as a radio station while also becoming a part of their daily news reading habits.
+    / CHAPTER: CONVERGE
+    section.chapter.converge
+      header.chapter-introduction
+        .bound
+          = partial(:svg, :locals => { :img => 'kpcc-ipad/ico-converge', :id => 'svg-converge' })
+          h2.chapter-title Converge
+          p.chapter-teaser Now that we had a clear set of outcomes to design for, I began sketching and devising a structure for the app. Storyboards and wireframes gave way to polished designs. Along the way, I made the switch from Photoshop to Sketch and haven't looked back.
+      .narrative.chapter-narrative
+        .bound
+          p To get our users reading KPCC content every day, we created a new editorial feature, The Short List, delivering twice-daily curated editions of the day's news in the early morning and late afternoon. This was a rare opportunity for product to influence and shape editorial strategy. Bringing The Short List to life demanded a deep collaboration across design, engineering, and content.
+          p We collectively imagined a news product with a different form and set of goals than our traditional coverage. Instead of long articles deeply investaging a single topic, we embraced short one-to-two paragraph summaries. Instead of only writing about the stories our newsroom covered, we curated stories from a range of trusted sources. Instead of an authoritative tone, we adopted a decidedly human voice. Instead of expediently selecting photo assets, we wanted to carefully choose images that were immersive and supported the emotional thrust of the story. Instead of building a curated homepage of things to click on, we wanted to create something that could be enjoyed just as much if it was skimmed as it was for those who dove deeper into each article. 
+          p Building  a new editorial product from conception to execution was thrilling. We got to experiment with different content approaches, extend KPCC’s custom CMS to support new content models, and design for a very specific mode of news consumption.
+        .intermission.device.screens.ipad
+          .slider-navigation.ipad
+          .bound
+            .marvel-device.ipad.silver
+              .top-bar
+              .sleep
+              .volume
+              .camera
+              .sensor
+              .speaker
+              .screen
+                /! iPad screenshots
+                .slider
+                  div
+                    img.asset data-lazy="../../images/kpcc-ipad/screens/screen-ipad-home.jpg" title="Home screen"
+                  div
+                    img.asset data-lazy="../../images/kpcc-ipad/screens/screen-ipad-programs.jpg" title="Browse programs"
+                  div
+                    img.asset data-lazy="../../images/kpcc-ipad/screens/screen-ipad-news.jpg" title="Browse news"
+                  div
+                    img.asset data-lazy="../../images/kpcc-ipad/screens/screen-ipad-article.jpg"  title="News article"
+                  div
+                    img.asset data-lazy="../../images/kpcc-ipad/screens/screen-ipad-program.jpg" title="Single program view"
+              .home
+              .bottom-bar
+            .screen-captions
+              h3.brief Home screen
+    / CHAPTER: OUTCOMES
+    section.chapter.outcomes
+      header.chapter-introduction
+        .bound
+          = partial(:svg, :locals => { :img => 'kpcc-ipad/ico-outcomes', :id => 'svg-outcomes' })
+          h2.chapter-title Outcomes
+          p.chapter-teaser KPCC for iPad is the first product to successfully switch KPCC's loyal listeners to readers. Users engage in reading nine times more often than listening, and read multiple stories per session. The Short List also marked the first time KPCC’s newsroom launched a new editorial product hand-in-hand with a new digital product. 
+      .narrative.chapter-narrative
+        .bound
+          p The app takes full advantage of iPad's canvas to show off the Short List's tightly curated sets of stories and beautiful photography. Users can select their favorite programs and have new episodes automatically added to their queue. Audio is surfaced throughout the app, making it easy to discover, queue and play radio segments and episodes.
+          p KPCC for iPad is a product that our audience loves. It received 94% 5-star ratings in its first 30 days in the App Store, and more than half of active users use the app multiple times per day.
+
+- content_for :postproject do
+    
+    / NEXT PROJECT: OUTPOST
+    aside.next-project.outpost
+      a href="../outpost/"
+        footer
+          .bound
+            h5 Next Project
+            h3 Outpost CMS Redesign
+            p Designing a better newsroom publishing platform.
+        .next-bg
+
+- content_for :additional_footer do
+
+    javascript:
+      $(document).ready(function() {
+        //
+        // Set up Waypoints for lazy loading content
+        // 
+        var waypoints = $(".chapter-introduction, .next-project, .slider").waypoint({
+          handler: function(direction) {
+            $(this.element).addClass("viewable");
+
+            //
+            // Slick.js for image galleries
+            //
+            $('.screens .slider.viewable').slick({
+              appendArrows:   ".screens .slider-navigation",
+              dots:           true,
+              lazyLoad:       "ondemand",
+              nextArrow:      '<button type="button" class="slick-next"><span class="next-arrow"></span></button>',
+              prevArrow:      '<button type="button" class="slick-prev"><span class="prev-arrow"></span></button>'
+            });
+
+            $('.screens .slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+              screenCaption = $('.screens .slick-active .asset').attr("title");
+              $('.screens .screen-captions .brief').text(screenCaption);
+            });
+          },
+          offset: "150%"
+        })
+
+        //
+        // Set up Waypoints for lazy loading images
+        // 
+        // var imgWaypoints = $(".lazy-img").waypoint({
+        //   handler: function(direction) {
+        //     var el = $(this.element);
+        //     $(this.element).attr("src", $(this.element).attr("data-src"));
+        //   },
+        //   offset: -100
+        // })
+
+        //
+        // Set up Waypoints for CSS transitions on UI controls
+        // 
+        var sliderNavWaypoints = $(".slider-navigation").waypoint({
+          handler: function(direction) {
+            $(this.element).addClass("active");
+          },
+          offset: 200
+        })
+
+        //
+        // Set up inline SVG icon animations for chapter introductions
+        //
+        new Vivus(document.querySelector("#svg-explore svg"), {type: 'async', duration: 120, start : 'inViewport'});
+        new Vivus(document.querySelector("#svg-converge svg"), {type: 'async', duration: 120, start : 'inViewport'});
+        new Vivus(document.querySelector("#svg-outcomes svg"), {type: 'async', duration: 120, start : 'inViewport'});
+      });

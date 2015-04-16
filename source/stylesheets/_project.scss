@@ -66,6 +66,12 @@ $bp-tiny-viewport           : 380px;
       }
     }
   }
+  &.kpcc-ipad {
+    .project-marquee {
+      background: url('../images/kpcc-ipad/bg-ipad-hero.jpg') no-repeat center top;
+      background-size: cover;
+    }
+  }
 }
 // Project Marquee
 .project-marquee {
@@ -154,6 +160,14 @@ $bp-tiny-viewport           : 380px;
 // Project Figure Styles
 .figure {
   display: block;
+
+  &.single {
+    margin: grid-height(2) grid-pull-calc(1);
+
+    @include below-max-med {
+      margin: grid-height(1) grid-pull-calc(0);
+    }
+  }
 
   &.triptych, &.quadrant {
     @include small-viewport {
@@ -291,6 +305,13 @@ $bp-tiny-viewport           : 380px;
     }
   }
 }
+.converge {
+  .narrative {
+    @include below-max-med {
+      padding-bottom: 0; // On small screens, the Design chapter has a gray device BG that should be flush with the next chapter introduction 
+    }
+  }
+}
 .prototyping {
   .device {
     @include small-viewport {
@@ -335,6 +356,15 @@ $bp-tiny-viewport           : 380px;
     @each $chapter in $chapters {
       .#{$chapter} &  { 
         background: url('../images/kpcc-iphone/bg-#{$chapter}.jpg') no-repeat center top;
+        background-size: cover;
+      }
+    }
+    // iPad Chapters
+    $chapters: ("explore", "converge", "outcomes");
+
+    @each $chapter in $chapters {
+      .#{$chapter} &  { 
+        background: url('../images/kpcc-ipad/bg-#{$chapter}.jpg') no-repeat center top;
         background-size: cover;
       }
     }
@@ -503,10 +533,52 @@ $bp-tiny-viewport           : 380px;
     }
   }
 
+  &.ipad.silver {
+    @include below-max-med {
+      background: transparent;
+      box-shadow: none;
+      margin-top: grid-height(1);
+      padding: 0;
+      width: 480px;
+      height: 640px;
+
+      .asset {
+        width: 480px;
+      }
+    }
+    @include below-bound {
+      width: 384px;
+      height: 512px;
+
+      .asset {
+        width: 384px;
+      }
+    }
+    @include tiny-viewport {
+      width: 220px;
+      height: 293px;
+
+      .asset {
+        width: 220px;
+      }
+    }
+
+    &:before {
+      @include below-max-med {
+        background: transparent;
+      }
+    }
+    &:after {
+      @include below-max-med {
+        box-shadow: none;
+      }
+    }
+  }
+
   .screen {
     background: black;
     z-index: 500;
-    @include small-viewport {
+    @include below-max-med {
       background: transparent;
       box-shadow: none;
     }
@@ -520,7 +592,7 @@ $bp-tiny-viewport           : 380px;
   .speaker,
   .home,
   .bottom-bar {
-    @include small-viewport {
+    @include below-max-med {
       display: none;
     }
   }
@@ -536,6 +608,35 @@ $bp-tiny-viewport           : 380px;
     margin-bottom: 0;
     margin-top: grid-height(1);
     padding: grid-height(1) 0 grid-height(3);
+  }
+
+  &.ipad {
+    @include below-max-med {
+      background: $paleGray;
+      margin-bottom: 0;
+      margin-top: grid-height(1);
+      padding: grid-height(1) 0 grid-height(3);
+
+      .slick-dots {
+        margin-top: 60px;
+      }
+      .slider-navigation {
+        @include below-max-med {
+          .slick-prev, .slick-next {
+            background: #bbb;
+            top: 42%;
+          }
+          .slick-prev {
+            left: 0 !important;
+            margin-left: 0 !important;
+          }
+          .slick-next {
+            right: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
   }
   .slider-navigation {
     .slick-prev, .slick-next {
@@ -585,6 +686,39 @@ $bp-tiny-viewport           : 380px;
         @include small-viewport {
           right: 0;
           margin-right: 0;
+        }
+      }
+    }
+
+    &.ipad {
+      .slick-prev {
+        margin-left: -280px;
+
+        @include small-viewport {
+          margin-left: 0;
+        }
+      }
+      .slick-next {
+        margin-right: -280px;
+
+        @include small-viewport {
+          margin-right: 0;
+        }
+      }
+      &.active {
+        .slick-prev {
+          margin-left: -377px;
+
+          @include small-viewport {
+            margin-left: 0;
+          }
+        }
+        .slick-next {
+          margin-right: -377px;
+
+          @include small-viewport {
+            margin-right: 0;
+          }
         }
       }
     }

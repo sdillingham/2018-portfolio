@@ -54,7 +54,20 @@ $bp-tiny-viewport           : 380px;
     @include small-viewport {
       width: 90%;
     }
-  } 
+  }
+
+  // set a wider bounding container for non-narrative sections
+  .chapter-sheet {
+    padding: grid-height(2) 0;
+
+    .bound {
+      max-width: grid-calc(8);
+    }
+  }
+
+  .chapter-introduction + .chapter-sheet {
+    padding-top: 0;
+  }
 
   &.kpcc-iphone {
     .project-marquee {
@@ -70,6 +83,16 @@ $bp-tiny-viewport           : 380px;
     .project-marquee {
       background: url('../images/kpcc-ipad/bg-ipad-hero.jpg') no-repeat center top;
       background-size: cover;
+    }
+  }
+  &.outpost {
+    .project-marquee {
+      background: url('../images/outpost/bg-outpost-hero.jpg') no-repeat center top;
+      background-size: cover;
+
+      @include below-max-med {
+        background-position: left top;
+      }
     }
   }
 }
@@ -140,8 +163,8 @@ $bp-tiny-viewport           : 380px;
     padding-top: grid-height(1);
   }
 }
-// Project Body Copy Styles 
-.narrative {
+// Project Body Copy Styles
+.narrative, .sheet {
   padding-bottom: grid-height(3);
 
   @include small-viewport {
@@ -154,12 +177,172 @@ $bp-tiny-viewport           : 380px;
 
   p, li {
     font-size: em(18);
-    line-height: em(31);
+    line-height: 1.72em;
+  }
+  p, ul {
+    margin: em(31) 0;
+  }
+  .subhead {
+    @extend .marquee-heading;
+    font-size: em(24);
+    font-weight: 400;
+    line-height: 31px;
+    margin: 18px 0;
+  }
+  .supportive {
+    color: #6D6D6D;
+    font-size: em(21);
+    line-height: 31px;
+  }
+  .numbered-list {
+    font-size: 1.5em;
+    list-style: none;
+    padding: 0;
+
+    @include small-viewport {
+      font-size: 1.25em;
+    }
+    li {
+      display: block;
+      margin:0 0 em(16);
+      padding: 0;
+    }
+    .number {
+      color: #12A17A;
+      display: inline-block;
+      font-size: 41px;
+      font-weight: 700;
+      margin-right: 12px;
+
+      @include small-viewport {
+        font-size: 32px;
+      }
+    }
   }
 }
+.section {
+  @include clearfix;
+
+  .bound {
+    max-width: grid-calc(10) !important;
+  }
+}
+.chapter-sheet {
+  padding-bottom: grid-height(3);
+  text-align: center;
+
+  &:nth-child(odd) {
+    background: #FAFAFA;
+  }
+
+  .sheet-heading {
+    @extend .marquee-heading;
+    color: #252525;
+    font-size: em(32);
+  }
+}
+
 // Project Figure Styles
 .figure {
   display: block;
+
+  &.browser {
+    margin: grid-height(2) grid-pull-calc(1);
+
+    @include below-max {
+      margin: grid-height(1) grid-pull-calc(0);
+    }
+
+    &.left {
+      float: left;
+      margin-right: 0;
+      margin-left: 0;
+      margin-top: 40px;
+      width: 44%;
+
+      @include between-max-wide {
+        width: 40%;
+      }
+      @include below-max-med {
+        float: none;
+        width: 100%;
+      }
+
+      .controls {
+        border-top-left-radius: 0;
+      }
+      .address-bar {
+        left: 0;
+      }
+      .viewport {
+        padding: 43% 0;
+      }
+    }
+
+    .controls {
+      background: #D3D3D3;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      height: 42px;
+      position: relative;
+
+      @include small-viewport {
+        display: none;
+      }
+    }
+    .gumdrop {
+      border-radius: 6px;
+      display: block;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 15px;
+
+      &.close {
+        background: #E96E4C;
+        left: 15px;
+      }
+      &.minimize {
+        background: #E6A935;
+        left: 33px;
+      }
+      &.maximize {
+        background: #85C33D;
+        left: 51px;
+      }
+    }
+    .address-bar {
+      background: #fff;
+      height: 22px;
+      position: absolute;
+      top: 10px;
+      left: 75px;
+      right: 15px;
+    }
+
+    .viewport {
+      border: 1px solid #D6D6D6;
+      box-sizing: border-box;
+      overflow: hidden;
+      padding: 33% 0;
+      position: relative;
+      text-align: initial;
+      width: 100%;
+
+      img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+    .caption {
+      margin: 0 grid-calc(1);
+
+      @include below-max-med {
+        margin: 0;
+      }
+    }
+  }
 
   &.single {
     margin: grid-height(2) grid-pull-calc(1);
@@ -287,6 +470,16 @@ $bp-tiny-viewport           : 380px;
   font-size: em(14);
   line-height: em(24);
   text-align: center;
+  &.big p {
+    @extend .marquee-heading;
+    color: #222;
+    font-size: 24px;
+    line-height: 31px;
+
+    @include small-viewport {
+      font-size: 18px;
+    }
+  }
 }
 .brief {
   @extend .marquee-heading;
@@ -301,14 +494,14 @@ $bp-tiny-viewport           : 380px;
 .design {
   .narrative {
     @include small-viewport {
-      padding-bottom: 0; // On small screens, the Design chapter has a gray device BG that should be flush with the next chapter introduction 
+      padding-bottom: 0; // On small screens, the Design chapter has a gray device BG that should be flush with the next chapter introduction
     }
   }
 }
 .converge {
   .narrative {
     @include below-max-med {
-      padding-bottom: 0; // On small screens, the Design chapter has a gray device BG that should be flush with the next chapter introduction 
+      padding-bottom: 0; // On small screens, the Design chapter has a gray device BG that should be flush with the next chapter introduction
     }
   }
 }
@@ -354,7 +547,7 @@ $bp-tiny-viewport           : 380px;
     $chapters: ("discovery", "design", "prototyping");
 
     @each $chapter in $chapters {
-      .#{$chapter} &  { 
+      .#{$chapter} &  {
         background: url('../images/kpcc-iphone/bg-#{$chapter}.jpg') no-repeat center top;
         background-size: cover;
       }
@@ -363,8 +556,17 @@ $bp-tiny-viewport           : 380px;
     $chapters: ("explore", "converge", "outcomes");
 
     @each $chapter in $chapters {
-      .#{$chapter} &  { 
+      .#{$chapter} &  {
         background: url('../images/kpcc-ipad/bg-#{$chapter}.jpg') no-repeat center top;
+        background-size: cover;
+      }
+    }
+    // Outpost Chapters
+    $chapters: ("redesign");
+
+    @each $chapter in $chapters {
+      .#{$chapter} &  {
+        background: url('../images/outpost/bg-#{$chapter}.jpg') no-repeat center top;
         background-size: cover;
       }
     }
@@ -488,7 +690,7 @@ $bp-tiny-viewport           : 380px;
     }
   }
   img {
-    @include box-shadow(0 2px 9px rgba(0,0,0,0.5)); 
+    @include box-shadow(0 2px 9px rgba(0,0,0,0.5));
   }
   .heading-label {
     color: #003E2D;
@@ -584,8 +786,8 @@ $bp-tiny-viewport           : 380px;
     }
   }
 
-  .top-bar, 
-  .sleep, 
+  .top-bar,
+  .sleep,
   .volume,
   .camera,
   .sensor,
@@ -594,6 +796,21 @@ $bp-tiny-viewport           : 380px;
   .bottom-bar {
     @include below-max-med {
       display: none;
+    }
+  }
+}
+
+// Sheets
+.sheet-column {
+  &.right {
+    margin-left: grid-calc(5);
+    width: grid-calc(5);
+
+    .feature {
+      text-align: left;
+      .sheet-heading {
+        margin-bottom:0;
+      }
     }
   }
 }
@@ -824,6 +1041,14 @@ $bp-tiny-viewport           : 380px;
   }
 }
 
+// Outpost-specific styles
+.comment-cards {
+  max-width: 346px;
+}
+.contentbot-avatar {
+  max-width: 181px;
+}
+
 // Slider component
 .slider {
   position: relative;
@@ -926,7 +1151,7 @@ $bp-tiny-viewport           : 380px;
   list-style: none;
   margin: 0;
   padding: 0;
-  li { 
+  li {
     display: inline-block;
     margin: 0 5px;
     &.slick-active {
@@ -1031,5 +1256,13 @@ $bp-tiny-viewport           : 380px;
   &.outpost .next-bg {
     background: url('../images/next-project-outpost.jpg');
     background-size: cover;
+  }
+  &.kpcc-ipad .next-bg {
+    background: url('../images/next-project-ipad.jpg');
+    background-size: cover;
+
+    @include below-max-med {
+      background-position: center  top;
+    }
   }
 }

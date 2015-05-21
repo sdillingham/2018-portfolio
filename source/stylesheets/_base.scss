@@ -45,6 +45,11 @@ iframe, embed, object {
   max-width:100%;
 }
 
+// Utilities
+.hidden {
+  display: none;
+}
+
 // Containers and Grid
 .bound {
   @include clearfix();

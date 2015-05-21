@@ -8,6 +8,9 @@ $bp-bound                   : 680px;
 $bp-small-viewport          : 575px;
 $bp-tiny-viewport           : 380px;
 
+// Declare breakpoint for min-height
+$bp-tall-viewport           : 920px;
+
 @mixin below-max {
   @media (max-width: #{$bp-max}) {
     @content;
@@ -40,6 +43,11 @@ $bp-tiny-viewport           : 380px;
 }
 @mixin tiny-viewport {
   @media (max-width: #{$bp-tiny-viewport}) {
+    @content;
+  }
+}
+@mixin large-viewport {
+  @media (min-height: #{$bp-tall-viewport}) and (min-width: #{$bp-max}) {
     @content;
   }
 }
@@ -251,6 +259,10 @@ $bp-tiny-viewport           : 380px;
 
     @include below-max {
       margin: grid-height(1) grid-pull-calc(0);
+    }
+
+    @include large-viewport {
+      margin: grid-height(2) grid-pull-calc(2);
     }
 
     &.left {

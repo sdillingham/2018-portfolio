@@ -279,7 +279,7 @@ article.single-project.kpcc-iphone
 - content_for :postproject do
     
     / NEXT PROJECT: OUTPOST
-    aside.next-project.outpost
+    aside.next-project.outpost.viewable
       a href="../outpost/"
         footer
           .bound
@@ -295,7 +295,7 @@ article.single-project.kpcc-iphone
         //
         // Set up Waypoints for lazy loading content
         // 
-        var waypoints = $(".chapter-introduction, .next-project, .slider").waypoint({
+        var waypoints = $(".chapter-introduction, .slider").waypoint({
           handler: function(direction) {
             $(this.element).addClass("viewable");
 

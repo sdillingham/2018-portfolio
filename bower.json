@@ -10,7 +10,8 @@
     "fluidbox": "~1.4.3",
     "slick.js": "~1.4.1",
     "waypoints": "~3.1.1",
-    "vivus": "~0.2.1"
+    "vivus": "~0.2.1",
+    "skrollr": "~0.6.29"
   },
   "authors": [
     "Sean Dillingham <sean.dillingham@gmail.com>"

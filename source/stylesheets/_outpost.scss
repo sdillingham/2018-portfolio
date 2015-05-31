@@ -1,0 +1,80 @@
+// Outpost-specific styles
+.figure.browser {
+  .viewport {
+    .icon-notification {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 2.2%;
+      right: 5.5%;
+      z-index: 201;
+    }
+    video {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    img {
+      &.icon-notification-bell {
+        position: absolute;
+        width: 18px;
+        height: 12px;
+        top: 6px;
+        right: 3px;
+      }
+      &.icon-notification-circle {
+        opacity: 0;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        left: 0;
+      }
+      &.pane-notification {
+        position: absolute;
+        margin-right: -28.8888889%;
+        width: 28.8888889%;
+        top: 7%;
+        right: 0;
+        z-index: 200;
+      }
+    }
+  }
+}
+.browser-wrapper {
+  position: relative;
+  .browser {
+    z-index: 205;
+  }
+}
+.comment-cards {
+  max-width: 346px;
+  position: absolute;
+  top:0;
+  right: 50%;
+  margin-right: -173px;
+  z-index: 206;
+}
+.comment-items {
+  position: absolute;
+  right: 5.5%;
+  top:35% !important;
+  width: 22.8472222% !important;
+}
+.contentbot-avatar {
+  max-width: 181px;
+}
+
+// hide parallax elements from small screens
+.no-parallax {
+  #comments {
+    .browser {
+      display: none;
+    }
+    .comment-cards {
+      margin-right: 0;
+      position: relative;
+      right: auto;
+    }
+  }
+}

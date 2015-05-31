@@ -329,7 +329,27 @@ article.single-project.kpcc-iphone
             });
 
             $('.prototypes .slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+              // set our vars
+              currentVideo  = $('.prototypes .slick-active .asset').get(0);
               screenCaption = $('.prototypes .slick-active .asset').attr("title");
+              pBar = document.getElementById('video-progress');
+              
+              // pause all playing videos
+              $('.prototypes .asset').each(function() {
+                  $(this).get(0).pause();
+              });
+
+              // start playing the current video from the beginning
+              currentVideo.currentTime = 0;
+              currentVideo.play();
+
+              // bind progress bar to current video 
+              currentVideo.addEventListener('timeupdate', function() {
+                var percent = Math.floor((100 / currentVideo.duration) * currentVideo.currentTime);
+                pBar.value = percent;
+              });
+
+              // set our caption for the current video
               $('.prototypes .screen-captions .brief').text(screenCaption);
             });
           },
@@ -337,15 +357,15 @@ article.single-project.kpcc-iphone
         })
 
         //
-        // Set up Waypoints for lazy loading images
+        // Set up Waypoint for autoplaying prototype video
         // 
-        // var imgWaypoints = $(".lazy-img").waypoint({
-        //   handler: function(direction) {
-        //     var el = $(this.element);
-        //     $(this.element).attr("src", $(this.element).attr("data-src"));
-        //   },
-        //   offset: -100
-        // })
+        var videoWaypoint = $(".prototyping .prototypes").waypoint({
+          handler: function(direction) {
+            var video=document.getElementById("live-preroll");
+            video.play();
+          },
+          offset: 200
+        })
 
         //
         // Set up Waypoints for CSS transitions on UI controls
@@ -354,15 +374,9 @@ article.single-project.kpcc-iphone
           handler: function(direction) {
             $(this.element).addClass("active");
           },
-          offset: 200
+          offset: 200,
+          triggerOnce: true
         })
-
-        //
-        // Set up inline SVG icon animations for chapter introductions
-        //
-        new Vivus(document.querySelector("#svg-discovery svg"), {type: 'async', duration: 60, start : 'inViewport'});
-        new Vivus(document.querySelector("#svg-design svg"), {type: 'async', duration: 60, start : 'inViewport'});
-        new Vivus(document.querySelector("#svg-prototyping svg"), {type: 'async', duration: 120, start : 'inViewport'});
 
         //
         // Basic video controls just to get started
@@ -375,8 +389,9 @@ article.single-project.kpcc-iphone
             $(this).get(0).pause();
           }
         });
-        var video = document.getElementById('live-preroll');
-        var pBar = document.getElementById('video-progress');
+        video  = $('.prototypes .slick-active .asset').get(0);
+        pBar = document.getElementById('video-progress');
+
         video.addEventListener('timeupdate', function() {
           var percent = Math.floor((100 / video.duration) * video.currentTime);
           pBar.value = percent;

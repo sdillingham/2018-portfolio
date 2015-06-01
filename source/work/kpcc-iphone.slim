@@ -362,7 +362,13 @@ article.single-project.kpcc-iphone
         var videoWaypoint = $(".prototyping .prototypes").waypoint({
           handler: function(direction) {
             var video=document.getElementById("live-preroll");
+            var pBar = document.getElementById('video-progress');
+
             video.play();
+            video.addEventListener('timeupdate', function() {
+              var percent = Math.floor((100 / video.duration) * video.currentTime);
+              pBar.value = percent;
+            });
           },
           offset: 200
         })
@@ -388,12 +394,5 @@ article.single-project.kpcc-iphone
           else {
             $(this).get(0).pause();
           }
-        });
-        video  = $('.prototypes .slick-active .asset').get(0);
-        pBar = document.getElementById('video-progress');
-
-        video.addEventListener('timeupdate', function() {
-          var percent = Math.floor((100 / video.duration) * video.currentTime);
-          pBar.value = percent;
-        });
+        });        
       });

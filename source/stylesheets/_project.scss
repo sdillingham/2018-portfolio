@@ -1269,4 +1269,12 @@ $bp-tall-viewport           : 920px;
       background-position: center  top;
     }
   }
+  &.kpcc-iphone .next-bg {
+    background: url('../images/next-project-iphone.jpg');
+    background-size: cover;
+
+    @include below-max-med {
+      background-position: center  top;
+    }
+  }
 }

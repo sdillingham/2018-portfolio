@@ -258,6 +258,15 @@ article.single-project.kpcc-iphone
               .sensor
               .speaker
               .screen
+                .video-overlay
+                  h2.video-control-label.play
+                    span.pause
+                      span.pause-btn
+                      span.pause-btn 
+                      | Pause
+                    span.play
+                      span.play-btn 
+                      | Play
                 .slider
                   div
                     video.asset id="live-preroll" src="../../images/kpcc-iphone/prototypes/live-preroll.mp4" title="Live Stream &amp; Preroll" width="332" preload="none" poster="../../images/kpcc-iphone/prototypes/live-preroll-poster.jpg"
@@ -357,18 +366,11 @@ article.single-project.kpcc-iphone
         })
 
         //
-        // Set up Waypoint for autoplaying prototype video
+        // Set up Waypoint for animating in video overlay
         // 
         var videoWaypoint = $(".prototyping .prototypes").waypoint({
           handler: function(direction) {
-            var video=document.getElementById("live-preroll");
-            var pBar = document.getElementById('video-progress');
-
-            video.play();
-            video.addEventListener('timeupdate', function() {
-              var percent = Math.floor((100 / video.duration) * video.currentTime);
-              pBar.value = percent;
-            });
+            $(".video-overlay").addClass("active");
           },
           offset: 200
         })
@@ -378,7 +380,7 @@ article.single-project.kpcc-iphone
         // 
         var sliderNavWaypoints = $(".slider-navigation").waypoint({
           handler: function(direction) {
-            $(this.element).addClass("active");
+            $(this.element).addClass("active initial");
           },
           offset: 200,
           triggerOnce: true
@@ -387,12 +389,30 @@ article.single-project.kpcc-iphone
         //
         // Basic video controls just to get started
         //
-        $('video').click(function() {
-          if ($(this).get(0).paused) {
-            $(this).get(0).play();
+        $('.video-overlay').hover(
+          function(){ $(this).addClass('active') },
+          function(){ $(this).removeClass('active dismiss') }
+        )
+        $('.video-overlay').click(function() {
+          if ($('.slick-active video').get(0).paused) {
+            $('.slick-active video').get(0).play();
+            $(this).removeClass("active initial");
+            $(this).addClass("dismiss");
+            $(".video-control-label").removeClass("play");
+            $(".video-control-label").addClass("pause");
+
+            currentVideo  = $('.prototypes .slick-active .asset').get(0);
+            pBar = document.getElementById('video-progress');
+            // bind progress bar to current video 
+            currentVideo.addEventListener('timeupdate', function() {
+              var percent = Math.floor((100 / currentVideo.duration) * currentVideo.currentTime);
+              pBar.value = percent;
+            });
           }
           else {
-            $(this).get(0).pause();
+            $('.slick-active video').get(0).pause();
+            $(".video-control-label").removeClass("pause");
+            $(".video-control-label").addClass("play");
           }
         });        
       });

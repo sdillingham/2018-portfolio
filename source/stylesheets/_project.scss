@@ -1318,11 +1318,11 @@ $bp-tall-viewport           : 920px;
 }
 .next-project.viewable {
   &.outpost .next-bg {
-    background: url('../images/next-project-outpost.jpg');
+    background: url('../images/outpost/next-project-outpost.jpg');
     background-size: cover;
   }
   &.kpcc-ipad .next-bg {
-    background: url('../images/next-project-ipad.jpg');
+    background: url('../images/kpcc-ipad/next-project-ipad.jpg');
     background-size: cover;
 
     @include below-max-med {
@@ -1330,7 +1330,7 @@ $bp-tall-viewport           : 920px;
     }
   }
   &.kpcc-iphone .next-bg {
-    background: url('../images/next-project-iphone.jpg');
+    background: url('../images/kpcc-iphone/next-project-iphone.jpg');
     background-size: cover;
 
     @include below-max-med {

@@ -1,0 +1,15 @@
+article.post
+  - if context == 'landing'
+    h1: a href=current_article.url = current_article.title
+  - else
+    h1= current_article.title
+  aside.post-meta
+    time= current_article.date.strftime('%b %e %Y') 
+    span.divider • 
+    span.tags
+      - current_article.tags.each do |tag| 
+        span.tag=tag
+    span.divider • 
+    a.permalink href=current_article.url Permalink
+  = current_article.body
+  hr.terminus

@@ -140,120 +140,159 @@
 
 // Marquee - introductory section for project landing page.
 .marquee {
-  background:$subduedAccent url('../images/bg-marquee-work-landing.jpg') no-repeat left top;
-  background-size:cover;
+  background:#12A17A;
   color:$white;
   padding:2em 0;
   text-align:center;
-  &.single-project {
-    padding-bottom:8em;
-    position:relative;
-    .marquee-overlay {
-      background:$black;
-      opacity:0;
-      position:absolute;
-      top:0;
-      bottom:0;
-      left:0;
-      right:0;
-      z-index:150;
-    }
-    .bound {
-      z-index:180;
-    }
-  }
-
-  h2 {
-    @extend .marquee-heading;
-    font-size:2.4em;
-    margin-top:0.2em;
-  }
 
   h3 {
-    font-size:1.9em;
-    font-style:italic;
-    font-weight:400;
-    line-height:1.44em;
-    margin:0.6em 0 1em;
-  }
-
-  .description {
     @extend .marquee-heading;
-    font-size:1.25em;
-    line-height:1.7em;
+    font-size:1.8em;
+    font-weight:300;
+    line-height:1.44em;
+    margin:1em auto 2em;
+    max-width: 830px;
   }
 }
 
 // List of Selected Work
 .work-list {
+  height: 100%;
 
+  header {
+    text-align: center;
+  }
   h2 {
-    @extend .marquee-heading;
-    font-size:3em;
+    border-bottom: 1px solid $black;
+    color: $black;
+    display: inline-block;
+    font-size:1.8em;
+    font-weight: 300;
     line-height:1em;
-    margin:0 0 0.25em;
-    a {
-      color:$darkGray;
-      &:hover {
-        color:$black;
-      }
-    }
+    margin: 3em 0 2em;
+    padding-bottom: 8px;
+    text-align: center;
   }
 
-  p {
-    @extend .marquee-heading;
-    color:$medGray;
-    font-size:1.1em;
-    line-height:1.4em;
-    margin:0 0 1em;
-  }
-
-  .button {
-    display:none;
-  }
-
-  figure {
-    position:relative;
-
-    img {
-      border:1px solid $medDivider;
-      display:block;
-      &:hover {
-        border-color:$linkAccent;
-      }
-    }
-
-    figcaption {
-      background:rgba($linkAccent, 0.9);
-      padding:10px 14px;
-      position:absolute;
-      bottom:0;
-      left:0;
-      right:0;
-
-      p {
-        color:$white;
-        font-size:1.3em;
-        margin:0;
-        span {
-          display:inline-block;
-          font-size:0.85em;
-          margin-left:10px; 
-        }
-      }
-    }
+  .work-items {
+    @include clearfix;
+    position: relative;
+    width: 100%;
   }
 
   .work-item {
-    margin-bottom:4em;
-    hr {
-      background:$paleGray;
-      margin-top:3em;
+    background: $black;
+    color: $white;
+    display: block;
+    float: none;
+    margin-bottom: 2em;
+    margin-right: 0;
+    overflow: hidden;
+    padding-bottom: 32%;
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
     }
 
-    &:nth-of-type(1) {
-      hr {
-        display:none;
+    &:hover {
+      .item-bg {
+        opacity: 0.4;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      .item-summary {
+        top: 0px;
+        opacity: 1;
+      }
+      h4 {
+        opacity: 0;
+        transform: zoom(0);
+      }
+    }
+
+    .item-bg {
+      transition: all 0.2s;
+      opacity: 0.8;
+      position: absolute;
+      left:-20px;
+      right:-20px;
+      top:-20px;
+      bottom:-20px;
+      z-index: 299;
+    }
+
+    h3 {
+      @extend .marquee-heading;
+      font-size: 2.2em;
+      margin: 1.2em 0 0.6em;
+      position: relative;
+      z-index: 300;
+    }
+    h4 {
+      @extend .marquee-heading;
+      transition: all 0.1s;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      right: 5%;
+      border-bottom: 1px solid $white;
+      color: $white;
+      font-size: 1.5em;
+      margin: 0;
+      padding-bottom: 8px;
+      text-align: left;
+      transform: zoom(1);
+      z-index: 302;
+    }
+    .item-summary {
+      transition: all 0.2s;
+      top:10px;
+      opacity: 0;
+      padding: 0 5%;
+      position: absolute;
+      z-index: 301;
+      p {
+        color: $white;
+        font-size: 1.25em;
+      }
+      button {
+        transition: all 0.15s;
+        @extend .marquee-heading;
+        background: transparent;
+        border: 1px solid $white;
+        color: $white;
+        font-size: 1em;
+        font-weight: 400;
+        margin-top: 10px;
+        padding: 10px 18px;
+        text-transform: uppercase;
+        &:hover {
+          background: #12A17A;
+        }
+      }
+    }
+
+    &.iphone {
+      .item-bg {
+        background: url('../images/kpcc-iphone/grid-tile-iphone.jpg') no-repeat center center;
+        background-size: cover;
+      }
+    }
+    &.outpost {
+      .item-bg {
+        background: url('../images/outpost/grid-tile-outpost.jpg') no-repeat center center;
+        background-size: cover;
+      }
+    }
+    &.ipad {
+      .item-bg {
+        background: url('../images/kpcc-ipad/grid-tile-ipad.jpg') no-repeat center center;
+        background-size: cover;
       }
     }
   }
@@ -271,10 +310,8 @@
     }
   }
   &.work_index {
-    .colophon {
-      hr {
-        display:none;
-      }
+    .bound {
+      max-width: grid-calc(12);
     }
   }
 }

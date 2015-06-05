@@ -16,8 +16,7 @@
     }
   }
 }
-
-// Blog post styles for larger screens
+// Styles for larger screens
 @media (min-width:58em) {
   .blog {
 
@@ -65,10 +64,156 @@
     }
     
   }
+
+  // Work Landing page
+  .work-list {
+    height: 100%;
+
+    header {
+      text-align: center;
+    }
+    h2 {
+      border-bottom: 1px solid $black;
+      color: $black;
+      display: inline-block;
+      font-size:1.8em;
+      font-weight: 300;
+      line-height:1em;
+      margin: 3em 0 2em;
+      padding-bottom: 8px;
+      text-align: center;
+    }
+
+    .work-items {
+      @include clearfix;
+      position: relative;
+      width: 100%;
+    }
+
+    .work-item {
+      background: $black;
+      color: $white;
+      display: block;
+      float: left;
+      margin-bottom: 0;
+      margin-right: 2%;
+      overflow: hidden;
+      padding-bottom: 32%;
+      width: 32%;
+      height: auto;
+      position: relative;
+      text-align: center;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        .item-bg {
+          opacity: 0.4;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+        .item-summary {
+          top: 0px;
+          opacity: 1;
+        }
+        h4 {
+          opacity: 0;
+          transform: zoom(0);
+        }
+      }
+
+      .item-bg {
+        transition: all 0.2s;
+        opacity: 0.8;
+        position: absolute;
+        left:-20px;
+        right:-20px;
+        top:-20px;
+        bottom:-20px;
+        z-index: 299;
+      }
+
+      h3 {
+        @extend .marquee-heading;
+        font-size: 2.2em;
+        margin: 1.2em 0 0.6em;
+        position: relative;
+        z-index: 300;
+      }
+      h4 {
+        @extend .marquee-heading;
+        transition: all 0.1s;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        right: 5%;
+        border-bottom: 1px solid $white;
+        color: $white;
+        font-size: 1.5em;
+        margin: 0;
+        padding-bottom: 8px;
+        text-align: left;
+        transform: zoom(1);
+        z-index: 302;
+      }
+      .item-summary {
+        transition: all 0.2s;
+        top:10px;
+        opacity: 0;
+        padding: 0 10%;
+        position: absolute;
+        z-index: 301;
+        p {
+          color: $white;
+          font-size: 1.25em;
+        }
+        button {
+          transition: all 0.15s;
+          @extend .marquee-heading;
+          background: transparent;
+          border: 1px solid $white;
+          color: $white;
+          font-size: 1em;
+          font-weight: 400;
+          margin-top: 10px;
+          padding: 10px 18px;
+          text-transform: uppercase;
+          &:hover {
+            background: #12A17A;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:940px) and (max-width:1160px) {
+  .work-list {
+    .work-item {
+      h3 {
+        font-size: 1.8em;
+        margin-top: 1em;
+      }
+      .item-summary {
+        p {
+          font-size: 1em;
+        }
+      }
+    }
+  }
 }
 
 // We're on a larger screen, let's use that extra real estate
 @media (min-width:40em) {
+  .marquee {
+    h3 {
+      font-size: 3em;
+    }
+  }
 
   .interior {
     padding-top:0;
@@ -125,7 +270,7 @@
             padding:0 10px;
             text-transform:uppercase;
             &:hover {
-              color:$brightAccent;
+              color: lighten(#12A17A, 12%);
             }
             &:active {
               background:transparent;
@@ -308,72 +453,11 @@
     display:none;
   }
 
-  // Work Landing page
-  .work-list {
-
-    .work-item {
-      margin-bottom:10em;
-      text-align:center;
-
-      &:nth-of-type(1) {
-        hr {
-          display:block;
-        }
-      }
-
-      &:last-child {
-        margin-bottom:3em;
-      }
-
-      &.kpcc-ipad {
-        figure {
-          margin:0 auto;
-          max-width:37.5em;
-        }
-      }
-
-      h2 + p {
-        margin:0 4em 3em;
-      }
-
-      hr {
-        margin-top:0;
-      }
-
-    }
-
-    figure {
-      margin:0 auto;
-      max-width:46.25em;
-      text-align:center;
-
-      figcaption {
-        background:$brightAccentAlt;
-        border-radius:3px;
-        margin-left:-7em;
-        width:14em;
-        left:50%;
-        bottom:-1.5em;
-        transition: background-color 0.2s linear;
-        &:hover {
-          background:saturate($brightAccentAlt, 30%);
-        }
-      }
-
-      img {
-        border:0;
-        display:block;
-        max-width:100%;
-        text-align:center;
-      }
-    }
-  }
-
   // Blog, Rudimental styles
   .blog, .rudimental {
 
     .global-header {
-      background:#013F4A;
+      background:#12A17A;
       background-size:cover;
       margin-bottom:4em;
       position:relative;

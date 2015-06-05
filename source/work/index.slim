@@ -8,22 +8,28 @@ teaser: The portfolio of Sean Dillingham, a product designer and front-end devel
     h3 I work on websites and mobile apps, focusing on product design, user experience, and front-end development.
 section.work-list
   .bound
-    header.section-header
-      h4: span Selected Work
-      hr
-    - data.work.items.each do |i|
-      article.work-item class="#{i.slug}"
-        header
-          h2: a href="#{i.slug}/" = i.title
-          p = i.description
-          p: a.button href="#{i.slug}/"
-            | View this project 
-            span.icon-chevron
-        a href="#{i.slug}/"
-          figure
-            = partial(:image, :locals => { :img => i.thumbnail.src, :alt => i.thumbnail.caption, :format => 'jpg', :largebreak => '640' })
-            figcaption
-                p
-                  | View this project
-                  span.icon-chevron
-        hr
+    header
+      h2 Recent Work
+    .work-items
+        a.work-item.iphone href="kpcc-iphone/"
+          .item-bg
+          h4 KPCC for iPhone
+          .item-summary
+            h3 KPCC for iPhone
+            p Designing new ways for Angelinos to listen to the public radio they love.
+            button View Project
+        a.work-item.outpost href="outpost/"
+          .item-bg
+          h4 Outpost CMS
+          .item-summary
+            h3 Outpost CMS
+            p Reimagining publishing systems for the needs of a modern newsroom.
+            button View Project
+        a.work-item.ipad href="kpcc-ipad/"
+          .item-bg
+          h4 KPCC for iPad
+          .item-summary
+            h3 KPCC for iPad
+            p Positioning LA’s public radio station as a digital news leader.
+            button View Project
+    

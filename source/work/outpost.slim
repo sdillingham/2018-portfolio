@@ -1,0 +1,168 @@
+---
+order: 1
+title: "Outpost CMS"
+teaser: "Reimagining the publishing system for the needs of a modern newsroom."
+---
+
+article.single-project.outpost
+  section.project-marquee
+    .marquee-overlay
+    .bound
+      header.marquee-header
+        h1.project-title Outpost CMS
+        p.project-description Reimagining publishing systems for the needs of a modern newsroom.
+        dl.project-responsibilities
+          dt Responsibilities: 
+          dd Product strategy, Product design
+  .project-details
+    / PROJECT INTRODUCTION
+    section.narrative.introduction
+      .bound
+        p At KPCC, we see the CMS as “the box of all that is possible.” It's also the tool that our reporters and editors spends their entire day in, so we built our publishing platform from the ground up, tailored to their specific needs.
+        p Since 2012, all of our websites have been powered by a custom Rails engine we call Outpost. In an industry where most newsrooms hate their CMS, we’re proud of the fact that KPCC’s editorial staff find Outpost a pleasure to use. But we also saw the potential for Outpost to become a more elegant, powerful tool.
+        p The first release of Outpost shipped with a bunch of great features, but was built using vanilla Bootstrap without the input of a designer. It looked like...well, a vanilla Bootstrap site. And while it did a good job supporting the daily publishing needs of KPCC’s growing newsroom, we were missing opportunities to delight users, automate repetitive tasks, and free up journalists to do more important work.
+        p I wanted to take all the listening, learning and building I’ve done inside a newsroom for over 3 years and apply it to the next iteration of Outpost. Any improvements I made needed to flow from three guiding principles:
+        ul.numbered-list
+          li 
+            span.number 1.
+            | Minimize distractions
+          li 
+            span.number 2.
+            | Guide writers toward creating better content
+          li 
+            span.number 3.
+            | Feel friendly, fast and reliable
+        p With these principles in mind, I focused my daily conversations with the newsroom on identifying common problems and areas of opportunity. Breaking insights down into a handful of themes, the design process led me to an overhauled design and a bunch of cool new features.
+
+    / CHAPTER: EXPLORE
+    section.chapter.redesign
+      header.chapter-introduction.viewable
+        .bound
+          = partial(:svg, :locals => { :img => 'outpost/ico-redesign', :id => 'svg-redesign' })
+          h2.chapter-title The Redesign
+          p.chapter-teaser The new Outpost UI strives to bring structure and clarity to the content authoring experience. A clear and direct authoring flow allows reporters to move quickly from blank canvas to published article.
+      .sheet.chapter-sheet#ui-overhaul
+        .bound
+          #pin1
+            h3.sheet-heading Completely overhauled UI
+            p.supportive The new Outpost UI strives to bring structure and clarity to the content authoring experience. A clear and direct authoring flow allows reporters to move quickly from blank canvas to published article.
+            figure.figure.browser data-300-top="opacity: 0; padding-top: 50px;" data-100-top="opacity: 1; padding-top: 0;" data-bottom-bottom="opacity: 1" data-anchor-target="#ui-overhaul"
+              .controls
+                span.gumdrop.close
+                span.gumdrop.minimize
+                span.gumdrop.maximize
+                span.address-bar
+              .viewport
+                img src="../../images/outpost/screens/screen-outpost-full-ui.jpg" alt="The new Outpost CMS UI" data-top="top: 0px;" data--200-bottom="top: -1450px;" data-anchor-target="#ui-overhaul"
+                img src="../../images/outpost/screens/screen-outpost-navbar-ui.png" data-top="top: -58px;" data--70-top="top: 0;" data-anchor-target="#ui-overhaul"
+              figcaption.caption.big
+                p Typography and interface contrast were carefully considered to improve legibility, reduce fatigue and allow users to focus on discreet task areas.
+      .sheet.chapter-sheet#metrics-notifications
+        .bound
+          h3.sheet-heading Content Metrics & Notifications
+          p.supportive The newsroom doesn’t stop caring about their stories after they hit the publish button. To build a stronger connection between content creation and content performance, I integrated key metrics directly into Outpost’s story view.
+          figure.figure.browser data-400-top="opacity: 0; padding-top: 50px;" data-200-top="opacity: 1; padding-top: 0;" data-bottom-bottom="opacity: 1" data-anchor-target="#metrics-notifications"
+            .controls
+              span.gumdrop.close
+              span.gumdrop.minimize
+              span.gumdrop.maximize
+              span.address-bar
+            .viewport
+              img src="../../images/outpost/screens/screen-outpost-metrics.jpg" alt="Integrated Content Metrics"
+              .icon-notification data--100-top="top:2.2%;" data--250-top="top:5.5%;" data-anchor-target="#metrics-notifications"
+                img.icon-notification-circle src="../../images/outpost/screens/screen-outpost-notification-icon-circle.png" data--100-top="opacity:0;" data--250-top="opacity:1;" data-anchor-target="#metrics-notifications"
+                img.icon-notification-bell src="../../images/outpost/screens/screen-outpost-notification-icon.png"
+              img.pane-notification src="../../images/outpost/screens/screen-outpost-notification-pane.png" data--100-top="margin-right: -28.8888889%;" data--250-top="margin-right: 0;" data-anchor-target="#metrics-notifications"
+          .feature.notifications.ghost data--380-top="opacity:0;" data--480-top="opacity:1;" data-anchor-target="#metrics-notifications"
+            p.subhead A new notifications view points reporters and editors to items that require their attention and keeps them up to date as others make changes to their stories.
+      .sheet.chapter-sheet
+        .bound
+          h3.sheet-heading Elegant Text Editing
+          p.supportive Outpost’s previous WYSIWYG editor was full-featured, but didn’t guide users to create well-structured content. Producers often bypassed Outpost’s native oEmbed tools, directly embedding complex JavaScript or iFrames that resulted in brittle or broken content.
+          figure.figure.browser
+            .controls
+              span.gumdrop.close
+              span.gumdrop.minimize
+              span.gumdrop.maximize
+              span.address-bar
+            .viewport
+              video id="editorVideo" src="../../images/outpost/prototypes/outpost-editor.mp4" title="Outpost Editing Experience" poster="../../images/outpost/prototypes/outpost-editor.jpg"
+            figcaption.caption.big
+              p Inline formatting of copy is there when you need it, and gets out of the way when you’re typing.
+      .sheet.chapter-sheet#comments
+        .bound
+          h3.sheet-heading Collaboration & Comments
+          p.supportive KPCC currently conducts too much of its editorial workflow over email. As a result, important discussions about stories, sources and status updates are all lost in the inbox. To bring communication closer to the content, I designed an editorial-focused commenting system integrated into Outpost, adding the ability to associate a comment with a specific part of a story.
+          .browser-wrapper
+            img.comment-cards src="../../images/outpost/screens/screen-outpost-comments.png" alt="Inline editorial comments" data-top="opacity: 1;right:50%;top:0%;" data-100-bottom="opacity: 0;right:20%;top:20%;" data-anchor-target="#comments"
+            figure.figure.browser data-top="opacity: 0;" data-bottom-bottom="opacity: 1" data-anchor-target="#comments"
+              .controls
+                span.gumdrop.close
+                span.gumdrop.minimize
+                span.gumdrop.maximize
+                span.address-bar
+              .viewport
+                img src="../../images/outpost/screens/screen-outpost-full-comments.jpg"
+                img.comment-items src="../../images/outpost/screens/screen-outpost-comment-items.png" data--200-top="opacity: 0;" data-100-bottom="opacity: 1;" data-anchor-target="#comments"
+      .sheet.chapter-sheet#contentbot
+        .bound
+          .point data-200-top="opacity: 1;" data-70-top="opacity: 0;" data-anchor-target="#contentbot"
+            h3.sheet-heading Automated Content Review
+            p.supportive Digital newsrooms need to publish at speed while still maintaining high standards for accuracy. At the same time, the digital publishing process places more demands than ever on authors and editors: crafting metadata for optimal search and social discovery, managing multimedia assets, selecting the right layout... it's so much busy work that it's easy to lose focus on the goal of crafting great stories.
+          .point data-150-top="opacity: 0;" data-30-top="opacity: 1;" data-anchor-target="#contentbot"
+            h3.sheet-heading Enter Contentbot.
+            figure.figure.single
+              img.contentbot-avatar src="../../images/outpost/screens/screen-outpost-contentbot-avatar.png" alt="Hi, I'm Contentbot."
+            p.supportive Contentbot is a robot editor that is always present in Outpost, reviewing content every time it’s saved and auditing changes against KPCC’s style guide and best practices.
+            p.supportive As it finds mistakes or style violations, it automatically flags them and suggests improvements. By finding and flagging common errors, Contentbot reduces the burden on editors, freeing them up to focus on helping authors hone their reporting.
+          figure.figure.browser data-200-center="opacity: 0; padding-top: 50px;" data-100-bottom="opacity: 1; padding-top: 0;" data-anchor-target="#contentbot"
+            .controls
+              span.gumdrop.close
+              span.gumdrop.minimize
+              span.gumdrop.maximize
+              span.address-bar
+            .viewport
+              img src="../../images/outpost/screens/screen-outpost-contentbot.jpg" alt="Contentbot integrated comments"
+          p.subhead By integrating with Outpost’s commenting feature, Contentbot behaves like any other user in the system, humanizing the process of automated content review. 
+
+
+- content_for :postproject do
+    
+    / NEXT PROJECT: OUTPOST
+    aside.next-project.kpcc-ipad.viewable
+      a href="../kpcc-ipad/"
+        footer
+          .bound
+            h5 Next Project
+            h3 KPCC for iPad
+            p Positioning LA’s public radio station as a digital news leader.
+        .next-bg
+
+- content_for :additional_footer do
+    = javascript_include_tag  "outpost"
+    javascript:
+      function checkViewportSize() {
+        if (document.body.scrollWidth > 768) {
+          var s = skrollr.init();
+          $("body").removeClass("no-parallax");
+        }
+        else {
+          $("body").addClass("no-parallax");
+          var s = skrollr.init().destroy();
+        }
+      }
+      
+      $(function () {
+        $(window).on("load resize",function(e){
+            checkViewportSize()
+        });
+
+        var videoWaypoint = $(".browser video").waypoint({
+          handler: function(direction) {
+            var video=document.getElementById("editorVideo");
+            video.play();
+            $(this.element).addClass("active");
+          },
+          offset: 200
+        })
+      });

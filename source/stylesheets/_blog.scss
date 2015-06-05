@@ -46,6 +46,7 @@
 
   // base styles for text elements
   h1 {
+    @extend .marquee-heading;
     color:$black;
     font-size:2.9em;
     font-weight:700;

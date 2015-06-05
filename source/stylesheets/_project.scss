@@ -1,241 +1,1251 @@
 // STYLES FOR SINGLE PROJECT VIEW
 
-.work {
-  &.work_kpcc-ipad {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-kpcc-ipad.jpg');
-      background-size:cover;
-    }
-  }
+// Declare some breakpoint variables and mixins just for our project pages
+$bp-max                     : 1220px;
+$bp-below-max-wide          : 1040px;
+$bp-below-max-med           : 800px;
+$bp-bound                   : 680px;
+$bp-small-viewport          : 575px;
+$bp-tiny-viewport           : 380px;
 
-  &.work_half-in-ten {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-half-in-ten.jpg');
-      background-size:cover;
-    }
-  }
+// Declare breakpoint for min-height
+$bp-tall-viewport           : 920px;
 
-  &.work_kpcc-redesign {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-kpcc-redesign.jpg');
-      background-size:cover;
-    }
+@mixin below-max {
+  @media (max-width: #{$bp-max}) {
+    @content;
   }
-
-  &.work_kpcc-newsletters {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-kpcc-emails.jpg');
-      background-size:cover;
-    }
+}
+@mixin between-max-wide {
+  @media (min-width: #{$bp-below-max-med}) and (max-width: #{$bp-below-max-wide}) {
+    @content;
   }
-
-  &.work_highlander-orientation {
-    .marquee.single-project {
-      background-image:url('../images/bg-marquee-ucr-orientation.jpg');
-      background-size:cover;
-    }
+}
+@mixin between-max-med {
+  @media (min-width: #{$bp-bound}) and (max-width: #{$bp-below-max-med - 1}) {
+    @content;
+  }
+}
+@mixin below-max-med {
+  @media (max-width: #{$bp-below-max-med - 1}) {
+    @content;
+  }
+}
+@mixin below-bound {
+  @media (max-width: #{$bp-bound}) {
+    @content;
+  }
+}
+@mixin small-viewport {
+  @media (max-width: #{$bp-small-viewport}) {
+    @content;
+  }
+}
+@mixin tiny-viewport {
+  @media (max-width: #{$bp-tiny-viewport}) {
+    @content;
+  }
+}
+@mixin large-viewport {
+  @media (min-height: #{$bp-tall-viewport}) and (min-width: #{$bp-max}) {
+    @content;
   }
 }
 
-.project-details {
-  background:$white;
-}
-.product-shot {
-  text-align:center;
-  position:relative;
-  z-index:199;
+.single-project {
+  background: white;
 
-  img {
-    margin:-6em 0 4em;
-    position:relative;
-    z-index:200;
-  }
+  // set up default max-width for our content
+  .bound {
+    max-width: grid-calc(6);
 
-  .button {
-    font-size:1.4em;
-    span {
-      font-size:0.8em;
-      margin-left:8px;
-    }
-  }
-}
-
-.checklist {
-  &.problem {
-    h4 {
-      color:$darkGray;
-    }
-  }
-  &.outcomes {
-    padding-bottom:8em;
-  }
-
-  .section-header {
-    padding-bottom:1em;
-    hr {
-      top:61%;
+    @include small-viewport {
+      width: 90%;
     }
   }
 
-  ul, p {
-    color:$darkGray;
-    font-size:1.25em;
-  }
-  ul {
-    padding-left:26px;
-    li {
-      margin-bottom:0.75em;
+  // set a wider bounding container for non-narrative sections
+  .chapter-sheet {
+    padding: grid-height(2) 0;
+
+    .bound {
+      max-width: grid-calc(8);
     }
   }
-}
 
-.gallery {
-  background:$black;
-  overflow:hidden;
-  margin:3em 0 2em;
-  padding:1em 0;
-  position:relative;
+  .chapter-introduction + .chapter-sheet {
+    padding-top: 0;
+  }
 
-  .section-header {
-    padding:1em 0;
-    h4 {
-      span {
-        background:$black;
+  &.kpcc-iphone {
+    .project-marquee {
+      background: url('../images/kpcc-iphone/bg-iphone-hero.jpg') no-repeat center top;
+      background-size: cover;
+
+      @include below-max-med {
+        background-position: left top;
       }
     }
-    hr {
-      background:lighten($black, 15%);
-      top:30%;
+  }
+  &.kpcc-ipad {
+    .project-marquee {
+      background: url('../images/kpcc-ipad/bg-ipad-hero.jpg') no-repeat center top;
+      background-size: cover;
+    }
+  }
+  &.outpost {
+    .project-marquee {
+      background: url('../images/outpost/bg-outpost-hero.jpg') no-repeat center top;
+      background-size: cover;
+
+      @include below-max-med {
+        background-position: left top;
+      }
+    }
+  }
+}
+// Project Marquee
+.project-marquee {
+  color: white;
+  min-height: grid-height(15);
+  position: relative;
+  text-align: center;
+}
+// Add dark overlay to improve legibility of type overlaid over images on small viewports
+.marquee-overlay {
+  @include small-viewport {
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
+}
+.marquee-header {
+  @extend .marquee-heading;
+  margin: grid-height(3) grid-pull-calc(2) 0;
+  position: relative;
+
+  @include between-max-wide {
+    margin-left: grid-pull-calc(1);
+    margin-right: grid-pull-calc(1);
+  }
+
+  @include below-max-med {
+    margin-left: grid-pull-calc(0);
+    margin-right: grid-pull-calc(0);
+  }
+}
+// Project Title and Description
+.project-title {
+  color: white;
+  font-size: em(61);
+  line-height:1em;
+  margin:0;
+  padding:14px 0;
+  @include small-viewport {
+    font-size: em(41);
+  }
+}
+.project-description {
+  font-size: em(27);
+  line-height: em(31, 27);
+  margin: 0 0 grid-height(6);
+}
+.project-responsibilities {
+  font-size: em(16);
+  dd, dt {
+    display: inline-block;
+    margin: 0;
+  }
+  dt {
+    font-weight: 700;
+  }
+}
+
+// Project Details
+.project-details {
+  padding-top: grid-height(2);
+
+  @include small-viewport {
+    padding-top: grid-height(1);
+  }
+}
+// Project Body Copy Styles
+.narrative, .sheet {
+  padding-bottom: grid-height(3);
+
+  @include small-viewport {
+    padding-bottom: grid-height(2);
+
+    .bound > ol {
+      padding-left: 1em;
     }
   }
 
-  nav {
-    text-align:center;
+  p, li {
+    font-size: em(18);
+    line-height: 1.72em;
+  }
+  p, ul {
+    margin: em(31) 0;
+  }
+  .subhead {
+    @extend .marquee-heading;
+    font-size: em(24);
+    font-weight: 400;
+    line-height: 31px;
+    margin: 18px 0;
+  }
+  .supportive {
+    color: #6D6D6D;
+    font-size: em(21);
+    line-height: 31px;
+  }
+  .numbered-list {
+    font-size: 1.5em;
+    list-style: none;
+    padding: 0;
 
-    .bullets {
-      @include clearfix();
-      padding:0;
-      li {
-        border:1px solid $deepGray;
-        border-radius:4px;
-        display:inline-block;
-        margin:0 5px;
-        width:8px;
-        height:8px;
-        &.on {
-          background:$white;
-          border:0;
+    @include small-viewport {
+      font-size: 1.25em;
+    }
+    li {
+      display: block;
+      margin:0 0 em(16);
+      padding: 0;
+    }
+    .number {
+      color: #12A17A;
+      display: inline-block;
+      font-size: 41px;
+      font-weight: 700;
+      margin-right: 12px;
+
+      @include small-viewport {
+        font-size: 32px;
+      }
+    }
+  }
+}
+.section {
+  @include clearfix;
+
+  .bound {
+    max-width: grid-calc(10) !important;
+  }
+}
+.chapter-sheet {
+  padding-bottom: grid-height(3);
+  text-align: center;
+
+  &:nth-child(odd) {
+    background: #FAFAFA;
+  }
+
+  .sheet-heading {
+    @extend .marquee-heading;
+    color: #252525;
+    font-size: em(32);
+  }
+}
+
+// Project Figure Styles
+.figure {
+  display: block;
+
+  &.browser {
+    margin: grid-height(2) grid-pull-calc(1);
+
+    @include below-max {
+      margin: grid-height(1) grid-pull-calc(0);
+    }
+
+    @include large-viewport {
+      margin: grid-height(2) grid-pull-calc(2);
+    }
+
+    &.left {
+      float: left;
+      margin-right: 0;
+      margin-left: 0;
+      margin-top: 40px;
+      width: 44%;
+
+      @include between-max-wide {
+        width: 40%;
+      }
+      @include below-max-med {
+        float: none;
+        width: 100%;
+      }
+
+      .controls {
+        border-top-left-radius: 0;
+      }
+      .address-bar {
+        left: 0;
+      }
+      .viewport {
+        padding: 43% 0;
+      }
+    }
+
+    .controls {
+      background: #D3D3D3;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      height: 42px;
+      position: relative;
+
+      @include small-viewport {
+        display: none;
+      }
+    }
+    .gumdrop {
+      border-radius: 6px;
+      display: block;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 15px;
+
+      &.close {
+        background: #E96E4C;
+        left: 15px;
+      }
+      &.minimize {
+        background: #E6A935;
+        left: 33px;
+      }
+      &.maximize {
+        background: #85C33D;
+        left: 51px;
+      }
+    }
+    .address-bar {
+      background: #fff;
+      height: 22px;
+      position: absolute;
+      top: 10px;
+      left: 75px;
+      right: 15px;
+    }
+
+    .viewport {
+      border: 1px solid #D6D6D6;
+      box-sizing: border-box;
+      overflow: hidden;
+      padding: 33% 0;
+      position: relative;
+      text-align: initial;
+      width: 100%;
+
+      img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+    .caption {
+      margin: 0 grid-calc(1);
+
+      @include below-max-med {
+        margin: 0;
+      }
+    }
+  }
+
+  &.single {
+    margin: grid-height(2) grid-pull-calc(1);
+
+    @include below-max-med {
+      margin: grid-height(1) grid-pull-calc(0);
+    }
+  }
+
+  &.triptych, &.quadrant {
+    @include small-viewport {
+      display: table;
+
+      > .caption {
+        display: table-header-group;
+        p {
+          margin-bottom: grid-height(2);
+        }
+      }
+      > .img-bin {
+        display: table-footer-group;
+      }
+    }
+  }
+
+  &.triptych {
+    @include clearfix;
+    margin: grid-height(2) grid-pull-calc(3);
+
+    @include below-max {
+      margin-left: grid-pull-calc(2);
+      margin-right: grid-pull-calc(2);
+    }
+    @include between-max-wide {
+      margin-left: grid-pull-calc(1);
+      margin-right: grid-pull-calc(1);
+    }
+    @include below-max-med {
+      margin-left: grid-pull-calc(0);
+      margin-right: grid-pull-calc(0);
+    }
+    @include below-max-med {
+      margin-left: grid-pull-calc(0);
+      margin-right: grid-pull-calc(0);
+    }
+    @include small-viewport {
+      background: $paleGray;
+      margin-left: -5%;
+      margin-right: -5%;
+      padding: grid-height(1) 5%;
+    }
+
+    .img-container {
+      float: left;
+      margin-right: 2%;
+      text-align: center;
+      width: 32%;
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      @include small-viewport {
+        display: block;
+        float: none;
+        margin-bottom: grid-height(1);
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+    .caption {
+      margin: 0 grid-push-calc(2);
+
+      @include below-max {
+        margin: 0;
+      }
+    }
+    .brief {
+      @include small-viewport {
+        margin-top: grid-height(0.25);
+      }
+    }
+  }
+  &.quadrant {
+    @include clearfix;
+    margin: grid-height(2) grid-pull-calc(1);
+
+    @include below-max-med {
+      margin-left: grid-pull-calc(0);
+      margin-right: grid-pull-calc(0);
+    }
+    @include small-viewport {
+      background: $paleGray;
+      margin-left: -5%;
+      margin-right: -5%;
+      padding: grid-height(1) 5%;
+    }
+    .img-container {
+      float: left;
+      margin-bottom: 21px;
+      margin-right: 3%;
+      text-align: center;
+      width: 48.5%;
+      &:nth-of-type(even) {
+        margin-right: 0;
+      }
+
+      @include small-viewport {
+        display: block;
+        float: none;
+        margin-bottom: grid-height(1);
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+  &.prototypes {
+    text-align: center;
+  }
+}
+.img-bin {
+  @include clearfix;
+}
+.caption {
+  color: $medGray;
+  font-size: em(14);
+  line-height: em(24);
+  text-align: center;
+  &.big p {
+    @extend .marquee-heading;
+    color: #222;
+    font-size: 24px;
+    line-height: 31px;
+
+    @include small-viewport {
+      font-size: 18px;
+    }
+  }
+}
+.brief {
+  @extend .marquee-heading;
+  display: block;
+  font-size: em(14);
+  font-weight: 600;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+// Chapter Styles
+.design {
+  .narrative {
+    @include small-viewport {
+      padding-bottom: 0; // On small screens, the Design chapter has a gray device BG that should be flush with the next chapter introduction
+    }
+  }
+}
+.converge {
+  .narrative {
+    @include below-max-med {
+      padding-bottom: 0; // On small screens, the Design chapter has a gray device BG that should be flush with the next chapter introduction
+    }
+  }
+}
+.prototyping {
+  .device {
+    @include small-viewport {
+      margin-left: -5%;
+      margin-right: -5%;
+      margin-bottom: grid-height(1);
+    }
+  }
+}
+
+// Chapter Introductions
+.chapter-introduction {
+  @extend .marquee-heading;
+  @include linear-gradient(90deg, #3593C0, #18B180);
+  color: white;
+  margin-bottom: grid-height(3);
+  min-height: grid-height(17);
+  padding-top: grid-height(2);
+  text-align: center;
+
+  @include below-bound {
+    min-height: grid-height(15);
+  }
+  @include small-viewport {
+    margin-bottom: grid-height(1);
+  }
+  .bound {
+    max-width: grid-calc(8);
+
+    @include below-bound {
+      max-width: grid-calc(6);
+    }
+  }
+  .svg {
+    display: block;
+  }
+
+  &.viewable {
+    // iPhone Chapters
+    $chapters: ("discovery", "design", "prototyping");
+
+    @each $chapter in $chapters {
+      .#{$chapter} &  {
+        background: url('../images/kpcc-iphone/bg-#{$chapter}.jpg') no-repeat center top;
+        background-size: cover;
+      }
+    }
+    // iPad Chapters
+    $chapters: ("explore", "converge", "outcomes");
+
+    @each $chapter in $chapters {
+      .#{$chapter} &  {
+        background: url('../images/kpcc-ipad/bg-#{$chapter}.jpg') no-repeat center top;
+        background-size: cover;
+      }
+    }
+    // Outpost Chapters
+    $chapters: ("redesign");
+
+    @each $chapter in $chapters {
+      .#{$chapter} &  {
+        background: url('../images/outpost/bg-#{$chapter}.jpg') no-repeat center top;
+        background-size: cover;
+      }
+    }
+  }
+}
+.chapter-title {
+  display: inline-block;
+  font-size: em(41);
+  margin:0 0 grid-height(3);
+
+  @include below-bound {
+    margin-bottom: grid-height(2);
+  }
+  @include small-viewport {
+    margin-bottom: grid-height(1);
+  }
+  &:after {
+    background: white;
+    content: "";
+    display: block;
+    height:1px;
+    margin-top: $grid-height / 2;
+  }
+}
+.chapter-teaser {
+  font-size: em(24);
+  line-height: em(36, 24);
+
+  @include below-bound {
+    font-size: em(22);
+  }
+  @include small-viewport {
+    font-size: em(20);
+  }
+}
+
+// Chapter Intermissions
+.intermission {
+  @extend .marquee-heading;
+  text-align: center;
+
+  .bound {
+    max-width: grid-calc(12);
+  }
+}
+.intermission-heading {
+  font-size: em(32);
+  margin: 0 0 grid-height(2);
+
+  @include small-viewport {
+    font-size: em(28);
+  }
+}
+.intermission.wireframes {
+  background: #12A17A;
+  color: white;
+  margin: grid-height(2) 0;
+  padding: grid-height(1) 0 grid-height(2);
+  position: relative;
+
+  @include small-viewport {
+    margin: grid-height(1) 0;
+    padding-top: 0;
+
+    .intermission-heading {
+      font-size: em(20);
+      margin: grid-height(1) 0;
+    }
+    .flow-item {
+      .brief {
+        display: none;
+      }
+    }
+    img {
+      box-shadow: none !important;
+    }
+    .slick-prev, .slick-next {
+      background: transparent;
+      bottom: 0;
+      top: auto;
+      width: 50%;
+      border-top: 1px solid rgba(255,255,255,0.5);
+      &:active, &:hover {
+        background: transparent;
+      }
+      &:after {
+        color: $white;
+        display: block;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .next-arrow, .prev-arrow {
+        height: 1px;
+        width: 12px;
+        top: 23px;
+      }
+      .next-arrow:after {
+        border-width: 5.5px 0 5.5px 7px;
+        right: -7px;
+        top: -5px;
+      }
+      .prev-arrow:after {
+        border-width: 5.5px 7px 5.5px;
+        left: -14px;
+        top: -5px;
+      }
+    }
+    .slick-prev {
+      border-right:1px solid rgba(255,255,255,0.5);
+      &:after {
+        content: "Previous";
+      }
+    }
+    .slick-next {
+      &:after {
+        content: "Next";
+      }
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
+  img {
+    @include box-shadow(0 2px 9px rgba(0,0,0,0.5));
+  }
+  .heading-label {
+    color: #003E2D;
+  }
+}
+
+// Device Mocks
+.marvel-device {
+  margin: grid-height(2) auto;
+
+  &.iphone6 {
+    @include small-viewport {
+      background: transparent;
+      box-shadow: none;
+      margin-top: grid-height(1);
+      padding: 0;
+      width: 280px;
+      height: 498px;
+
+      .asset {
+        width: 280px;
+      }
+    }
+    @include tiny-viewport {
+      width: 220px;
+      height: 391px;
+
+      .asset {
+        width: 220px;
+      }
+    }
+
+    &:before {
+      @include small-viewport {
+        background: transparent;
+      }
+    }
+    &:after {
+      @include small-viewport {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.ipad.silver {
+    @include below-max-med {
+      background: transparent;
+      box-shadow: none;
+      margin-top: grid-height(1);
+      padding: 0;
+      width: 480px;
+      height: 640px;
+
+      .asset {
+        width: 480px;
+      }
+    }
+    @include below-bound {
+      width: 384px;
+      height: 512px;
+
+      .asset {
+        width: 384px;
+      }
+    }
+    @include tiny-viewport {
+      width: 220px;
+      height: 293px;
+
+      .asset {
+        width: 220px;
+      }
+    }
+
+    &:before {
+      @include below-max-med {
+        background: transparent;
+      }
+    }
+    &:after {
+      @include below-max-med {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .screen {
+    background: black;
+    z-index: 500;
+    @include below-max-med {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .top-bar,
+  .sleep,
+  .volume,
+  .camera,
+  .sensor,
+  .speaker,
+  .home,
+  .bottom-bar {
+    @include below-max-med {
+      display: none;
+    }
+  }
+}
+
+// Sheets
+.sheet-column {
+  &.right {
+    margin-left: grid-calc(5);
+    width: grid-calc(5);
+
+    .feature {
+      text-align: left;
+      .sheet-heading {
+        margin-bottom:0;
+      }
+    }
+  }
+}
+
+// Screenshot Slider
+.device {
+  margin-bottom: grid-height(2);
+  position: relative;
+
+  @include small-viewport {
+    background: $paleGray;
+    margin-bottom: 0;
+    margin-top: grid-height(1);
+    padding: grid-height(1) 0 grid-height(3);
+  }
+
+  &.ipad {
+    @include below-max-med {
+      background: $paleGray;
+      margin-bottom: 0;
+      margin-top: grid-height(1);
+      padding: grid-height(1) 0 grid-height(3);
+
+      .slick-dots {
+        margin-top: 60px;
+      }
+      .slider-navigation {
+        @include below-max-med {
+          .slick-prev, .slick-next {
+            background: #bbb;
+            top: 42%;
+          }
+          .slick-prev {
+            left: 0 !important;
+            margin-left: 0 !important;
+          }
+          .slick-next {
+            right: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  .slider-navigation {
+    .slick-prev, .slick-next {
+      background: #eee;
+      top: 50%;
+
+      @include small-viewport {
+        background: #bbb;
+        top: 42%;
+      }
+      &:hover {
+        background: $medGray;
+      }
+    }
+    .slick-prev {
+      left: 50%;
+      margin-left: -150px;
+
+      @include small-viewport {
+        left: 0;
+        margin-left: 0;
+      }
+    }
+    .slick-next {
+      right: 50%;
+      margin-right: -150px;
+
+      @include small-viewport {
+        right: 0;
+        margin-right: 0;
+      }
+    }
+    &.active {
+      .slick-prev {
+        left: 50%;
+        margin-left: -254px;
+
+        @include small-viewport {
+          left: 0;
+          margin-left: 0;
+        }
+      }
+      .slick-next {
+        right: 50%;
+        margin-right: -254px;
+
+        @include small-viewport {
+          right: 0;
+          margin-right: 0;
         }
       }
     }
 
-  }
-}
+    &.ipad {
+      .slick-prev {
+        margin-left: -280px;
 
-  .swipe {
-    margin:0 auto;
-    max-width:540px; 
-    overflow: hidden;
-    visibility: hidden;
-    position: relative;
-  }
+        @include small-viewport {
+          margin-left: 0;
+        }
+      }
+      .slick-next {
+        margin-right: -280px;
 
-  .swipe-wrap {
-    overflow: hidden;
-    position: relative;
-  }
+        @include small-viewport {
+          margin-right: 0;
+        }
+      }
+      &.active {
+        .slick-prev {
+          margin-left: -377px;
 
-  .swipe-wrap > div {
-    float:left;
-    width:100%;
-    padding:0 1em;
-    position: relative;
+          @include small-viewport {
+            margin-left: 0;
+          }
+        }
+        .slick-next {
+          margin-right: -377px;
 
-    figure  {
-      position:relative;
-    }
-
-    figcaption {
-      background:rgba($black, 0.85);
-      color:$paleGray;
-      font-size:0.9em;
-      margin:0;
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:0;
-
-      p {
-        @extend .marquee-heading;
-        padding:0 10px;
+          @include small-viewport {
+            margin-right: 0;
+          }
+        }
       }
     }
   }
+  .slick-dots {
+    margin-top: grid-height(5);
+    margin-bottom: grid-height(4);
 
-  .no-touch .slider-nav {
-    background:rgba(0,0,0,0.4);
-    border:2px solid $white;
-    border-radius:22px;
-    display:block;
-    margin-top:-22px;
-    opacity:0.65;
-    position:absolute;
-    width:44px;
-    height:44px;
-    top:55%;
-    z-index:400;
-    &:hover {
-      cursor:pointer;
-      opacity:1;
+    @include small-viewport {
+      margin-top: grid-height(2);
+      margin-bottom: 0;
     }
-    &:active {
-      opacity:0.6;
+    button {
+      background: #bbb;
+    }
+  }
+  .brief {
+    margin-top: grid-height(-2);
+  }
+  .video-overlay {
+    background: rgba(0,0,0,0.75);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 400;
+    transition: opacity 0.2s linear;
+    &.active, &.initial {
+      cursor: pointer;
+      opacity: 1;
+    }
+    &.dismiss {
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0s linear;
+    }
+  }
+  .video-control-label {
+    @extend .marquee-heading;
+    border: 1px solid $white;
+    display: block;
+    font-weight: 400;
+    margin: 250px auto 0;
+    padding: 4px 10px 8px;
+    text-align: center;
+    width: 150px;
+    &.pause {
+      .play {
+        display: none;
+      }
+    }
+    &.play {
+      .pause {
+        display: none;
+      }
+    }
+  }
+  .play-btn {
+    display: inline-block;
+    margin-right: 8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent $white;
+  }
+  .pause-btn {
+    background: $white;
+    display: inline-block;
+    margin-right: 4px;
+    width: 4px;
+    height: 16px;
+    &:last-of-type {
+      margin-right: 8px;
+    }
+  }
+  .video-progress {
+    transition: width 0.4s linear;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    color: $brightAccent;
+    border-radius: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    z-index: 399;
+  }
+  progress[value]::-webkit-progress-bar {
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+  }
+  progress[value]::-webkit-progress-value {
+    background-color: $brightAccent;
+  }
+  progress[value]::-moz-progress-bar {
+    background-color: $brightAccent;
+  }
+}
+
+// Wireframe Flows
+.flow {
+  @include clearfix;
+  list-style: none;
+  padding: 0;
+}
+.flow-item {
+  float: left;
+  position: relative;
+  &:last-of-type {
+    .flow-arrow {
+      display: none;
+    }
+  }
+  .four-steps & {
+    margin: 0 5%;
+    width: 15%;
+
+    @include small-viewport {
+      margin: 0 6% 22px 0;
+      width: 47%;
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+      &:nth-child(3), &:nth-child(4), {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .brief {
+    margin-top: 10px;
+    text-transform: none;
+  }
+  .flow-arrow {
+    border-top: 1px dashed white;
+    display: block;
+    height:1px;
+    opacity: 0.48;
+    width: 52%;
+    position: absolute;
+    top: 44%;
+    right: -58%;
+
+    @include below-max-med {
+      display: none; // Hide flow arrows to give each card in the flow more space at smaller viewports
     }
     &:after {
-      content:"";
-      display:block;
-      position:absolute;
-      top:10px;
-    }
-    &.prev {
-      left:2%;
-      &:after { 
-        @include triangle(20px, $white, left);
-        left:3px;
-      }
-    }
-    &.next {
-      right:2%;
-      &:after { 
-        @include triangle(20px, $white, right);
-        right:3px;
-      }
-    }
-  }
-
-
-.meta {
-  margin-bottom:2em;
-  text-align:center;
-
-  dl {
-    margin-bottom:1em;
-    dd, dt {
-      @extend .marquee-heading;
-      color:$deepGray;
-      display:block;
-      font-size:1.1em;
-    }
-    dt {
-      font-size:0.8em;
-      text-transform:uppercase;
-    }
-    dd {
-      color:$lightGray;
-      margin-left:2px;
+      border-style: solid;
+      border-width: 4.5px 0 4.5px 6px;
+      border-color: transparent transparent transparent #ffffff;
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: -7px;
+      top: -5px;
     }
   }
 }
+
+// Slider component
+.slider {
+  position: relative;
+}
+.slider-navigation {
+  overflow: hidden;
+  position: absolute;
+  width:100%;
+  height:100%;
+  .slick-prev, .slick-next {
+    transition: all 0.2s ease-in-out;
+    background: rgba(0,0,0,0.05);
+    border:0;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 43%;
+    margin-top: -32px;
+    width: 64px;
+    height: 64px;
+    &:hover {
+      background: rgba(0,0,0,0.25);
+    }
+    &:active {
+      background: rgba(0,0,0,0.5);
+    }
+
+    @include small-viewport {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .slick-prev {
+    left: -64px;
+
+    @include small-viewport {
+      left: 0;
+    }
+  }
+  .slick-next {
+    right: -64px;
+
+    @include small-viewport {
+      right: 0;
+    }
+  }
+  .next-arrow, .prev-arrow {
+    background: white;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+  }
+  .prev-arrow {
+    left: 27px;
+
+    @include small-viewport {
+      left: 19px;
+    }
+    &:after {
+      border-style: solid;
+      border-width: 7.5px 10px 7.5px 0;
+      border-color: transparent #ffffff transparent transparent;
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: -10px;
+      top: -6px;
+    }
+  }
+  .next-arrow {
+    right: 27px;
+
+    @include small-viewport {
+      right: 19px;
+    }
+    &:after {
+      border-style: solid;
+      border-width: 7.5px 0 7.5px 10px;
+      border-color: transparent transparent transparent #ffffff;
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: -10px;
+      top: -6px;
+    }
+  }
+  &.active {
+    .slick-prev {
+      left: 0;
+    }
+    .slick-next {
+      right: 0;
+    }
+  }
+}
+.slick-dots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    &.slick-active {
+      button {
+        opacity: 0.5;
+      }
+    }
+  }
+  button {
+    @include hide-text;
+    background: white;
+    border: 0;
+    border-radius: 5px;
+    opacity: 0.2;
+    outline: none;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+// Fluidbox styling
+.fluidbox {
+  transition: all 0.1s linear, color 0.1s linear;
+  display: block;
+  &:hover {
+    @include box-shadow(0 2px 9px rgba(0,0,0,0.5));
+  }
+}
+
 
 // Next Project
 .next-project {
@@ -243,50 +1253,88 @@
   height:24em;
   margin-bottom:-8em;
   position:relative;
-
-  footer {
-    padding-top:3em;
+  overflow: hidden;
+  &:hover {
+    .next-bg {
+      left:0px;
+      right:0px;
+      top:0px;
+      bottom:0px;
+    }
+    footer {
+      p {
+        margin-top: -10px;
+        opacity: 1;
+      }
+    }
   }
-
   .next-bg {
+    transition: all 0.3s;
     background:darken($subduedAccent, 13%);
     position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
+    left:-20px;
+    right:-20px;
+    top:-20px;
+    bottom:-20px;
     z-index:-3;
   }
   footer {
     height:20em;
+    padding-top: grid-height(3);
     position:fixed;
     bottom:4em;
     left:0;
     right:0;
     text-align:center;
-    h3, p {
+    h3, h5 {
       @extend .marquee-heading;
     }
     h3 {
-      font-size:2em;
-      margin-bottom:0;
+      color:$white;
+      font-size: em(41);
+      margin:0 0 grid-height(1);
     }
     h5 {
-      color:$lightAccent;
-      font-size:1em;
-      font-weight:400;
+      color: #003D2C;
+      font-size: em(14);
+      font-weight: 600;
+      margin-bottom: em(6);
+      text-transform: uppercase;
     }
     p {
+      transition: all 0.3s;
+      color:$white;
+      font-size: em(18);
       margin-top:0;
-      a {
-        color:$white;
-      }
+      opacity: 0;
     }
     a {
       color:$white;
       &:hover {
         color:$brightAccent;
       }
+    }
+  }
+}
+.next-project.viewable {
+  &.outpost .next-bg {
+    background: url('../images/outpost/next-project-outpost.jpg');
+    background-size: cover;
+  }
+  &.kpcc-ipad .next-bg {
+    background: url('../images/kpcc-ipad/next-project-ipad.jpg');
+    background-size: cover;
+
+    @include below-max-med {
+      background-position: center  top;
+    }
+  }
+  &.kpcc-iphone .next-bg {
+    background: url('../images/kpcc-iphone/next-project-iphone.jpg');
+    background-size: cover;
+
+    @include below-max-med {
+      background-position: center  top;
     }
   }
 }

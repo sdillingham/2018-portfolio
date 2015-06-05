@@ -4,7 +4,7 @@ $nearWhite      : #EEEFF3;
 $black          : #000;
 $nearBlack      : #121212;
 
-$paleGray       : #D2D4D8;
+$paleGray       : #F3F3F3;
 $lightGray      : #999EA5;
 $medGray        : #6B7579;
 $deepGray       : #575E68;
@@ -25,3 +25,8 @@ $subduedAccent  : #1f5c67;
 // Media Query variables
 $bp-med         : 580px;
 $bp-large       : 1024px;
+
+// Grid variables
+$grid-col       : 5em;
+$grid-gutter    : 1.375em;
+$grid-height    : 32px;

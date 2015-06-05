@@ -21,7 +21,7 @@ img {
 a {
   color:$linkAccent;
   text-decoration:none;
-  transition: background-color 0.2s linear, color 0.2s linear;
+  transition: background-color 0.1s linear, color 0.1s linear;
 }
 
 .button {
@@ -43,6 +43,11 @@ hr {
 // Control embeds
 iframe, embed, object {
   max-width:100%;
+}
+
+// Utilities
+.hidden {
+  display: none;
 }
 
 // Containers and Grid

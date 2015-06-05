@@ -3,6 +3,9 @@
 // Import vendor dependencies
 @import "bourbon";
 @import "neat";
+@import "devices.css/assets/scss/devices";
+@import "fluidbox/css/fluidbox.scss";
+@import "slick.js/slick/slick.scss";
 
 // Import author dependencies
 @import "variables";
@@ -16,6 +19,7 @@
 @import "work";
 @import "blog";
 @import "project";
+@import "outpost";
 @import "mediaqueries";
 
 // Import stylesheet for print

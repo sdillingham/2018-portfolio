@@ -214,6 +214,10 @@ $bp-tall-viewport           : 920px;
       display: block;
       margin:0 0 em(16);
       padding: 0;
+      position: relative;
+    }
+    @include small-viewport {
+      padding-left: 34px;
     }
     .number {
       color: #12A17A;
@@ -224,6 +228,9 @@ $bp-tall-viewport           : 920px;
 
       @include small-viewport {
         font-size: 32px;
+        position: absolute;
+        left: -34px;
+        top: 0;
       }
     }
   }

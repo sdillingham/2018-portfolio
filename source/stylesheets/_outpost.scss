@@ -54,6 +54,10 @@
   right: 50%;
   margin-right: -173px;
   z-index: 206;
+  @include small-viewport {
+    max-width: 280px;
+    margin-right: -140px;
+  }
 }
 .comment-items {
   position: absolute;

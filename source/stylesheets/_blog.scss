@@ -48,12 +48,12 @@
   h1 {
     @extend .marquee-heading;
     color:$black;
-    font-size:2.9em;
+    font-size:2.4em;
     font-weight:700;
     line-height:1.095em;
     margin:0.762em 0 0;
     padding:1.142857143em 0;
-    text-align:center;
+    text-align:left;
     a {
       color:$black;
       &:hover {

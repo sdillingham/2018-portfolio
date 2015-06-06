@@ -549,6 +549,7 @@ $bp-tall-viewport           : 920px;
   }
   @include small-viewport {
     margin-bottom: grid-height(1);
+    padding-bottom: grid-height(1);
   }
   .bound {
     max-width: grid-calc(8);
@@ -984,6 +985,9 @@ $bp-tall-viewport           : 920px;
     height: 100%;
     z-index: 400;
     transition: opacity 0.2s linear;
+    @include small-viewport {
+      display: none;
+    }
     &.active, &.initial {
       cursor: pointer;
       opacity: 1;
@@ -1314,6 +1318,11 @@ $bp-tall-viewport           : 920px;
       font-size: em(18);
       margin-top:0;
       opacity: 0;
+
+      @include small-viewport {
+        margin-top: -10px;
+        opacity: 1;
+      }
     }
     a {
       color:$white;
@@ -1324,9 +1333,20 @@ $bp-tall-viewport           : 920px;
   }
 }
 .next-project.viewable {
-  &.outpost .next-bg {
-    background: url('../images/outpost/next-project-outpost.jpg');
-    background-size: cover;
+  &.outpost {
+    footer {
+      h3 {
+        font-size: 1.8em;
+      }
+    }
+    .next-bg {
+      background: url('../images/outpost/next-project-outpost.jpg');
+      background-size: cover;
+
+      @include small-viewport {
+        background-position: center  top;
+      }
+    }
   }
   &.kpcc-ipad .next-bg {
     background: url('../images/kpcc-ipad/next-project-ipad.jpg');

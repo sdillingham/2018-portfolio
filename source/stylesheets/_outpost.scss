@@ -38,6 +38,26 @@
         right: 0;
         z-index: 200;
       }
+
+      @include small-viewport {
+        &.screen-contentbot {
+          max-width: inherit;
+          width: 800px;
+          top: auto;
+          bottom: -34%;
+          right: -6%;
+        }
+        &.pane-notification {
+          margin-right: 0;
+          max-width: inherit;
+          width: 105%;
+          top: -5px;
+          right: 0;
+        }
+        &.navbar-ui {
+          display: none;
+        }
+      }
     }
   }
 }

@@ -1297,6 +1297,11 @@ $bp-tall-viewport           : 920px;
     left:0;
     right:0;
     text-align:center;
+
+    @include small-viewport {
+      padding-top: grid-height(2);
+    }
+
     h3, h5 {
       @extend .marquee-heading;
     }

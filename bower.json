@@ -4,13 +4,10 @@
   "dependencies": {
     "jquery": "~2.0",
     "html5shiv": "~3.7.0",
-    "swipe": "2.0.0",
-    "picturefill": "2.0.0-beta",
     "devices.css": "*",
     "fluidbox": "~1.4.3",
     "slick.js": "~1.4.1",
     "waypoints": "~3.1.1",
-    "vivus": "~0.2.1",
     "skrollr": "~0.6.29"
   },
   "authors": [

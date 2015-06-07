@@ -86,8 +86,7 @@ article.single-project.outpost
               span.gumdrop.maximize
               span.address-bar
             .viewport
-              video id="editorVideo" src="../../images/outpost/prototypes/outpost-editor.mp4" title="Outpost Editing Experience" poster="../../images/outpost/prototypes/outpost-editor.jpg"
-            figcaption.caption.big
+              video id="editorVideo" preload="none" src="../../images/outpost/prototypes/outpost-editor.mp4" title="Outpost Editing Experience" poster="../../images/outpost/prototypes/outpost-editor.jpg"
               p Inline formatting of copy is there when you need it, and gets out of the way when you’re typing.
       .sheet.chapter-sheet#comments
         .bound
@@ -145,6 +144,14 @@ article.single-project.outpost
         if (document.body.scrollWidth > 768) {
           var s = skrollr.init();
           $("body").removeClass("no-parallax");
+          var videoWaypoint = $(".browser video").waypoint({
+            handler: function(direction) {
+              var video=document.getElementById("editorVideo");
+              video.play();
+              $(this.element).addClass("active");
+            },
+            offset: 200
+          })
         }
         else {
           $("body").addClass("no-parallax");
@@ -157,12 +164,5 @@ article.single-project.outpost
             checkViewportSize()
         });
 
-        var videoWaypoint = $(".browser video").waypoint({
-          handler: function(direction) {
-            var video=document.getElementById("editorVideo");
-            video.play();
-            $(this.element).addClass("active");
-          },
-          offset: 200
-        })
+        
       });

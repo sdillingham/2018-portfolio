@@ -183,6 +183,9 @@ hr {
   }
 
 // experience
+.experience {
+  page-break-before: always;
+}
 .employment-duration {
   color:$lightGray;
   display:inline-block;

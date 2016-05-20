@@ -9,7 +9,7 @@
 // SYLING ON BASE ELEMENTS
 body {
   color:$black;
-  font-family:"freight-text-pro", Cambria, Georgia, "Droid Serif", serif; 
+  font-family:"freight-text-pro", Cambria, Georgia, "Droid Serif", serif;
   font-size:0.875em;
 }
 
@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2 {
-  font-family:"freight-sans-pro", "Avenir Next", Helvatica, "Droid Sans", sans-serif; 
+  font-family:"freight-sans-pro", "Avenir Next", Helvatica, "Droid Sans", sans-serif;
 }
 
 h1 {
@@ -117,7 +117,7 @@ hr {
 // titling
 .titling {
   @include clearfix();
-  border-bottom:1px solid $lightGray; 
+  border-bottom:1px solid $lightGray;
   margin-bottom:1em;
   left:0;
   padding-bottom:1em;
@@ -145,7 +145,7 @@ hr {
     margin:0;
   }
 }
-  
+
   .roles {
     list-style:none;
     margin:0;
@@ -183,14 +183,15 @@ hr {
   }
 
 // experience
-.experience {
-  page-break-before: always;
-}
 .employment-duration {
   color:$lightGray;
   display:inline-block;
   font-size:0.75em;
   font-weight:400;
+}
+
+.company {
+  margin-bottom: 1rem;
 }
 
 .position-description {
@@ -203,6 +204,10 @@ hr {
   }
 }
 
+.print-page-break {
+  margin-top: 4rem;
+}
+
 // skills
 .skills {
   h3 {
@@ -210,7 +215,7 @@ hr {
   }
   h4 {
     color:$medGray;
-    font-family:"freight-text-pro", Cambria, Georgia, "Droid Serif", serif; 
+    font-family:"freight-text-pro", Cambria, Georgia, "Droid Serif", serif;
     font-style:italic;
     font-weight:400;
     margin:0.3em 0 0.2em;
@@ -238,7 +243,7 @@ hr {
   }
 
   .titling {
-    border-bottom:1px solid $lightGray; 
+    border-bottom:1px solid $lightGray;
     margin-bottom:1em;
     padding-bottom:1em;
     position:relative;

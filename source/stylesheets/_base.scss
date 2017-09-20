@@ -1,6 +1,6 @@
 // Typography
 body {
-  font-family:"freight-text-pro", "Lucida Bright", "Droid Serif", Georgia, serif;
+  font-family:"proxima-nova", "Avenir Next", Helvatica, "Droid Sans", sans-serif;
   font-size:0.875em;
   -webkit-font-smoothing: antialiased;
   @include respond-to(medium-screens) {
@@ -9,7 +9,13 @@ body {
 }
 
 .marquee-heading {
-  font-family:"freight-sans-pro", "Avenir Next", Helvatica, "Droid Sans", sans-serif; 
+  font-family:"leitura-news", "Lucida Bright", "Droid Serif", Georgia, serif;
+  font-weight: 800;
+}
+
+.marquee-subheading {
+  font-family:"proxima-nova", "Avenir Next", Helvatica, "Droid Sans", sans-serif;
+  font-weight: 400;
 }
 
 // Images
@@ -22,6 +28,10 @@ a {
   color:$linkAccent;
   text-decoration:none;
   transition: background-color 0.1s linear, color 0.1s linear;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .button {
@@ -54,7 +64,7 @@ iframe, embed, object {
 .bound {
   @include clearfix();
   margin:0 auto;
-  max-width:33.75em;
+  max-width:38em;
   width:87.5%;
 }
 
@@ -90,7 +100,7 @@ main {
     background:$paleGray;
   }
   p.fineprint {
-    color:$medGray;
+    color:$lightGray;
     font-size:0.75em;
   }
 }

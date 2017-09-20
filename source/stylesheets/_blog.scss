@@ -17,7 +17,7 @@
     border-style:solid;
     border-width:1px 0;
     color:$medGray;
-    font-family:"freight-sans-pro", sans-serif;
+    font-family:"proxima-nova", sans-serif;
     font-size:1em;
     line-height:1.25em;
     margin:0.2em 0 2.2em 0;
@@ -36,7 +36,7 @@
     .tag+.tag {
       margin-left:5px;
       &:before {
-        color:$paleGray;
+        color:$lightGray;
         content:" | ";
         display:inline-block;
         margin-right:5px;
@@ -63,12 +63,14 @@
   }
 
   h2 {
-    font-size:1.5em;
+    @extend .marquee-heading;
+    font-size:1.75em;
     line-height:1.188em;
-    margin:2em 0 0.5em 0;
+    margin:2em 0 1em 0;
   }
 
   h3 {
+    @extend .marquee-heading;
     font-size:1.625em;
     line-height:1.231em;
     margin:2.462em 0 0.615em 0;
@@ -76,8 +78,8 @@
 
   p {
     font-size:1.25em;
-    line-height:1.5em;
-    margin:0 0 1.5em 0;
+    line-height:1.6em;
+    margin:0 0 1.6em 0;
   }
 
   // embiggen the first graph in a post
@@ -106,12 +108,13 @@
   }
 
   hr {
-    border-top:1px solid $paleGray;
+    border-top:2px solid $paleGray;
     display:block;
     margin:4em auto;
     width:20%;
     &.terminus {
-      border-top-color:$medGray;
+      border-top-color: #534FEF;
+      border-top-width: 4px;
     }
   }
 
@@ -131,11 +134,11 @@
       padding:0 0 0 0em;
       text-align:center;
       p {
-        color: $deepGray;
-        font-family:"freight-sans-pro", sans-serif;
+        color: $darkGray;
+        font-family:"leitura-news", "Lucida Bright", "Droid Serif", Georgia, serif;
         font-size:1.92em;
         font-style:italic;
-        font-weight:300;       
+        font-weight:600;
         line-height:1.4em;
         margin:0 0 1.2em 0;
       }
@@ -144,7 +147,7 @@
 
   .footnotes {
     h2 {
-      font-family:"freight-sans-pro", sans-serif;
+      font-family:"proxima-nova", sans-serif;
       font-size:1.5em;
       font-weight:400;
       line-height:1.188em;
@@ -191,14 +194,11 @@
         left:0px;
       }
       a {
-        border:1px solid $paleGray;
-        border-radius:3px;
         display:block;
-        font-family:"freight-sans-pro", sans-serif;
+        font-family:"proxima-nova", sans-serif;
         line-height:1em;
         padding:8px;
         &:hover {
-          border-color:$lightGray;
           color:$brightAccentAlt;
         }
       }
@@ -214,8 +214,7 @@
   position:relative;
 
   .next-bg {
-    background:$nearWhite;
-    border-top:1px solid darken($nearWhite, 10%);
+    background:$brightAccent;
     bottom:0;
     left:0;
     position:absolute;
@@ -235,18 +234,19 @@
       @extend .marquee-heading;
     }
     h3 {
+      color: $white;
       font-size:2.5em;
       margin-bottom:0;
       margin-top:0;
     }
     h5 {
-      color:$deepGray;
+      color:$white;
       font-size:1em;
       font-weight:400;
       margin-bottom:0;
     }
     a {
-      color:$linkAccent;
+      color:$white;
       &:hover {
         color:$nearBlack;
       }

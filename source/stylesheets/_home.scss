@@ -1,35 +1,52 @@
 .index {
-  .masthead {
-    height:27em;
-    padding-top:3em;
-    position:relative;
-    text-align:center;
+  .marquee {
+    color: $white;
+    min-height: 75vh;
+    text-align: left;
 
-    .img-src {
-        position:absolute;
-        background-image:url('../images/bg-el-lay.jpg');
-        background-position:50% 20%;
-        background-size:cover;
-        top:0;
-        bottom:0;
-        left:0;
-        right:0;
-    }
-    .img-src.color {
-      background-image:url('../images/bg-el-lay-color.jpg');
-      opacity:0;
+    h3 {
+      @extend .marquee-subheading;
+      line-height: 1.2em;
+      margin: 0;
     }
 
-    .bound {
-      position:relative;
-      z-index:100;
+    hr {
+      background-color: $white;
+      margin: 2em 0;
     }
 
+    a {
+      color: $white;
+      font-weight: 700;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        border-bottom: 1px solid $white;
+        transition: 0.2s;
+      }
+
+      &:hover {
+        color: $white;
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .bound {
+    max-width: 38em;
   }
     h1 {
       @extend .marquee-heading;
       color:$white;
       font-size:2.4em;
+      margin: 1em 0 0;
     }
     h2 {
       @extend .marquee-heading;
@@ -38,23 +55,78 @@
       font-weight:400;
       line-height:1.4375em;
       margin:0 auto;
-      max-width:13em;
+      max-width:14em;
     }
+    h3 {
+      @extend .marquee-heading;
+      margin-bottom: 0;
+
+      a {
+        color: $black;
+        padding: 3px 0;
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          border-bottom: 2px solid $brightAccent;
+          transition: 0.2s;
+        }
+
+        &:hover {
+          color: $brightAccent;
+
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .home-header {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .home-title {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .home-profile {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2em;
+    }
+
+    .profile {
+      mix-blend-mode: hard-light;
+    }
+
+    .item-summary {
+      p {
+        margin: 0.5em 0 2em;
+      }
+    }
+
   main {
     background:$white;
     padding:2em 0;
     z-index:200;
   }
     p {
-      color:$darkGray;
-      font-size:1.25em;
-      line-height:1.5em;
+      font-size:1.125em;
+      line-height:1.75em;
     }
     a {
         color:$linkAccent;
         text-decoration:none;
         &:hover {
-          color:lighten($linkAccent, 20%);
+          color: $brightAccent;
         }
       }
 }

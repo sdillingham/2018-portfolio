@@ -8,8 +8,9 @@
 
 // SYLING ON BASE ELEMENTS
 body {
+  -webkit-font-smoothing: antialiased;
   color:$black;
-  font-family:"freight-text-pro", Cambria, Georgia, "Droid Serif", serif;
+  font-family:"leitura-news", Cambria, Georgia, "Droid Serif", serif;
   font-size:0.875em;
 }
 
@@ -17,8 +18,8 @@ h1, h2, h3, h4, h5, h6 {
   margin:0;
 }
 
-h1, h2 {
-  font-family:"freight-sans-pro", "Avenir Next", Helvatica, "Droid Sans", sans-serif;
+h2 {
+  font-family:"proxima-nova", "Avenir Next", Helvatica, "Droid Sans", sans-serif;
 }
 
 h1 {
@@ -30,7 +31,7 @@ h1 {
 h2 {
   color:$lightGray;
   font-size:1.25em;
-  font-weight:300;
+  font-weight:400;
   text-transform:uppercase;
 }
 
@@ -204,10 +205,6 @@ hr {
   }
 }
 
-.print-page-break {
-  margin-top: 4rem;
-}
-
 // skills
 .skills {
   h3 {
@@ -215,7 +212,7 @@ hr {
   }
   h4 {
     color:$medGray;
-    font-family:"freight-text-pro", Cambria, Georgia, "Droid Serif", serif;
+    font-family:"leitura-news", Cambria, Georgia, "Droid Serif", serif;
     font-style:italic;
     font-weight:400;
     margin:0.3em 0 0.2em;
@@ -237,6 +234,12 @@ hr {
 }
 
 // RESPONSIVE & PRINT CSS
+@media print {
+  .print-page-break {
+    margin-top: 4rem;
+  }
+}
+
 @media print, screen and (max-width:56em) {
   .cv {
     padding:0 1em;

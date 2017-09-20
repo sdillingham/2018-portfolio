@@ -51,7 +51,7 @@
     }
 
     // pull post title out beyond the boundaries of the text column
-    h1 {
+    .post h1 {
       font-size:3.49em;
       margin-left:-2.321428571em;
       margin-right:-2.321428571em;
@@ -62,131 +62,22 @@
       margin-left:-8.125em;
       margin-right:-8.125em;
     }
-    
+
   }
 
   // Work Landing page
   .work-list {
     height: 100%;
 
-    header {
-      text-align: center;
-    }
     h2 {
-      border-bottom: 1px solid $black;
+      border-bottom: 4px solid $brightAccent;
       color: $black;
       display: inline-block;
       font-size:1.8em;
-      font-weight: 300;
+      font-weight: 700;
       line-height:1em;
-      margin: 3em 0 2em;
+      margin: 2em 0 1em;
       padding-bottom: 8px;
-      text-align: center;
-    }
-
-    .work-items {
-      @include clearfix;
-      position: relative;
-      width: 100%;
-    }
-
-    .work-item {
-      background: $black;
-      color: $white;
-      display: block;
-      float: left;
-      margin-bottom: 0;
-      margin-right: 2%;
-      overflow: hidden;
-      padding-bottom: 32%;
-      width: 32%;
-      height: auto;
-      position: relative;
-      text-align: center;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:hover {
-        .item-bg {
-          opacity: 0.4;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-        }
-        .item-summary {
-          top: 0px;
-          opacity: 1;
-        }
-        h4 {
-          opacity: 0;
-          transform: zoom(0);
-        }
-      }
-
-      .item-bg {
-        transition: all 0.2s;
-        opacity: 0.8;
-        position: absolute;
-        left:-20px;
-        right:-20px;
-        top:-20px;
-        bottom:-20px;
-        z-index: 299;
-      }
-
-      h3 {
-        @extend .marquee-heading;
-        font-size: 2.2em;
-        margin: 1.2em 0 0.6em;
-        position: relative;
-        z-index: 300;
-      }
-      h4 {
-        @extend .marquee-heading;
-        transition: all 0.1s;
-        position: absolute;
-        top: 5%;
-        left: 5%;
-        right: 5%;
-        border-bottom: 1px solid $white;
-        color: $white;
-        font-size: 1.5em;
-        margin: 0;
-        padding-bottom: 8px;
-        text-align: left;
-        transform: zoom(1);
-        z-index: 302;
-      }
-      .item-summary {
-        transition: all 0.2s;
-        top:10px;
-        opacity: 0;
-        padding: 0 10%;
-        position: absolute;
-        z-index: 301;
-        p {
-          color: $white;
-          font-size: 1.25em;
-        }
-        button {
-          transition: all 0.15s;
-          @extend .marquee-heading;
-          background: transparent;
-          border: 1px solid $white;
-          color: $white;
-          font-size: 1em;
-          font-weight: 400;
-          margin-top: 10px;
-          padding: 10px 18px;
-          text-transform: uppercase;
-          &:hover {
-            background: #12A17A;
-          }
-        }
-      }
     }
   }
 }
@@ -216,24 +107,59 @@
   }
   .marquee {
     h3 {
-      font-size: 3em;
+      font-size: 1.75em;
     }
   }
 
   .interior {
     padding-top:0;
 
+    &.work_signal-sciences, &.blog {
+      .global-header {
+        h1.site-title a {
+          color: #222;
+        }
+        .site-nav ul li a {
+          color: #222;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0%;
+            border-bottom: 2px solid #222;
+            transition: 0.2s;
+          }
+
+          &:hover {
+            color: #222;
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
     // global header elements
     .global-header {
       background:transparent;
       position:absolute;
-      h1 {
+
+      h1.site-title {
         float:left;
         font-size:1.375em;
         padding:17px 0;
+
         a {
-          color:$white;
+          color: $white;
         }
+      }
+
+      .site-nav ul li a {
+        color: $white;
       }
     }
 
@@ -250,7 +176,7 @@
       position:relative;
       width:auto;
 
-      // hide some costmetic elements we don't need on larger screens  
+      // hide some costmetic elements we don't need on larger screens
       h1, .nav-close, hr, h4 {
         display:none;
       }
@@ -260,42 +186,35 @@
         list-style:none;
         li {
           float:left;
+          padding:0 10px;
           &.home {
             display:none;
           }
           a {
-            color:white;
             font-size:1em;
             margin:18px 0;
-            padding:0 10px;
+            padding: 0;
+            position: relative;
             text-transform:uppercase;
+
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: 0%;
+              border-bottom: 2px solid $white;
+              transition: 0.2s;
+            }
+
             &:hover {
-              color: lighten(#12A17A, 12%);
+              color: $white;
+              &:after {
+                width: 100%;
+              }
             }
             &:active {
               background:transparent;
-            }
-            &.active {
-              position:relative;
-              &:before {
-                display:none;
-              }
-              &:after {
-                bottom:-1px;
-                content:"";
-                background: white;
-                display:block;
-                height:1px;
-                left:10px;
-                position:absolute;
-                right:10px;
-              }
-            }
-            i {
-              display:inline-block;
-              font-size:0.9em;
-              line-height:1em;
-              margin-top:5px;
             }
             span {
               @include hide-text();
@@ -457,7 +376,7 @@
   .blog, .rudimental {
 
     .global-header {
-      background:#12A17A;
+      background:#FFFFFF;
       background-size:cover;
       margin-bottom:4em;
       position:relative;
@@ -473,5 +392,42 @@
       }
     }
 
+  }
+}
+
+// Homepage
+@media (min-width:36em) {
+  .index {
+
+    .home-header {
+      display: block;
+    }
+
+    .home-title {
+      display: inline-block;
+      max-width: 74%;
+    }
+
+    .home-profile {
+      display: inline-block;
+      left: auto;
+      margin-right: 5%;
+      margin-top: 0;
+      max-height: inherit;
+      max-width: 19%;
+      overflow: auto;
+      position: relative;
+      right: auto;
+      top: auto;
+      vertical-align: text-bottom;
+    }
+
+    .profile {
+      border-radius: 6px;
+      margin-top: 0;
+      max-width: 100%;
+      position: relative;
+      vertical-align: text-bottom;
+    }
   }
 }

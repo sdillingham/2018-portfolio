@@ -10,18 +10,29 @@
       }
     }
 
+    &.work_index, &.work {
+      .site-title a{
+        color: $black;
+      }
+    }
+
+    &.work_signal-sciences {
+      .global-header .bound {
+        max-width: grid-calc(7);
+      }
+    }
+
     .bound {
       max-width:55em;
     }
 
     // Style nav for small screens
     .site-nav {
-      @extend .marquee-heading;
-      overflow: hidden; 
-      clip: rect(0 0 0 0); 
-      height: 1px; width: 1px; 
-      margin: -1px; 
-      padding: 0; 
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px; width: 1px;
+      margin: -1px;
+      padding: 0;
       border: 0; // Hide menu for small screens by default
       position:fixed;
       left:0;
@@ -29,9 +40,10 @@
       top:0;
       bottom:-100px;
       z-index:300;
-      background:rgba($black, 0.95);
+      background: $brightAccent;
       display:block;
       &.active {
+        box-sizing: border-box;
         overflow:visible;
         clip:auto;
         height:100%;
@@ -42,15 +54,23 @@
 
       hr {
         background:rgba($white, 0.1);
+        max-width: 100%;
+      }
+
+      .site-title {
+        color: $white;
+        margin-top: 3em;
+        padding: 0 10px;
+        text-align: left;
       }
 
       h4 {
-        color:$lightAccent;
+        color:$white;
         font-size:1em;
-        font-weight:400;
+        font-weight:700;
         margin-bottom:.5em;
         padding:0 10px;
-        text-transform:uppercase; 
+        text-transform:uppercase;
       }
 
       ul {
@@ -66,26 +86,6 @@
             position:relative;
             text-decoration:none;
             i { display:none; }
-            &:active {
-              background:$black;
-              color:$brightAccent;
-            }
-            &.active {
-              &:before {
-                content:"";
-                background:#14B9D5;
-                border-radius:12px;
-                display:block;
-                position:absolute;
-                width:12px;
-                height:12px;
-                left:-18px;
-                top:50%;
-                margin-top:-6px;
-                filter: blur(5px);
-                -webkit-filter: blur(5px);
-              }
-            }
           }
         }
       }
@@ -97,7 +97,7 @@
         left:20px;
         top:20px;
         &:before {
-          color:$medDivider;
+          color:$white;
           font-size:1em;
         }
       }
@@ -132,7 +132,7 @@
   padding:14px 0;
   text-align:center;
   a {
-    color:$black;
+    color: $darkGray;
     display:inline-block;
     text-decoration:none;
   }
@@ -140,18 +140,18 @@
 
 // Marquee - introductory section for project landing page.
 .marquee {
-  background:#12A17A;
+  background:#534FEF;
   color:$white;
   padding:2em 0;
   text-align:center;
 
   h3 {
-    @extend .marquee-heading;
+    @extend .marquee-subheading;
     font-size:1.8em;
     font-weight:300;
     line-height:1.44em;
     margin:1em auto 2em;
-    max-width: 830px;
+    max-width: 860px;
   }
 }
 
@@ -159,142 +159,16 @@
 .work-list {
   height: 100%;
 
-  header {
-    text-align: center;
-  }
   h2 {
-    border-bottom: 1px solid $black;
+    @extend .marquee-heading;
+    border-bottom: 4px solid $brightAccent;
     color: $black;
     display: inline-block;
     font-size:1.8em;
-    font-weight: 300;
+    font-weight: 700;
     line-height:1em;
     margin: 3em 0 2em;
     padding-bottom: 8px;
-    text-align: center;
-  }
-
-  .work-items {
-    @include clearfix;
-    position: relative;
-    width: 100%;
-  }
-
-  .work-item {
-    background: $black;
-    color: $white;
-    display: block;
-    float: none;
-    margin-bottom: 2em;
-    margin-right: 0;
-    overflow: hidden;
-    padding-bottom: 32%;
-    width: 100%;
-    height: 300px;
-    position: relative;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      .item-bg {
-        opacity: 0.4;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-      }
-      .item-summary {
-        top: 0px;
-        opacity: 1;
-      }
-      h4 {
-        opacity: 0;
-        transform: zoom(0);
-      }
-    }
-
-    .item-bg {
-      transition: all 0.2s;
-      opacity: 0.8;
-      position: absolute;
-      left:-20px;
-      right:-20px;
-      top:-20px;
-      bottom:-20px;
-      z-index: 299;
-    }
-
-    h3 {
-      @extend .marquee-heading;
-      font-size: 2.2em;
-      margin: 1.2em 0 0.6em;
-      position: relative;
-      z-index: 300;
-    }
-    h4 {
-      @extend .marquee-heading;
-      transition: all 0.1s;
-      position: absolute;
-      top: 5%;
-      left: 5%;
-      right: 5%;
-      border-bottom: 1px solid $white;
-      color: $white;
-      font-size: 1.5em;
-      margin: 0;
-      padding-bottom: 8px;
-      text-align: left;
-      transform: zoom(1);
-      z-index: 302;
-    }
-    .item-summary {
-      transition: all 0.2s;
-      top:10px;
-      opacity: 0;
-      padding: 0 5%;
-      position: absolute;
-      z-index: 301;
-      p {
-        color: $white;
-        font-size: 1.25em;
-      }
-      button {
-        transition: all 0.15s;
-        @extend .marquee-heading;
-        background: transparent;
-        border: 1px solid $white;
-        color: $white;
-        font-size: 1em;
-        font-weight: 400;
-        margin-top: 10px;
-        padding: 10px 18px;
-        text-transform: uppercase;
-        &:hover {
-          background: #12A17A;
-        }
-      }
-    }
-
-    &.iphone {
-      .item-bg {
-        background: url('../images/kpcc-iphone/grid-tile-iphone.jpg') no-repeat center center;
-        background-size: cover;
-      }
-    }
-    &.outpost {
-      .item-bg {
-        background: url('../images/outpost/grid-tile-outpost.jpg') no-repeat center center;
-        background-size: cover;
-      }
-    }
-    &.ipad {
-      .item-bg {
-        background: url('../images/kpcc-ipad/grid-tile-ipad.jpg') no-repeat center center;
-        background-size: cover;
-      }
-    }
   }
 }
 

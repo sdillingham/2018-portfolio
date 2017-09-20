@@ -2,25 +2,17 @@
   | interior
 
 - wrap_layout :layout do
-  
+
   header.global-header
     .bound
       h1.site-title: a href="/" Sean Dillingham
       nav.site-nav
         span.nav-close.icon-close aria-hidden="true"
-        h1 aria-hidden="true" Sean Dillingham
+        h1.site-title aria-hidden="true" Sean Dillingham
         hr
-        h4 Menu
         ul.menu-main
-          li.home: a href="/" Home
-          li: a class=('active' if @current_section_work) href="/work/" Work
+          li: a href="/" Home
           li: a class=('active' if @current_section_blog)  href="/blog/" Blog
-        hr
-        h4 Elsewhere
-        ul.menu-elsewhere
-          li: a href="http://github.com/sdillingham"
-            i.icon-github
-            span Github
       span.nav-toggle.icon-menu aria-hidden="true"
       hr.ledge
   main.main

@@ -1,0 +1,66 @@
+---
+order: 1
+title: "Signal Sciences"
+teaser: "Leading product design at a fast-moving SaaS startup."
+---
+
+article.single-project.simple
+  section.narrative
+    .bound
+      header
+        h1.project-title Signal Sciences
+        p.project-description Cloud security that moves at the speed of DevOps.
+        hr
+  div
+    / PROJECT INTRODUCTION
+    .sheet.chapter-sheet.introduction
+      .bound
+        p <a href="https://www.signalsciences.com/">Signal Sciences</a> is a powerful application security platform founded and built by the practitioners who ran security at Etsy, one of the companies that helped pioneer the DevOps movement. Etsy's agile practices forced our founders to invent new tools and processes so security was never seen as a blocker to continuous deployment.
+        p First launched in 2015, Signal Sciences already operates at a large scale. We protect 10 billion requests per day, and major internet brands like Adobe, Vimeo, and Duo rely on us to defend their production apps from attacks.
+        figure.figure
+          img src="../../images/signal-sciences/sigsci-website.jpg" alt="Signal Sciences Homepage"
+        h3.sheet-heading My role
+        p Attracted by an inspiring group of people and a product with huge potential, I joined the company in 2016 as its second product designer. In early 2017 I officially began leading and growing the product design team.
+        p In addition to helping recruit and hire a great team, I've worked hard to foster a culture at Signal Sciences that values design. I've put tools and process in place to help product designers achieve both consistency and velocity, so we can improve product clarity and quality while moving fast.
+    .sheet.chapter-sheet
+      .bound
+        h3.sheet-heading Projects
+        p During my time at Signal Sciences, I've touched most parts of the customer-facing experience. While I'm not able to provide detailed examples of my work, I can share a few of the key projects where I've led design.
+        h4 "Cosmo" design system
+        p As part of establishing a strong design practice at Signal Sciences, I created our design system from the ground up. I worked early on to establish our product's design principles, visual style and copywriting voice, as well as a comprehensive component library.
+        h4 Rules platform
+        p Signal Sciences bests other legacy application firewalls with its intelligent decision-making engine. I designed features to put that power directly into users' hands, enabling them to tailor and customize security rules to match their applications.
+        h4 Help center and API docs
+        p Great developer tools are often distinguished by the quality of their documentation. I led the effort to overhaul and redesign ours.
+        h4 DesignOps
+        p I've invested in great tooling to streamline product design operations: implementing Abstract for better version control and collaboration of assets, being an early adopter of Sketch Libraries for syncing our UI components, and employing code to help glue together our Sketch design system with our React component library.
+        h4 Product navigation
+        p The product's information architecture, which had grown organically with the product, was in need of simplification. Our team worked together to launch a data-driven redesign of our IA and navigation. 
+
+
+- content_for :postproject do
+
+    / NEXT PROJECT: KPCC FOR IPHONE
+    aside.next-project.kpcc-iphone
+      a href="../kpcc-iphone/"
+        footer
+          .bound
+            h5 Next Project
+            h3 KPCC for iPhone
+            p Designing new ways for Angelinos to listen to the public radio they love.
+        .next-bg
+
+- content_for :additional_footer do
+
+    javascript:
+      $(document).ready(function() {
+        //
+        // Set up Waypoints for lazy loading content
+        //
+        var waypoints = $(".next-project").waypoint({
+          handler: function(direction) {
+            $(this.element).addClass("viewable");
+          },
+          offset: "150%"
+        })
+      });

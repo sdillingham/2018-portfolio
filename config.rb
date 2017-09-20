@@ -1,8 +1,7 @@
 require  "slim"
+Slim::Engine.disable_option_validator!
 require  "builder"
-activate :bourbon
 activate :directory_indexes
-activate :neat
 activate :livereload
 activate :blog do |blog|
   blog.layout = "article_layout"
@@ -85,7 +84,7 @@ page "*.xml",    :layout => false
  end
 
 # Set slim-lang output style
-Slim::Engine.set_default_options :pretty => true
+Slim::Engine.set_options :pretty => true
 
 # Enable Slim templates to use frontmatter
 set :frontmatter_extensions, %w(.html .slim)

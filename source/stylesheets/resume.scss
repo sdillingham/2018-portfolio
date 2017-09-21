@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-  color:$lightGray;
+  color:$deepGray;
   font-size:1.25em;
   font-weight:400;
   text-transform:uppercase;
@@ -49,7 +49,7 @@ p {
 }
 
 a {
-  color:$medGray;
+  color:$deepGray;
   text-decoration:none;
   &:hover {
     text-decoration:underline;
@@ -131,7 +131,7 @@ hr {
       font-size:0.875em;
       margin:0;
       a {
-        color:$lightGray;
+        color:$deepGray;
       }
     }
   }
@@ -166,7 +166,7 @@ hr {
   }
 
   .recognition {
-    border-left:3px solid $paleGray;
+    border-left:3px solid $lightGray;
     margin:1em 0;
     padding-left:1em;
     .award {
@@ -178,14 +178,14 @@ hr {
         margin:0;
       }
       time {
-        color:$medGray;
+        color:$deepGray;
       }
     }
   }
 
 // experience
 .employment-duration {
-  color:$lightGray;
+  color:$deepGray;
   display:inline-block;
   font-size:0.75em;
   font-weight:400;
@@ -201,7 +201,7 @@ hr {
 
 .position-title {
   span {
-    color:$lightGray;
+    color:$deepGray;
   }
 }
 
@@ -211,7 +211,7 @@ hr {
     margin-bottom:0;
   }
   h4 {
-    color:$medGray;
+    color:$deepGray;
     font-family:"leitura-news", Cambria, Georgia, "Droid Serif", serif;
     font-style:italic;
     font-weight:400;
@@ -235,8 +235,14 @@ hr {
 
 // RESPONSIVE & PRINT CSS
 @media print {
+  body {
+    font-size:0.75em;
+  }
   .print-page-break {
     margin-top: 4rem;
+  }
+  h2 {
+    color:$deepGray;
   }
 }
 
